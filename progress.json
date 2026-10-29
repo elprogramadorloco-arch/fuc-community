@@ -1,0 +1,539 @@
+﻿{
+  "schema": "FUC_COMMUNITY_PROGRESS_V1",
+  "generated_utc": "2026-10-29T23:22:03Z",
+  "generator": "FUC Observer (aggregate-only export)",
+  "headline": [
+    {
+      "label": "Route frames native",
+      "value": 3226,
+      "total": 3232,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Effect programs statically eligible",
+      "value": 277,
+      "total": 443,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Unknown closure",
+      "value": 41,
+      "total": 128,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Effect VM semantic support",
+      "value": 441,
+      "total": 443,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Catalog support",
+      "value": 432,
+      "total": 443,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Regression tests passing",
+      "value": 379,
+      "total": 379,
+      "as_of": "2026-10-29"
+    },
+    {
+      "label": "Frozen milestones",
+      "value": 76,
+      "as_of": "2026-10-29"
+    }
+  ],
+  "panels": [
+    {
+      "id": "route_frames",
+      "title": "Route frames: native vs fallback",
+      "unit": "frames",
+      "as_of": "2026-10-29",
+      "note": "Newest run census per route, as measured by the project.",
+      "groups": [
+        {
+          "name": "GCU",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 541
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 542,
+          "good": 541
+        },
+        {
+          "name": "GFO",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 534
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 535,
+          "good": 534
+        },
+        {
+          "name": "GGA",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 537
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 538,
+          "good": 537
+        },
+        {
+          "name": "GSH",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 541
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 542,
+          "good": 541
+        },
+        {
+          "name": "STG005",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 532
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 533,
+          "good": 532
+        },
+        {
+          "name": "STG010",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 541
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "attention",
+              "count": 1
+            }
+          ],
+          "total": 542,
+          "good": 541
+        }
+      ],
+      "combined": true,
+      "total": 3232,
+      "good": 3226,
+      "percent": 99.81435643564356
+    },
+    {
+      "id": "effect_program_layers",
+      "title": "Effect programs by semantic layer (443 programs)",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Each layer is a separate measure of the same programs; green = supported in that layer. Per program and layer, the newest project census that reports it.",
+      "groups": [
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 441
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 443,
+          "good": 441
+        },
+        {
+          "name": "Catalog",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 5
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 416
+            },
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 22
+            }
+          ],
+          "total": 443,
+          "good": 421
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "RESOLVED",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 117
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 17
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 302
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 3
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 443,
+          "good": 119
+        },
+        {
+          "name": "K01",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 397
+            },
+            {
+              "state": "CONDITIONAL",
+              "tone": "caution",
+              "count": 8
+            },
+            {
+              "state": "NOT NATIVE",
+              "tone": "attention",
+              "count": 6
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 32
+            }
+          ],
+          "total": 443,
+          "good": 397
+        },
+        {
+          "name": "K02",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 10
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 430
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 3
+            }
+          ],
+          "total": 443,
+          "good": 10
+        },
+        {
+          "name": "LB01",
+          "segments": [
+            {
+              "state": "PROVEN",
+              "tone": "good",
+              "count": 24
+            },
+            {
+              "state": "NOT EVALUATED",
+              "tone": "neutral",
+              "count": 4
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 405
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 10
+            }
+          ],
+          "total": 443,
+          "good": 24
+        },
+        {
+          "name": "EOPT",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 25
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 409
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 9
+            }
+          ],
+          "total": 443,
+          "good": 25
+        },
+        {
+          "name": "LT01",
+          "segments": [
+            {
+              "state": "DEPENDS",
+              "tone": "attention",
+              "count": 23
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 11
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 409
+            }
+          ],
+          "total": 443,
+          "good": 0
+        },
+        {
+          "name": "Static eligible",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 277
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 35
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 127
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 443,
+          "good": 277
+        }
+      ],
+      "combined": false,
+      "total": 3987,
+      "good": 1714
+    },
+    {
+      "id": "first_failure_subsystems",
+      "title": "Effect programs by first-failure subsystem",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Grouped by the subsystem that blocks each program first; green = statically eligible.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 274
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 117
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 24
+            }
+          ],
+          "total": 26,
+          "good": 2
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 9
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 9
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 277,
+      "percent": 62.52821670428894
+    }
+  ]
+}
