@@ -113,9 +113,10 @@ software in the loop.
   fighters, effects, lights and fog. The original PS2 graphics path is **not part of the final version: it is being
   removed completely**. During development it is still used temporarily only for the few frames that are not yet
   native, and it is deleted part by part as each one is rebuilt.
-- **Fail closed.** A frame is drawn natively only when every part of it is proven to match the original game's
-  behaviour; nothing is guessed. Until the PS2 path is gone, anything still unknown temporarily uses it instead of
-  being drawn wrong, and the work continues until nothing unknown is left.
+- **Fully native and safe.** The final version draws everything natively, with **no alternative path at all**: no PS2
+  graphics and no fallback mechanism. Safety does not come from falling back to PS2; it comes from proving that every
+  part matches the original game's behaviour before it is accepted, so nothing is guessed. During development, what is
+  not yet proven still uses the PS2 path temporarily; that mechanism disappears together with the PS2 path.
 - **Semantic recovery.** Each subsystem (the effect virtual machine, resource catalogs, material and texture state,
   late-bound resources, local lights, colour and fog rules…) is reconstructed from the game's own behaviour and only
   then made native.
@@ -155,7 +156,7 @@ the PS2 game, and the private build will be generated locally from it, as with t
 | Native renderer for battles | In progress | See "Route frames native" above; the few remaining frames still use the PS2 path temporarily. |
 | Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in the Progress panels. |
 | Menus, loading screens and other scenes | In progress | Covered progressively after battles. |
-| Complete removal of the PS2 graphics path | Planned (goal) | The final version will not contain it: it is deleted once every route is 100% native. |
+| Complete removal of the PS2 graphics path | Planned (goal) | The final version will contain neither it nor any fallback: both are deleted once every route is 100% native. |
 | Public build and instructions | Planned | Only when everything is ready; it will be announced here. |
 
 ### Legal notice
@@ -196,10 +197,10 @@ modelo del hardware de PS2 y sin software de PS2 de por medio.
   escenarios, luchadores, efectos, luces y niebla. El camino gráfico original de PS2 **no forma parte de la versión
   final: se está eliminando por completo**. Durante el desarrollo todavía se usa de forma temporal solo para los pocos
   fotogramas que aún no son nativos, y se va borrando parte por parte a medida que cada una se reconstruye.
-- **Fallo seguro (fail closed).** Un fotograma se dibuja de forma nativa solo cuando está demostrado que todas sus
-  partes coinciden con el comportamiento original; no se adivina nada. Mientras el camino de PS2 no haya desaparecido,
-  lo que aún es desconocido lo usa de forma temporal en lugar de dibujarse mal, y el trabajo sigue hasta que no quede
-  nada desconocido.
+- **Totalmente nativo y seguro.** La versión final lo dibuja todo de forma nativa, **sin ningún camino alternativo**:
+  ni gráficos de PS2 ni mecanismo de respaldo. La seguridad no viene de volver a PS2, sino de demostrar que cada parte
+  coincide con el comportamiento original del juego antes de darla por buena, así que no se adivina nada. Durante el
+  desarrollo, lo que aún no está demostrado usa temporalmente el camino de PS2; ese mecanismo desaparece junto con él.
 - **Recuperación semántica.** Cada subsistema (la máquina virtual de efectos, los catálogos de recursos, el estado de
   materiales y texturas, los recursos enlazados tarde, las luces locales, las reglas de color y niebla…) se reconstruye
   a partir del comportamiento del propio juego y solo entonces pasa a ser nativo.
@@ -240,7 +241,7 @@ juego de PS2 y la versión privada se generará localmente a partir de ella, igu
 | Renderizador nativo para los combates | En curso | Ver "Route frames native" arriba; los pocos fotogramas restantes aún usan el camino de PS2 de forma temporal. |
 | Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en los paneles de Progress. |
 | Menús, pantallas de carga y otras escenas | En curso | Se cubren progresivamente después de los combates. |
-| Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no lo tendrá: se borra cuando todas las rutas sean 100% nativas. |
+| Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no tendrá ni ese camino ni ningún respaldo: ambos se borran cuando todas las rutas sean 100% nativas. |
 | Versión pública e instrucciones | Previsto | Solo cuando todo esté listo; se anunciará aquí. |
 
 ### Aviso legal
@@ -281,10 +282,10 @@ do hardware do PS2 e sem software do PS2 no meio.
   modelos, cenários, lutadores, efeitos, luzes e névoa. O caminho gráfico original do PS2 **não faz parte da versão
   final: está sendo eliminado por completo**. Durante o desenvolvimento ainda é usado de forma temporária apenas para
   os poucos quadros que ainda não são nativos, e vai sendo apagado parte por parte à medida que cada uma é reconstruída.
-- **Falha segura (fail closed).** Um quadro só é desenhado de forma nativa quando está provado que todas as suas partes
-  coincidem com o comportamento original; nada é adivinhado. Enquanto o caminho do PS2 não tiver desaparecido, o que
-  ainda é desconhecido o usa de forma temporária em vez de ser desenhado errado, e o trabalho continua até não restar
-  nada desconhecido.
+- **Totalmente nativo e seguro.** A versão final desenha tudo de forma nativa, **sem nenhum caminho alternativo**: nem
+  gráficos do PS2 nem mecanismo de reserva. A segurança não vem de voltar ao PS2, mas de provar que cada parte coincide
+  com o comportamento original do jogo antes de ser aceita, então nada é adivinhado. Durante o desenvolvimento, o que
+  ainda não está provado usa temporariamente o caminho do PS2; esse mecanismo desaparece junto com ele.
 - **Recuperação semântica.** Cada subsistema (a máquina virtual de efeitos, os catálogos de recursos, o estado de
   materiais e texturas, os recursos ligados tardiamente, as luzes locais, as regras de cor e névoa…) é reconstruído a
   partir do comportamento do próprio jogo e só então passa a ser nativo.
@@ -325,7 +326,7 @@ legítima do jogo de PS2, e a versão privada será gerada localmente a partir d
 | Renderizador nativo para os combates | Em andamento | Veja "Route frames native" acima; os poucos quadros restantes ainda usam o caminho do PS2 de forma temporária. |
 | Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa nos painéis de Progress. |
 | Menus, telas de carregamento e outras cenas | Em andamento | Cobertos progressivamente depois dos combates. |
-| Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não o terá: é apagado quando todas as rotas forem 100% nativas. |
+| Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não terá nem esse caminho nem nenhuma reserva: ambos são apagados quando todas as rotas forem 100% nativas. |
 | Versão pública e instruções | Planejado | Apenas quando tudo estiver pronto; será anunciado aqui. |
 
 ### Aviso legal
