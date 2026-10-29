@@ -4,8 +4,10 @@
 
 **EN** — A 100% native Windows version of the PS2 release of *Fate/unlimited codes*: the game's own code,
 statically recompiled, with a native renderer that does not depend on PS2 hardware or software.
+
 **ES** — Una versión nativa al 100% para Windows de la edición de PS2 de *Fate/unlimited codes*: el código del propio
 juego, recompilado estáticamente, con un renderizador nativo que no depende del hardware ni del software de PS2.
+
 **PT** — Uma versão 100% nativa para Windows da edição de PS2 de *Fate/unlimited codes*: o código do próprio jogo,
 recompilado estaticamente, com um renderizador nativo que não depende do hardware nem do software do PS2.
 
