@@ -21,7 +21,7 @@ flowchart TB
   end
   subgraph PS2["PS2Recomp version: emulated PS2 graphics"]
     direction TB
-    a1["Fate"] --> a2["RenderWare"] --> a3["PS2 commands"] --> a4["VIF / VU1 / GIF / GS"] --> a5["ParaLLEl-GS"] --> a6["GPU"]
+    a1["Fate"] --> a2["RenderWare"] --> a3["PS2 commands"] --> a4["VIF / VU1 / GIF / GS"] --> a5["ParaLLEl-GS"] --> a6["Vulkan"]
   end
 ```
 
@@ -123,7 +123,7 @@ software in the loop.
 ### Native pipeline explained
 
 A plain PS2 recompilation still emulates the console's graphics hardware: the game's RenderWare calls become PS2
-commands that pass through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) before reaching the GPU.
+commands that pass through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) that runs on Vulkan.
 The native version removes that whole layer: it takes what the game *means* (RenderWare and Fate's own semantics),
 translates it into the **FUC Common Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vulkan
 backend**, straight to the GPU. The PS2 path is kept only as a safety fallback for frames not yet proven native; the
@@ -206,7 +206,7 @@ modelo del hardware de PS2 y sin software de PS2 de por medio.
 
 Una recompilación de PS2 sin más sigue emulando el hardware gráfico de la consola: las llamadas de RenderWare del juego
 se convierten en comandos de PS2 que pasan por **VIF / VU1 / GIF / GS** emulados y por un renderizador de GS
-(**ParaLLEl-GS**) antes de llegar a la GPU. La versión nativa elimina toda esa capa: toma lo que el juego *quiere decir*
+(**ParaLLEl-GS**) que funciona sobre Vulkan. La versión nativa elimina toda esa capa: toma lo que el juego *quiere decir*
 (la semántica de RenderWare y de Fate), lo traduce al **FUC Common Render IR** y lo dibuja con el **FUC Native Renderer**
 a través de un **backend Vulkan para Windows**, directamente en la GPU. El camino de PS2 se conserva solo como respaldo
 seguro para los fotogramas que aún no están demostrados como nativos; la cifra "Route frames native" mide cuánto del
@@ -289,7 +289,7 @@ do hardware do PS2 e sem software do PS2 no meio.
 
 Uma recompilação simples do PS2 continua emulando o hardware gráfico do console: as chamadas de RenderWare do jogo
 viram comandos do PS2 que passam por **VIF / VU1 / GIF / GS** emulados e por um renderizador de GS (**ParaLLEl-GS**)
-antes de chegar à GPU. A versão nativa elimina toda essa camada: pega o que o jogo *quer dizer* (a semântica do
+que funciona sobre Vulkan. A versão nativa elimina toda essa camada: pega o que o jogo *quer dizer* (a semântica do
 RenderWare e do Fate), traduz para o **FUC Common Render IR** e desenha com o **FUC Native Renderer** por meio de um
 **backend Vulkan para Windows**, direto na GPU. O caminho do PS2 é mantido apenas como reserva segura para os quadros
 que ainda não foram provados nativos; o número "Route frames native" mede quanto do jogo já o evita (diagrama acima).
