@@ -15,13 +15,13 @@ recompilado estaticamente, com um renderizador nativo que não depende do hardwa
 
 ```mermaid
 flowchart TB
-  subgraph PS2["PS2Recomp version: emulated PS2 graphics"]
-    direction TB
-    a1["Fate"] --> a2["RenderWare"] --> a3["PS2 commands"] --> a4["VIF / VU1 / GIF / GS"] --> a5["ParaLLEl-GS"] --> a6["GPU"]
-  end
   subgraph NAT["Native version (FUC): no PS2 hardware in the loop"]
     direction TB
     b1["Fate"] --> b2["RenderWare / Fate semantics"] --> b3["FUC Common Render IR"] --> b4["FUC Native Renderer"] --> b5["Windows Vulkan Backend"] --> b6["GPU"]
+  end
+  subgraph PS2["PS2Recomp version: emulated PS2 graphics"]
+    direction TB
+    a1["Fate"] --> a2["RenderWare"] --> a3["PS2 commands"] --> a4["VIF / VU1 / GIF / GS"] --> a5["ParaLLEl-GS"] --> a6["GPU"]
   end
 ```
 
@@ -120,7 +120,7 @@ software in the loop.
 - **Verification.** Results are checked against the original game's behaviour, using PCSX2 as a read-only reference,
   and by large regression suites. Finished work is frozen and protected by guards so later work cannot alter it.
 
-### PS2Recomp version vs native version
+### Native pipeline explained
 
 A plain PS2 recompilation still emulates the console's graphics hardware: the game's RenderWare calls become PS2
 commands that pass through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) before reaching the GPU.
