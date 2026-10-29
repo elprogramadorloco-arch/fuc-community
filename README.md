@@ -110,10 +110,12 @@ software in the loop.
   (an open-source static recompiler, GPLv3), so the original game logic runs as compiled code instead of being
   interpreted.
 - **Native rendering.** Frames are drawn by a native renderer that reproduces what the game asks for: models, stages,
-  fighters, effects, lights and fog. The original PS2 graphics path is kept only as a safety net while each part is
-  rebuilt.
+  fighters, effects, lights and fog. The original PS2 graphics path is **not part of the final version: it is being
+  removed completely**. During development it is still used temporarily only for the few frames that are not yet
+  native, and it is deleted part by part as each one is rebuilt.
 - **Fail closed.** A frame is drawn natively only when every part of it is proven to match the original game's
-  behaviour. If anything is unknown, that frame safely falls back to the original path instead of being drawn wrong.
+  behaviour; nothing is guessed. Until the PS2 path is gone, anything still unknown temporarily uses it instead of
+  being drawn wrong, and the work continues until nothing unknown is left.
 - **Semantic recovery.** Each subsystem (the effect virtual machine, resource catalogs, material and texture state,
   late-bound resources, local lights, colour and fog rules…) is reconstructed from the game's own behaviour and only
   then made native.
@@ -126,8 +128,9 @@ A plain PS2 recompilation still emulates the console's graphics hardware: the ga
 commands that pass through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) that runs on Vulkan.
 The native version removes that whole layer: it takes what the game *means* (RenderWare and Fate's own semantics),
 translates it into the **FUC Common Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vulkan
-backend**, straight to the GPU. The PS2 path is kept only as a safety fallback for frames not yet proven native; the
-"Route frames native" figure measures how much of the game already skips it (diagram above).
+backend**, straight to the GPU. **The goal is to delete the PS2 graphics path completely.** Until it is gone it only
+covers the frames that are not yet native, and the "Route frames native" figure measures how much of the game already
+runs without it (diagram above).
 
 ### How to read the progress
 
@@ -149,10 +152,10 @@ the PS2 game, and the private build will be generated locally from it, as with t
 | Step | Status | Note |
 | --- | --- | --- |
 | Static recompilation of the game executable | In progress | Boots and runs the measured battle routes as native code. |
-| Native renderer for battles | In progress | See "Route frames native" above; the remaining frames fall back safely. |
+| Native renderer for battles | In progress | See "Route frames native" above; the few remaining frames still use the PS2 path temporarily. |
 | Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in the Progress panels. |
 | Menus, loading screens and other scenes | In progress | Covered progressively after battles. |
-| Removal of the PS2 graphics fallback | Planned | When every measured route reaches 100% native frames. |
+| Complete removal of the PS2 graphics path | Planned (goal) | The final version will not contain it: it is deleted once every route is 100% native. |
 | Public build and instructions | Planned | Only when everything is ready; it will be announced here. |
 
 ### Legal notice
@@ -190,11 +193,13 @@ modelo del hardware de PS2 y sin software de PS2 de por medio.
   (un recompilador estático de código abierto, GPLv3), de modo que la lógica original se ejecuta como código compilado
   en lugar de interpretarse.
 - **Renderizado nativo.** Los fotogramas los dibuja un renderizador nativo que reproduce lo que el juego pide: modelos,
-  escenarios, luchadores, efectos, luces y niebla. El camino gráfico original de PS2 se conserva solo como red de
-  seguridad mientras se reconstruye cada parte.
+  escenarios, luchadores, efectos, luces y niebla. El camino gráfico original de PS2 **no forma parte de la versión
+  final: se está eliminando por completo**. Durante el desarrollo todavía se usa de forma temporal solo para los pocos
+  fotogramas que aún no son nativos, y se va borrando parte por parte a medida que cada una se reconstruye.
 - **Fallo seguro (fail closed).** Un fotograma se dibuja de forma nativa solo cuando está demostrado que todas sus
-  partes coinciden con el comportamiento original. Si algo es desconocido, ese fotograma vuelve al camino original en
-  lugar de dibujarse mal.
+  partes coinciden con el comportamiento original; no se adivina nada. Mientras el camino de PS2 no haya desaparecido,
+  lo que aún es desconocido lo usa de forma temporal en lugar de dibujarse mal, y el trabajo sigue hasta que no quede
+  nada desconocido.
 - **Recuperación semántica.** Cada subsistema (la máquina virtual de efectos, los catálogos de recursos, el estado de
   materiales y texturas, los recursos enlazados tarde, las luces locales, las reglas de color y niebla…) se reconstruye
   a partir del comportamiento del propio juego y solo entonces pasa a ser nativo.
@@ -208,9 +213,9 @@ Una recompilación de PS2 sin más sigue emulando el hardware gráfico de la con
 se convierten en comandos de PS2 que pasan por **VIF / VU1 / GIF / GS** emulados y por un renderizador de GS
 (**ParaLLEl-GS**) que funciona sobre Vulkan. La versión nativa elimina toda esa capa: toma lo que el juego *quiere decir*
 (la semántica de RenderWare y de Fate), lo traduce al **FUC Common Render IR** y lo dibuja con el **FUC Native Renderer**
-a través de un **backend Vulkan para Windows**, directamente en la GPU. El camino de PS2 se conserva solo como respaldo
-seguro para los fotogramas que aún no están demostrados como nativos; la cifra "Route frames native" mide cuánto del
-juego ya lo evita (diagrama arriba).
+a través de un **backend Vulkan para Windows**, directamente en la GPU. **El objetivo es borrar por completo el camino
+gráfico de PS2.** Hasta que desaparezca, solo cubre los fotogramas que aún no son nativos, y la cifra "Route frames
+native" mide cuánto del juego ya funciona sin él (diagrama arriba).
 
 ### Cómo leer el progreso
 
@@ -232,10 +237,10 @@ juego de PS2 y la versión privada se generará localmente a partir de ella, igu
 | Paso | Estado | Nota |
 | --- | --- | --- |
 | Recompilación estática del ejecutable del juego | En curso | Arranca y ejecuta como código nativo las rutas de combate medidas. |
-| Renderizador nativo para los combates | En curso | Ver "Route frames native" arriba; los fotogramas restantes vuelven al camino seguro. |
+| Renderizador nativo para los combates | En curso | Ver "Route frames native" arriba; los pocos fotogramas restantes aún usan el camino de PS2 de forma temporal. |
 | Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en los paneles de Progress. |
 | Menús, pantallas de carga y otras escenas | En curso | Se cubren progresivamente después de los combates. |
-| Retirada del camino gráfico de PS2 | Previsto | Cuando todas las rutas medidas lleguen al 100% de fotogramas nativos. |
+| Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no lo tendrá: se borra cuando todas las rutas sean 100% nativas. |
 | Versión pública e instrucciones | Previsto | Solo cuando todo esté listo; se anunciará aquí. |
 
 ### Aviso legal
@@ -273,11 +278,13 @@ do hardware do PS2 e sem software do PS2 no meio.
   (um recompilador estático de código aberto, GPLv3), de modo que a lógica original é executada como código compilado
   em vez de ser interpretada.
 - **Renderização nativa.** Os quadros são desenhados por um renderizador nativo que reproduz o que o jogo pede:
-  modelos, cenários, lutadores, efeitos, luzes e névoa. O caminho gráfico original do PS2 é mantido apenas como rede de
-  segurança enquanto cada parte é reconstruída.
+  modelos, cenários, lutadores, efeitos, luzes e névoa. O caminho gráfico original do PS2 **não faz parte da versão
+  final: está sendo eliminado por completo**. Durante o desenvolvimento ainda é usado de forma temporária apenas para
+  os poucos quadros que ainda não são nativos, e vai sendo apagado parte por parte à medida que cada uma é reconstruída.
 - **Falha segura (fail closed).** Um quadro só é desenhado de forma nativa quando está provado que todas as suas partes
-  coincidem com o comportamento original. Se algo for desconhecido, esse quadro volta ao caminho original em vez de ser
-  desenhado errado.
+  coincidem com o comportamento original; nada é adivinhado. Enquanto o caminho do PS2 não tiver desaparecido, o que
+  ainda é desconhecido o usa de forma temporária em vez de ser desenhado errado, e o trabalho continua até não restar
+  nada desconhecido.
 - **Recuperação semântica.** Cada subsistema (a máquina virtual de efeitos, os catálogos de recursos, o estado de
   materiais e texturas, os recursos ligados tardiamente, as luzes locais, as regras de cor e névoa…) é reconstruído a
   partir do comportamento do próprio jogo e só então passa a ser nativo.
@@ -291,8 +298,9 @@ Uma recompilação simples do PS2 continua emulando o hardware gráfico do conso
 viram comandos do PS2 que passam por **VIF / VU1 / GIF / GS** emulados e por um renderizador de GS (**ParaLLEl-GS**)
 que funciona sobre Vulkan. A versão nativa elimina toda essa camada: pega o que o jogo *quer dizer* (a semântica do
 RenderWare e do Fate), traduz para o **FUC Common Render IR** e desenha com o **FUC Native Renderer** por meio de um
-**backend Vulkan para Windows**, direto na GPU. O caminho do PS2 é mantido apenas como reserva segura para os quadros
-que ainda não foram provados nativos; o número "Route frames native" mede quanto do jogo já o evita (diagrama acima).
+**backend Vulkan para Windows**, direto na GPU. **O objetivo é apagar por completo o caminho gráfico do PS2.** Até
+ele desaparecer, cobre apenas os quadros que ainda não são nativos, e o número "Route frames native" mede quanto do
+jogo já funciona sem ele (diagrama acima).
 
 ### Como ler o progresso
 
@@ -314,10 +322,10 @@ legítima do jogo de PS2, e a versão privada será gerada localmente a partir d
 | Etapa | Estado | Nota |
 | --- | --- | --- |
 | Recompilação estática do executável do jogo | Em andamento | Inicia e executa como código nativo as rotas de combate medidas. |
-| Renderizador nativo para os combates | Em andamento | Veja "Route frames native" acima; os quadros restantes voltam ao caminho seguro. |
+| Renderizador nativo para os combates | Em andamento | Veja "Route frames native" acima; os poucos quadros restantes ainda usam o caminho do PS2 de forma temporária. |
 | Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa nos painéis de Progress. |
 | Menus, telas de carregamento e outras cenas | Em andamento | Cobertos progressivamente depois dos combates. |
-| Remoção do caminho gráfico do PS2 | Planejado | Quando todas as rotas medidas chegarem a 100% de quadros nativos. |
+| Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não o terá: é apagado quando todas as rotas forem 100% nativas. |
 | Versão pública e instruções | Planejado | Apenas quando tudo estiver pronto; será anunciado aqui. |
 
 ### Aviso legal
