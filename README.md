@@ -1,4 +1,4 @@
-﻿# fuc-community
+# fuc-community
 
 <!-- fuc-observer:progress:start -->
 ## Progress
@@ -20,5 +20,5 @@
 | Regression tests passing | 379 / 379 (100.00 %) | 2026-10-29 |
 | Frozen milestones | 76 | 2026-10-29 |
 
-_Updated 2026-10-29T23:22:03Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-29T23:24:01Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
