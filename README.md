@@ -32,9 +32,6 @@ flowchart TB
 ## Progress
 
 ![route frames](badges/route_frames.svg)
-![first failure subsystems](badges/first_failure_subsystems.svg)
-![regression tests](badges/regression_tests.svg)
-![layer vm](badges/layer_vm.svg)
 
 **🟦 Currently being worked on:** IQ-004 · LT01 — 23 effect programs (outlined in blue below).
 
