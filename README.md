@@ -31,11 +31,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261030T174556Z)
+![route frames](badges/route_frames.svg?v=20261030T175146Z)
 
 **⬜ Currently being worked on:** L01 (local lights) · R01 (effect element registers) — 6 effect programs (white outline below).
 
-![FUC native game coverage](progress.svg?v=20261030T174556Z)
+![FUC native game coverage](progress.svg?v=20261030T175146Z)
 
 | At a glance | Value | Over |
 |---|---|---|
@@ -94,7 +94,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-10-30T17:45:56Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T17:51:46Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
