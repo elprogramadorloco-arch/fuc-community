@@ -188,6 +188,21 @@ backend**, straight to the GPU. **The goal is to delete the PS2 graphics path co
 covers the frames that are not yet native, and the "Route frames native" figure measures how much of the game already
 runs without it (diagram above).
 
+### Why a 100% native version
+
+- **Faster and lighter.** Without emulating the PS2 graphics chips (VIF, VU1, GIF, GS) the game no longer pays for
+  translating every frame through a model of the console, so it needs far less CPU and GPU and runs on more modest PCs.
+- **Real high resolution.** Scenes are drawn by a modern renderer from what the game means, not by enlarging a PS2
+  image, so higher resolutions, widescreen and smoother edges become possible at full quality.
+- **Faithful to the original.** The game's own logic is kept (statically recompiled), and every native part is proven
+  to behave like the original game before it is accepted, so gameplay, timing and visuals stay the same.
+- **Stable.** No emulator timing tricks or hardware-specific hacks: the game runs as a normal Windows program on a
+  standard Vulkan driver.
+- **Open to improvements.** Once nothing depends on PS2 hardware, features that are impossible or awkward on an
+  emulated console (texture packs, mods, better effects, new graphics options) can be added on top of a clean base.
+- **Preservation.** The game can keep running on modern computers without the original console and without an
+  emulator in between.
+
 ### How to read the progress
 
 - **Route frames native** is the most direct measure: the share of frames of real battles drawn entirely by the native
@@ -275,6 +290,23 @@ a través de un **backend Vulkan para Windows**, directamente en la GPU. **El ob
 gráfico de PS2.** Hasta que desaparezca, solo cubre los fotogramas que aún no son nativos, y la cifra "Route frames
 native" mide cuánto del juego ya funciona sin él (diagrama arriba).
 
+### Ventajas de una versión 100% nativa
+
+- **Más rápida y más ligera.** Sin emular los chips gráficos de PS2 (VIF, VU1, GIF, GS), el juego ya no tiene que
+  traducir cada fotograma a través de un modelo de la consola, así que necesita mucho menos CPU y GPU y funciona en
+  PCs más modestos.
+- **Alta resolución real.** Las escenas las dibuja un renderizador moderno a partir de lo que el juego quiere decir, no
+  ampliando una imagen de PS2, así que resoluciones altas, pantalla panorámica y bordes más suaves son posibles con
+  calidad completa.
+- **Fiel al original.** Se conserva la lógica propia del juego (recompilada estáticamente) y cada parte nativa se
+  demuestra igual al juego original antes de aceptarla, así que la jugabilidad, los tiempos y el aspecto se mantienen.
+- **Estable.** Sin trucos de sincronización de emulador ni parches específicos de hardware: el juego funciona como un
+  programa normal de Windows sobre un controlador Vulkan estándar.
+- **Abierta a mejoras.** Cuando nada depende del hardware de PS2, se pueden añadir sobre una base limpia funciones que
+  en una consola emulada son imposibles o difíciles (packs de texturas, mods, mejores efectos, nuevas opciones gráficas).
+- **Preservación.** El juego puede seguir funcionando en ordenadores modernos sin la consola original y sin un emulador
+  de por medio.
+
 ### Cómo leer el progreso
 
 - **Route frames native** es la medida más directa: el porcentaje de fotogramas de combates reales que dibuja por
@@ -361,6 +393,23 @@ RenderWare e do Fate), traduz para o **FUC Common Render IR** e desenha com o **
 **backend Vulkan para Windows**, direto na GPU. **O objetivo é apagar por completo o caminho gráfico do PS2.** Até
 ele desaparecer, cobre apenas os quadros que ainda não são nativos, e o número "Route frames native" mede quanto do
 jogo já funciona sem ele (diagrama acima).
+
+### Vantagens de uma versão 100% nativa
+
+- **Mais rápida e mais leve.** Sem emular os chips gráficos do PS2 (VIF, VU1, GIF, GS), o jogo não precisa mais
+  traduzir cada quadro por meio de um modelo do console, então precisa de muito menos CPU e GPU e roda em PCs mais
+  modestos.
+- **Alta resolução de verdade.** As cenas são desenhadas por um renderizador moderno a partir do que o jogo quer dizer,
+  e não ampliando uma imagem do PS2, então resoluções altas, tela widescreen e bordas mais suaves são possíveis com
+  qualidade total.
+- **Fiel ao original.** A lógica do próprio jogo é mantida (recompilada estaticamente) e cada parte nativa é provada
+  igual ao jogo original antes de ser aceita, então a jogabilidade, os tempos e o visual continuam os mesmos.
+- **Estável.** Sem truques de sincronização de emulador nem gambiarras de hardware: o jogo roda como um programa normal
+  do Windows sobre um driver Vulkan padrão.
+- **Aberta a melhorias.** Quando nada depende do hardware do PS2, recursos impossíveis ou difíceis num console emulado
+  (pacotes de texturas, mods, efeitos melhores, novas opções gráficas) podem ser adicionados sobre uma base limpa.
+- **Preservação.** O jogo pode continuar rodando em computadores modernos sem o console original e sem um emulador no
+  meio.
 
 ### Como ler o progresso
 
