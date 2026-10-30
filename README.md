@@ -33,8 +33,8 @@ flowchart TB
 
 ![route frames](badges/route_frames.svg)
 ![first failure subsystems](badges/first_failure_subsystems.svg)
-![layer vm](badges/layer_vm.svg)
 ![regression tests](badges/regression_tests.svg)
+![layer vm](badges/layer_vm.svg)
 
 **🟦 Currently being worked on:** IQ-004 · LT01 — 23 effect programs (outlined in blue below).
 
@@ -42,19 +42,19 @@ flowchart TB
 
 ### Effect programs by layer
 
-Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work).
+Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work). Each percentage counts only the programs that layer applies to; the others are grey (not applicable) and are listed apart.
 
 <details><summary><b>VM</b> · 99.55% (441/443)</summary>
 
 ![VM layer](layers/vm.svg)
 
 </details>
-<details><summary><b>Catalog</b> · 95.03% (421/443)</summary>
+<details><summary><b>Catalog</b> · 97.52% (432/443)</summary>
 
 ![Catalog layer](layers/catalog.svg)
 
 </details>
-<details><summary><b>R01</b> · 26.86% (119/443)</summary>
+<details><summary><b>R01</b> · 95.97% (119/124 · 319 not applicable)</summary>
 
 ![R01 layer](layers/r01.svg)
 
@@ -64,22 +64,22 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 ![K01 layer](layers/k01.svg)
 
 </details>
-<details><summary><b>K02</b> · 2.26% (10/443)</summary>
+<details><summary><b>K02</b> · 0.00% (0/10 · 433 not applicable)</summary>
 
 ![K02 layer](layers/k02.svg)
 
 </details>
-<details><summary><b>LB01</b> · 5.42% (24/443)</summary>
+<details><summary><b>LB01</b> · 70.59% (24/34 · 409 not applicable)</summary>
 
 ![LB01 layer](layers/lb01.svg)
 
 </details>
-<details><summary><b>EOPT</b> · 5.64% (25/443)</summary>
+<details><summary><b>EOPT</b> · 100.00% (25/25 · 418 not applicable)</summary>
 
 ![EOPT layer](layers/eopt.svg)
 
 </details>
-<details><summary><b>LT01</b> · 0.00% (0/443)</summary>
+<details><summary><b>LT01</b> · 0.00% (0/23 · 420 not applicable)</summary>
 
 ![LT01 layer](layers/lt01.svg)
 
@@ -92,7 +92,7 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 
 | Figure | Value | As of |
 |---|---|---|
-| Route frames native | 3226 / 3232 (99.81 %) | 2026-10-30 |
+| Route frames native | 3227 / 3233 (99.81 %) | 2026-10-30 |
 | Effect programs statically eligible | 277 / 443 (62.53 %) | 2026-10-29 |
 | Unknown closure | 41 / 128 (32.03 %) | 2026-10-29 |
 | Effect VM semantic support | 441 / 443 (99.55 %) | 2026-10-29 |
@@ -135,11 +135,14 @@ reports it is used.
 first (NONE = no static blocker left). Green squares are programs that are statically eligible for the native path.
 The biggest non-green box is the subsystem whose fix would unlock the most programs.
 
+**4. Regression tests.** One square per test of the newest regression run, grouped by suite (effects VM, frozen
+guards, renderer, catalog…): green = passing, red = failing. It shows that what already works keeps working.
+
 **Table.** Headline figures exactly as the project records them (catalog completeness, VM semantic support, closed
 unknowns, regression tests, frozen milestones). When a figure appears both here and in a panel, the table is
 authoritative: some milestones publish totals without updating every program.
 
-_Updated 2026-10-30T00:55:26Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T01:19:23Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
