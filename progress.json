@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T02:11:42Z",
+  "generated_utc": "2026-10-30T02:34:14Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -25,12 +25,6 @@
       "label": "Catalog support",
       "value": 432,
       "total": 443,
-      "as_of": "2026-10-29"
-    },
-    {
-      "label": "Regression tests passing",
-      "value": 379,
-      "total": 379,
       "as_of": "2026-10-29"
     }
   ],

@@ -31,11 +31,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261030T021142Z)
+![route frames](badges/route_frames.svg?v=20261030T023414Z)
 
 **🟦 Currently being worked on:** LT01 (local lights of effects) — 23 effect programs (outlined in blue below).
 
-![FUC progress](progress.svg?v=20261030T021142Z)
+![FUC progress](progress.svg?v=20261030T023414Z)
 
 ### Effect programs by layer
 
@@ -43,22 +43,22 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 
 <details><summary><b>Static eligible</b> · 62.53% (277/443)</summary>
 
-![Static eligible layer](layers/static_eligible.svg?v=20261030T021142Z)
+![Static eligible layer](layers/static_eligible.svg?v=20261030T023414Z)
 
 </details>
 <details><summary><b>VM</b> · 99.55% (441/443)</summary>
 
-![VM layer](layers/vm.svg?v=20261030T021142Z)
+![VM layer](layers/vm.svg?v=20261030T023414Z)
 
 </details>
 <details><summary><b>Catalog</b> · 97.52% (432/443)</summary>
 
-![Catalog layer](layers/catalog.svg?v=20261030T021142Z)
+![Catalog layer](layers/catalog.svg?v=20261030T023414Z)
 
 </details>
 <details><summary><b>LT01</b> · 0.00% (0/23)</summary>
 
-![LT01 layer](layers/lt01.svg?v=20261030T021142Z)
+![LT01 layer](layers/lt01.svg?v=20261030T023414Z)
 
 </details>
 
@@ -68,7 +68,6 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 | Effect programs statically eligible | 277 / 443 (62.53 %) | 2026-10-29 |
 | Effect VM semantic support | 441 / 443 (99.55 %) | 2026-10-29 |
 | Catalog support | 432 / 443 (97.52 %) | 2026-10-29 |
-| Regression tests passing | 379 / 379 (100.00 %) | 2026-10-29 |
 
 ### How to read the panels
 
@@ -93,9 +92,12 @@ square is one item (or N items, noted as "one cell = N"). The percentage on a bo
   summary), VM instructions, resource catalog, and the layer currently being worked on. Layers are independent and
   never added together; each percentage counts only the programs that layer applies to.
 - **Table.** Headline figures as the project records them; when a figure also appears in a panel, the table is
-  authoritative. *Regression tests passing* shows that what already works keeps working.
+  authoritative.
 
-_Updated 2026-10-30T02:11:42Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+These figures follow the current phase, moving rendering from the emulated PS2 path to the native renderer. Even at
+100 % they do not mean the game is playable yet; see *What the figures do not measure yet* below.
+
+_Updated 2026-10-30T02:34:14Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
