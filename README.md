@@ -152,6 +152,14 @@ Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vu
   the routes the project measured, not the whole game.
 - **Effect programs:** the game's visual effect programs, one square each, grouped by character.
 - **White outline:** what is being worked on right now.
+- **Why native coverage is 0 % today:** an item turns green only when the project records that it actually ran through
+  the native path while the game was playing. The project does not record that per effect program yet, so 0 % means
+  "not recorded", not "never ran". Native-ready programs are proven ready by analysis but have not been seen running;
+  as soon as per-program runtime records exist, their squares move from blue to green on their own.
+- **Characters, "effect programs only":** for each character only its effect programs are measured. Models, weapons,
+  materials, shadows, lights and supers have no inventory yet, so they are NOT MEASURED.
+- **Measured battle routes vs native 0 %:** the routes count whole frames drawn natively, not individual effect
+  programs, so a high route figure and a 0 % native figure do not contradict each other.
 - The full legend is in **Progress** above. Only aggregate figures are published; no game data.
 
 ### What the figures do not measure yet
@@ -261,6 +269,15 @@ Windows**, directamente en la GPU (diagrama arriba). "Measured battle routes" mu
   nativo. Solo cubre las rutas que el proyecto midió, no el juego entero.
 - **Effect programs:** los programas de efectos visuales del juego, un cuadrado cada uno, agrupados por personaje.
 - **Contorno blanco:** lo que se está trabajando ahora mismo.
+- **Por qué la cobertura nativa es 0 % hoy:** un elemento solo se pone verde cuando el proyecto registra que se ejecutó
+  de verdad por el camino nativo con el juego en marcha. El proyecto todavía no lo registra por programa de efectos, así
+  que 0 % significa "no registrado", no "nunca se ejecutó". Los programas listos (native-ready) están demostrados por
+  análisis pero nadie los ha visto ejecutarse; en cuanto haya registros por programa, sus cuadrados pasarán solos de
+  azul a verde.
+- **Personajes, "effect programs only":** de cada personaje solo se miden sus programas de efectos. Modelos, armas,
+  materiales, sombras, luces y supers aún no tienen inventario, así que salen como NOT MEASURED.
+- **Rutas de combate medidas frente al 0 % nativo:** las rutas cuentan fotogramas enteros dibujados en nativo, no
+  programas de efectos sueltos, así que una cifra alta en las rutas y un 0 % nativo no se contradicen.
 - La leyenda completa está en **Progress** arriba. Solo se publican cifras agregadas; ningún dato del juego.
 
 ### Lo que las cifras aún no miden
@@ -371,6 +388,14 @@ GPU (diagrama acima). "Measured battle routes" mostra quantos dos quadros de com
   Cobre apenas as rotas que o projeto mediu, não o jogo inteiro.
 - **Effect programs:** os programas de efeitos visuais do jogo, um quadrado cada, agrupados por personagem.
 - **Contorno branco:** o que está sendo trabalhado agora.
+- **Por que a cobertura nativa é 0 % hoje:** um item só fica verde quando o projeto registra que ele rodou de fato pelo
+  caminho nativo com o jogo em execução. O projeto ainda não registra isso por programa de efeitos, então 0 % significa
+  "não registrado", não "nunca rodou". Os programas prontos (native-ready) estão comprovados por análise, mas ninguém os
+  viu rodando; assim que houver registros por programa, seus quadrados passam sozinhos de azul para verde.
+- **Personagens, "effect programs only":** de cada personagem só são medidos os programas de efeitos. Modelos, armas,
+  materiais, sombras, luzes e supers ainda não têm inventário, por isso aparecem como NOT MEASURED.
+- **Rotas de combate medidas vs 0 % nativo:** as rotas contam quadros inteiros desenhados em nativo, não programas de
+  efeitos individuais, então um número alto nas rotas e 0 % nativo não se contradizem.
 - A legenda completa está em **Progress** acima. Só são publicados números agregados; nenhum dado do jogo.
 
 ### O que os números ainda não medem
