@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-29T23:28:44Z",
+  "generated_utc": "2026-10-30T00:40:09Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -348,7 +348,8 @@
             {
               "state": "DEPENDS",
               "tone": "attention",
-              "count": 23
+              "count": 23,
+              "current": true
             },
             {
               "state": "NO DEPENDENCY",
@@ -361,6 +362,7 @@
               "count": 409
             }
           ],
+          "current": true,
           "total": 443,
           "good": 0
         },
@@ -375,12 +377,24 @@
             {
               "state": "STATIC ONLY",
               "tone": "caution",
-              "count": 35
+              "count": 19
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 16,
+              "current": true
             },
             {
               "state": "UNCLASSIFIED",
               "tone": "unknown",
-              "count": 127
+              "count": 120
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
             },
             {
               "state": "FAIL",
@@ -448,7 +462,13 @@
             {
               "state": "STATIC ONLY",
               "tone": "caution",
-              "count": 24
+              "count": 8
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 16,
+              "current": true
             }
           ],
           "total": 26,
@@ -465,7 +485,13 @@
             {
               "state": "UNCLASSIFIED",
               "tone": "unknown",
-              "count": 9
+              "count": 2
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
             },
             {
               "state": "BLOCKED",
@@ -535,5 +561,13 @@
       "good": 277,
       "percent": 62.52821670428894
     }
-  ]
+  ],
+  "current_work": {
+    "iq": "IQ-004",
+    "subsystems": [
+      "LT01"
+    ],
+    "programs": 23,
+    "as_of": "2026-10-29"
+  }
 }

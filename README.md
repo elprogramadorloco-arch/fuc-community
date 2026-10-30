@@ -36,6 +36,8 @@ flowchart TB
 ![layer vm](badges/layer_vm.svg)
 ![regression tests](badges/regression_tests.svg)
 
+**🟦 Currently being worked on:** IQ-004 · LT01 — 23 effect programs (outlined in blue below).
+
 ![FUC progress](progress.svg)
 
 | Figure | Value | As of |
@@ -86,7 +88,7 @@ The biggest non-green box is the subsystem whose fix would unlock the most progr
 unknowns, regression tests, frozen milestones). When a figure appears both here and in a panel, the table is
 authoritative: some milestones publish totals without updating every program.
 
-_Updated 2026-10-29T23:28:44Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T00:40:09Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
