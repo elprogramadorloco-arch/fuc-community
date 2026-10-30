@@ -121,7 +121,7 @@ square is one item (or N items, noted as "one cell = N"). The percentage on a bo
 - **Table.** Headline figures as the project records them; when a figure also appears in a panel, the table is
   authoritative. *Regression tests passing* shows that what already works keeps working.
 
-_Updated 2026-10-30T01:30:20Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T01:36:04Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
