@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T02:34:14Z",
+  "generated_utc": "2026-10-30T12:19:11Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -19,13 +19,13 @@
       "label": "Effect VM semantic support",
       "value": 441,
       "total": 443,
-      "as_of": "2026-10-29"
+      "as_of": "2026-10-30"
     },
     {
       "label": "Catalog support",
       "value": 432,
       "total": 443,
-      "as_of": "2026-10-29"
+      "as_of": "2026-10-30"
     }
   ],
   "panels": [
@@ -163,13 +163,7 @@
             {
               "state": "STATIC ONLY",
               "tone": "caution",
-              "count": 19
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 16,
-              "current": true
+              "count": 35
             },
             {
               "state": "NO VERDICT",
@@ -194,13 +188,7 @@
             {
               "state": "NOT ELIGIBLE",
               "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 7,
-              "current": true
+              "count": 9
             }
           ],
           "total": 443,
@@ -244,34 +232,10 @@
           ],
           "total": 443,
           "good": 432
-        },
-        {
-          "name": "LT01",
-          "segments": [
-            {
-              "state": "DEPENDS",
-              "tone": "attention",
-              "count": 23,
-              "current": true
-            },
-            {
-              "state": "NO DEPENDENCY",
-              "tone": "neutral",
-              "count": 11
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 409
-            }
-          ],
-          "current": true,
-          "total": 443,
-          "good": 0
         }
       ],
       "combined": false,
-      "total": 1772,
+      "total": 1329,
       "good": 1150,
       "not_applicable": 0
     },
@@ -317,13 +281,7 @@
             {
               "state": "STATIC ONLY",
               "tone": "caution",
-              "count": 8
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 16,
-              "current": true
+              "count": 24
             }
           ],
           "total": 26,
@@ -345,13 +303,7 @@
             {
               "state": "NOT ELIGIBLE",
               "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 7,
-              "current": true
+              "count": 9
             }
           ],
           "total": 19,
@@ -430,13 +382,6 @@
       "not_applicable": 0
     }
   ],
-  "current_work": {
-    "subsystems": [
-      "LT01 (local lights of effects)"
-    ],
-    "programs": 23,
-    "as_of": "2026-10-29"
-  },
   "layer_views": [
     {
       "id": "layer_static_eligible",
@@ -480,13 +425,7 @@
             {
               "state": "STATIC ONLY",
               "tone": "caution",
-              "count": 8
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 16,
-              "current": true
+              "count": 24
             }
           ],
           "total": 26,
@@ -508,13 +447,7 @@
             {
               "state": "NOT ELIGIBLE",
               "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 7,
-              "current": true
+              "count": 9
             }
           ],
           "total": 19,
@@ -629,13 +562,7 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 10
-            },
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 16,
-              "current": true
+              "count": 26
             }
           ],
           "total": 26,
@@ -647,13 +574,7 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 12
-            },
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 7,
-              "current": true
+              "count": 19
             }
           ],
           "total": 19,
@@ -768,13 +689,7 @@
             {
               "state": "COMPLETE",
               "tone": "good",
-              "count": 8
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 16,
-              "current": true
+              "count": 24
             }
           ],
           "total": 26,
@@ -791,13 +706,7 @@
             {
               "state": "GAP",
               "tone": "bad",
-              "count": 3
-            },
-            {
-              "state": "GAP",
-              "tone": "bad",
-              "count": 7,
-              "current": true
+              "count": 10
             }
           ],
           "total": 19,
@@ -873,46 +782,6 @@
       "total": 443,
       "good": 432,
       "percent": 97.51693002257336,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_lt01",
-      "title": "Effect programs: LT01 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 23 programs this layer applies to, grouped by first-failure subsystem and coloured by their LT01 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "DEPENDS",
-              "tone": "attention",
-              "count": 16,
-              "current": true
-            }
-          ],
-          "total": 16,
-          "good": 0
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "DEPENDS",
-              "tone": "attention",
-              "count": 7,
-              "current": true
-            }
-          ],
-          "total": 7,
-          "good": 0
-        }
-      ],
-      "combined": true,
-      "total": 23,
-      "good": 0,
-      "percent": 0,
       "not_applicable": 0
     }
   ]
