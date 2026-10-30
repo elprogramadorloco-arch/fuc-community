@@ -31,11 +31,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261030T020512Z)
+![route frames](badges/route_frames.svg?v=20261030T021142Z)
 
 **🟦 Currently being worked on:** LT01 (local lights of effects) — 23 effect programs (outlined in blue below).
 
-![FUC progress](progress.svg?v=20261030T020512Z)
+![FUC progress](progress.svg?v=20261030T021142Z)
 
 ### Effect programs by layer
 
@@ -43,22 +43,22 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 
 <details><summary><b>Static eligible</b> · 62.53% (277/443)</summary>
 
-![Static eligible layer](layers/static_eligible.svg?v=20261030T020512Z)
+![Static eligible layer](layers/static_eligible.svg?v=20261030T021142Z)
 
 </details>
 <details><summary><b>VM</b> · 99.55% (441/443)</summary>
 
-![VM layer](layers/vm.svg?v=20261030T020512Z)
+![VM layer](layers/vm.svg?v=20261030T021142Z)
 
 </details>
 <details><summary><b>Catalog</b> · 97.52% (432/443)</summary>
 
-![Catalog layer](layers/catalog.svg?v=20261030T020512Z)
+![Catalog layer](layers/catalog.svg?v=20261030T021142Z)
 
 </details>
 <details><summary><b>LT01</b> · 0.00% (0/23)</summary>
 
-![LT01 layer](layers/lt01.svg?v=20261030T020512Z)
+![LT01 layer](layers/lt01.svg?v=20261030T021142Z)
 
 </details>
 
@@ -95,7 +95,7 @@ square is one item (or N items, noted as "one cell = N"). The percentage on a bo
 - **Table.** Headline figures as the project records them; when a figure also appears in a panel, the table is
   authoritative. *Regression tests passing* shows that what already works keeps working.
 
-_Updated 2026-10-30T02:05:12Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T02:11:42Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
