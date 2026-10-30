@@ -92,7 +92,7 @@ Click a layer to open its map: the same programs grouped by first-failure subsys
 
 | Figure | Value | As of |
 |---|---|---|
-| Route frames native | 3226 / 3232 (99.81 %) | 2026-10-29 |
+| Route frames native | 3226 / 3232 (99.81 %) | 2026-10-30 |
 | Effect programs statically eligible | 277 / 443 (62.53 %) | 2026-10-29 |
 | Unknown closure | 41 / 128 (32.03 %) | 2026-10-29 |
 | Effect VM semantic support | 441 / 443 (99.55 %) | 2026-10-29 |
@@ -123,7 +123,8 @@ GSH, GCU, GGA). Squares are frames from the newest run of that route: green fram
 renderer, orange frames fell back to the legacy path. This is the most direct measure of run-time progress. The squares
 show proportions, not the order of the frames.
 
-**2. Effect programs by semantic layer.** Every box holds the same effect programs of the game, measured against a
+**2. Effect programs by layer (the drop-downs below the image).** Each layer opens its own map of the same effect
+programs, grouped by first-failure subsystem. Every layer measures the programs against a
 different layer of the port (VM semantics, resource catalog, element registers R01, K01/K02 persistence, late binding
 LB01, end-of-pass texture rule EOPT, local lights LT01, and static eligibility). The layers are independent, so they are
 never added together; a program is only fully native when every layer it needs is green. Purple usually means that a
@@ -138,7 +139,7 @@ The biggest non-green box is the subsystem whose fix would unlock the most progr
 unknowns, regression tests, frozen milestones). When a figure appears both here and in a panel, the table is
 authoritative: some milestones publish totals without updating every program.
 
-_Updated 2026-10-30T00:40:09Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T00:55:26Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---

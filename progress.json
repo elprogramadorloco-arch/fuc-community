@@ -1,13 +1,13 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T00:40:09Z",
+  "generated_utc": "2026-10-30T00:55:26Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
       "label": "Route frames native",
       "value": 3226,
       "total": 3232,
-      "as_of": "2026-10-29"
+      "as_of": "2026-10-30"
     },
     {
       "label": "Effect programs statically eligible",
@@ -50,7 +50,7 @@
       "id": "route_frames",
       "title": "Route frames: native vs fallback",
       "unit": "frames",
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-30",
       "note": "Newest run census per route, as measured by the project.",
       "groups": [
         {
@@ -569,5 +569,1264 @@
     ],
     "programs": 23,
     "as_of": "2026-10-29"
-  }
+  },
+  "layer_views": [
+    {
+      "id": "layer_vm",
+      "title": "Effect programs: VM layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their VM status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 274
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 118
+            }
+          ],
+          "total": 118,
+          "good": 118
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 10
+            },
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 16,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 26
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 12
+            },
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 19
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 2
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 441,
+      "percent": 99.54853273137698
+    },
+    {
+      "id": "layer_catalog",
+      "title": "Effect programs: Catalog layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their Catalog status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 274
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 117
+            },
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 118,
+          "good": 117
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 8
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 16,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 26
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 12
+            },
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 2
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 421,
+      "percent": 95.03386004514672
+    },
+    {
+      "id": "layer_r01",
+      "title": "Effect programs: R01 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their R01 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 67
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 206
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 274,
+          "good": 67
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 24
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 93
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 118,
+          "good": 24
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "RESOLVED",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 10,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 6
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 6,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 14
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 10
+            },
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 2,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 5,
+              "current": true
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 19,
+          "good": 12
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 1
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 2,
+          "good": 1
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 119,
+      "percent": 26.86230248306998
+    },
+    {
+      "id": "layer_k01",
+      "title": "Effect programs: K01 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their K01 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 254
+            },
+            {
+              "state": "CONDITIONAL",
+              "tone": "caution",
+              "count": 5
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 15
+            }
+          ],
+          "total": 274,
+          "good": 254
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 105
+            },
+            {
+              "state": "CONDITIONAL",
+              "tone": "caution",
+              "count": 2
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 11
+            }
+          ],
+          "total": 118,
+          "good": 105
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 10
+            },
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 10,
+              "current": true
+            },
+            {
+              "state": "NOT NATIVE",
+              "tone": "attention",
+              "count": 6,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 20
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 6
+            },
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 7,
+              "current": true
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 6
+            }
+          ],
+          "total": 19,
+          "good": 13
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 2
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 2
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "CONDITIONAL",
+              "tone": "caution",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "EXEMPT",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 397,
+      "percent": 89.61625282167043
+    },
+    {
+      "id": "layer_k02",
+      "title": "Effect programs: K02 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their K02 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 9
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 264
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 274,
+          "good": 9
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 1
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 115
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 118,
+          "good": 1
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 16,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 0
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 12
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 10,
+      "percent": 2.2573363431151243
+    },
+    {
+      "id": "layer_lb01",
+      "title": "Effect programs: LB01 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their LB01 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 0
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 118
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "PROVEN",
+              "tone": "good",
+              "count": 8
+            },
+            {
+              "state": "PROVEN",
+              "tone": "good",
+              "count": 16,
+              "current": true
+            },
+            {
+              "state": "NOT EVALUATED",
+              "tone": "neutral",
+              "count": 2
+            }
+          ],
+          "total": 26,
+          "good": 24
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 2
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "NOT EVALUATED",
+              "tone": "neutral",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 24,
+      "percent": 5.417607223476298
+    },
+    {
+      "id": "layer_eopt",
+      "title": "Effect programs: EOPT layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their EOPT status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 0
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 118
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 8
+            },
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 16,
+              "current": true
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 26,
+          "good": 24
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 2
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 25,
+      "percent": 5.643340857787811
+    },
+    {
+      "id": "layer_lt01",
+      "title": "Effect programs: LT01 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their LT01 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 0
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 118
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "DEPENDS",
+              "tone": "attention",
+              "count": 16,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 8
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 26,
+          "good": 0
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "DEPENDS",
+              "tone": "attention",
+              "count": 7,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 2
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 0,
+      "percent": 0
+    },
+    {
+      "id": "layer_static_eligible",
+      "title": "Effect programs: Static eligible layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Programs grouped by first-failure subsystem, coloured by their Static eligible status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 274
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 117
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 8
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 16,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 2
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 9
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 2
+            },
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 7,
+              "current": true
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "UNCLASSIFIED",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 277,
+      "percent": 62.52821670428894
+    }
+  ]
 }
