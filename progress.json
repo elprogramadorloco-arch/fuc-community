@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T01:19:23Z",
+  "generated_utc": "2026-10-30T01:30:20Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -13,12 +13,6 @@
       "label": "Effect programs statically eligible",
       "value": 277,
       "total": 443,
-      "as_of": "2026-10-29"
-    },
-    {
-      "label": "Unknown closure",
-      "value": 41,
-      "total": 128,
       "as_of": "2026-10-29"
     },
     {
@@ -37,11 +31,6 @@
       "label": "Regression tests passing",
       "value": 379,
       "total": 379,
-      "as_of": "2026-10-29"
-    },
-    {
-      "label": "Frozen milestones",
-      "value": 76,
       "as_of": "2026-10-29"
     }
   ],
@@ -578,254 +567,11 @@
       "good": 277,
       "percent": 62.52821670428894,
       "not_applicable": 0
-    },
-    {
-      "id": "regression_tests",
-      "title": "Regression tests (newest record)",
-      "unit": "tests",
-      "as_of": "2026-10-29",
-      "note": "One cell per test, grouped by suite: green = passing, red = failing. Shows that what already works keeps working.",
-      "groups": [
-        {
-          "name": "efxvm",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 129
-            }
-          ],
-          "total": 129,
-          "good": 129
-        },
-        {
-          "name": "adapter",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 60
-            }
-          ],
-          "total": 60,
-          "good": 60
-        },
-        {
-          "name": "frozen_guard",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 26
-            }
-          ],
-          "total": 26,
-          "good": 26
-        },
-        {
-          "name": "vulkan",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 21
-            }
-          ],
-          "total": 21,
-          "good": 21
-        },
-        {
-          "name": "cht01",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 19
-            }
-          ],
-          "total": 19,
-          "good": 19
-        },
-        {
-          "name": "render_ir",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 16
-            }
-          ],
-          "total": 16,
-          "good": 16
-        },
-        {
-          "name": "local_light",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 14
-            }
-          ],
-          "total": 14,
-          "good": 14
-        },
-        {
-          "name": "chc",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 13
-            }
-          ],
-          "total": 13,
-          "good": 13
-        },
-        {
-          "name": "g4mlc",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 13
-            }
-          ],
-          "total": 13,
-          "good": 13
-        },
-        {
-          "name": "lb01",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 11
-            }
-          ],
-          "total": 11,
-          "good": 11
-        },
-        {
-          "name": "stg",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 11
-            }
-          ],
-          "total": 11,
-          "good": 11
-        },
-        {
-          "name": "z1",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 8
-            }
-          ],
-          "total": 8,
-          "good": 8
-        },
-        {
-          "name": "g4r",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 7
-            }
-          ],
-          "total": 7,
-          "good": 7
-        },
-        {
-          "name": "cat01",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 6
-            }
-          ],
-          "total": 6,
-          "good": 6
-        },
-        {
-          "name": "g4m",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 6
-            }
-          ],
-          "total": 6,
-          "good": 6
-        },
-        {
-          "name": "g4mw",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 6
-            }
-          ],
-          "total": 6,
-          "good": 6
-        },
-        {
-          "name": "vpa",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 6
-            }
-          ],
-          "total": 6,
-          "good": 6
-        },
-        {
-          "name": "skin_gpu",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 5
-            }
-          ],
-          "total": 5,
-          "good": 5
-        },
-        {
-          "name": "g4mlc_gpu",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 2
-        }
-      ],
-      "combined": true,
-      "total": 379,
-      "good": 379,
-      "percent": 100,
-      "not_applicable": 0
     }
   ],
   "current_work": {
-    "iq": "IQ-004",
     "subsystems": [
-      "LT01"
+      "LT01 (local lights of effects)"
     ],
     "programs": 23,
     "as_of": "2026-10-29"
