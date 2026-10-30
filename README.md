@@ -40,6 +40,56 @@ flowchart TB
 
 ![FUC progress](progress.svg)
 
+### Effect programs by layer
+
+Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work).
+
+<details><summary><b>VM</b> · 99.55% (441/443)</summary>
+
+![VM layer](layers/vm.svg)
+
+</details>
+<details><summary><b>Catalog</b> · 95.03% (421/443)</summary>
+
+![Catalog layer](layers/catalog.svg)
+
+</details>
+<details><summary><b>R01</b> · 26.86% (119/443)</summary>
+
+![R01 layer](layers/r01.svg)
+
+</details>
+<details><summary><b>K01</b> · 89.62% (397/443)</summary>
+
+![K01 layer](layers/k01.svg)
+
+</details>
+<details><summary><b>K02</b> · 2.26% (10/443)</summary>
+
+![K02 layer](layers/k02.svg)
+
+</details>
+<details><summary><b>LB01</b> · 5.42% (24/443)</summary>
+
+![LB01 layer](layers/lb01.svg)
+
+</details>
+<details><summary><b>EOPT</b> · 5.64% (25/443)</summary>
+
+![EOPT layer](layers/eopt.svg)
+
+</details>
+<details><summary><b>LT01</b> · 0.00% (0/443)</summary>
+
+![LT01 layer](layers/lt01.svg)
+
+</details>
+<details><summary><b>Static eligible</b> · 62.53% (277/443)</summary>
+
+![Static eligible layer](layers/static_eligible.svg)
+
+</details>
+
 | Figure | Value | As of |
 |---|---|---|
 | Route frames native | 3226 / 3232 (99.81 %) | 2026-10-29 |
