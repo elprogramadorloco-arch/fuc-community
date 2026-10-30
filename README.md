@@ -31,59 +31,59 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg)
+![route frames](badges/route_frames.svg?v=20261030T014430Z)
 
 **🟦 Currently being worked on:** LT01 (local lights of effects) — 23 effect programs (outlined in blue below).
 
-![FUC progress](progress.svg)
+![FUC progress](progress.svg?v=20261030T014430Z)
 
 ### Effect programs by layer
 
-Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work). Each percentage counts only the programs that layer applies to; the others are grey (not applicable) and are listed apart.
+Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work). Each percentage counts only the programs that layer applies to.
 
 <details><summary><b>VM</b> · 99.55% (441/443)</summary>
 
-![VM layer](layers/vm.svg)
+![VM layer](layers/vm.svg?v=20261030T014430Z)
 
 </details>
 <details><summary><b>Catalog</b> · 97.52% (432/443)</summary>
 
-![Catalog layer](layers/catalog.svg)
+![Catalog layer](layers/catalog.svg?v=20261030T014430Z)
 
 </details>
-<details><summary><b>R01</b> · 95.97% (119/124 · 319 not applicable)</summary>
+<details><summary><b>R01</b> · 95.97% (119/124)</summary>
 
-![R01 layer](layers/r01.svg)
+![R01 layer](layers/r01.svg?v=20261030T014430Z)
 
 </details>
 <details><summary><b>K01</b> · 89.62% (397/443)</summary>
 
-![K01 layer](layers/k01.svg)
+![K01 layer](layers/k01.svg?v=20261030T014430Z)
 
 </details>
-<details><summary><b>K02</b> · 0.00% (0/10 · 433 not applicable)</summary>
+<details><summary><b>K02</b> · 0.00% (0/10)</summary>
 
-![K02 layer](layers/k02.svg)
-
-</details>
-<details><summary><b>LB01</b> · 70.59% (24/34 · 409 not applicable)</summary>
-
-![LB01 layer](layers/lb01.svg)
+![K02 layer](layers/k02.svg?v=20261030T014430Z)
 
 </details>
-<details><summary><b>EOPT</b> · 100.00% (25/25 · 418 not applicable)</summary>
+<details><summary><b>LB01</b> · 70.59% (24/34)</summary>
 
-![EOPT layer](layers/eopt.svg)
+![LB01 layer](layers/lb01.svg?v=20261030T014430Z)
 
 </details>
-<details><summary><b>LT01</b> · 0.00% (0/23 · 420 not applicable)</summary>
+<details><summary><b>EOPT</b> · 100.00% (25/25)</summary>
 
-![LT01 layer](layers/lt01.svg)
+![EOPT layer](layers/eopt.svg?v=20261030T014430Z)
+
+</details>
+<details><summary><b>LT01</b> · 0.00% (0/23)</summary>
+
+![LT01 layer](layers/lt01.svg?v=20261030T014430Z)
 
 </details>
 <details><summary><b>Static eligible</b> · 62.53% (277/443)</summary>
 
-![Static eligible layer](layers/static_eligible.svg)
+![Static eligible layer](layers/static_eligible.svg?v=20261030T014430Z)
 
 </details>
 
@@ -121,7 +121,7 @@ square is one item (or N items, noted as "one cell = N"). The percentage on a bo
 - **Table.** Headline figures as the project records them; when a figure also appears in a panel, the table is
   authoritative. *Regression tests passing* shows that what already works keeps working.
 
-_Updated 2026-10-30T01:39:48Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-30T01:44:30Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
