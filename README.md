@@ -132,7 +132,7 @@ A plain PS2 recompilation still emulates the console's graphics hardware: the ga
 that go through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) on Vulkan. The native version
 removes that layer: it takes what the game *means* (RenderWare and Fate's own semantics), turns it into the **FUC Common
 Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vulkan backend**, straight to the GPU
-(diagram above). "Route frames native" measures how much of the game already runs this way.
+(diagram above). "Measured battle routes" shows how many of the measured battle frames already run this way (not the whole game).
 
 ### Why a 100% native version
 
@@ -147,11 +147,15 @@ Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vu
 
 ### How to read the progress
 
-- **Route frames native:** share of battle frames drawn entirely by the native renderer (the most direct measure).
-- **Effect programs:** the game's visual effect programs, by what blocks them and layer by layer (drop-downs); each layer's
-  percentage counts only the programs it applies to.
-- **Blue border:** what is being worked on right now.
-- The colour legend and the panel guide are in **Progress** above. Only aggregate figures are published; no game data.
+- **FUC Native Game Coverage:** every known item has one state (NATIVE, PARTIAL, FALLBACK, READY / NOT SEEN, UNKNOWN,
+  UNTOUCHED). Only areas with a known inventory get a percentage; the others say NOT MEASURED instead of guessing.
+- **Native, native-ready and investigated coverage** are three separate figures: actually executed natively; proven ready
+  but not seen running yet; examined at all. They are never added together.
+- **Measured battle routes:** share of the measured battle frames drawn entirely by the native renderer. It covers only
+  the routes the project measured, not the whole game.
+- **Effect programs:** the game's visual effect programs, one square each, grouped by character.
+- **White outline:** what is being worked on right now.
+- The full legend is in **Progress** above. Only aggregate figures are published; no game data.
 
 ### What the figures do not measure yet
 
@@ -180,8 +184,8 @@ the private build will be generated locally from it, as with the PSP version.
 | Step | Status | Note |
 | --- | --- | --- |
 | Static recompilation of the game executable | In progress | Boots and runs the measured battle routes as native code. |
-| Native renderer for battles | In progress | See "Route frames native"; the few remaining frames still use the PS2 path temporarily. |
-| Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in the Progress panels. |
+| Native renderer for battles | In progress | See "Measured battle routes"; the few remaining measured frames still use the PS2 path temporarily. |
+| Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in Progress (one square per program). |
 | Menus, loading screens and other scenes | In progress | Covered progressively after battles. |
 | Image identical to the original game | In progress | Compared family by family against the original game. |
 | Full speed (60 fps on every frame) | In progress | Native frames are much faster than the emulated path, not yet fast enough. |
@@ -235,7 +239,7 @@ Una recompilación de PS2 sin más sigue emulando el hardware gráfico de la con
 convierten en comandos de PS2 que pasan por **VIF / VU1 / GIF / GS** emulados y por un renderizador de GS (**ParaLLEl-GS**)
 sobre Vulkan. La versión nativa elimina esa capa: toma lo que el juego *quiere decir* (la semántica de RenderWare y de Fate),
 lo convierte al **FUC Common Render IR** y lo dibuja con el **FUC Native Renderer** a través de un **backend Vulkan para
-Windows**, directamente en la GPU (diagrama arriba). "Route frames native" mide cuánto del juego ya funciona así.
+Windows**, directamente en la GPU (diagrama arriba). "Measured battle routes" muestra cuántos de los fotogramas de combate medidos ya funcionan así (no el juego entero).
 
 ### Ventajas de una versión 100% nativa
 
@@ -251,13 +255,16 @@ Windows**, directamente en la GPU (diagrama arriba). "Route frames native" mide 
 
 ### Cómo leer el progreso
 
-- **Route frames native:** porcentaje de fotogramas de combate dibujados por completo por el renderizador nativo (la medida
-  más directa).
-- **Effect programs:** los programas de efectos visuales del juego, según qué los bloquea y capa por capa (desplegables);
-  el porcentaje de cada capa cuenta solo los programas a los que aplica.
-- **Borde azul:** lo que se está trabajando ahora mismo.
-- La leyenda de colores y la guía de los paneles están en **Progress** arriba. Solo se publican cifras agregadas; ningún
-  dato del juego.
+- **FUC Native Game Coverage:** cada elemento conocido tiene un estado (NATIVE, PARTIAL, FALLBACK, READY / NOT SEEN,
+  UNKNOWN, UNTOUCHED). Solo las áreas con inventario conocido tienen porcentaje; las demás dicen NOT MEASURED en vez de
+  adivinar.
+- **Cobertura nativa, lista e investigada** son tres cifras separadas: ejecutado de verdad en nativo; demostrado listo pero
+  aún sin verse en marcha; examinado. Nunca se suman.
+- **Measured battle routes:** porcentaje de los fotogramas de combate medidos que dibuja por completo el renderizador
+  nativo. Solo cubre las rutas que el proyecto midió, no el juego entero.
+- **Effect programs:** los programas de efectos visuales del juego, un cuadrado cada uno, agrupados por personaje.
+- **Contorno blanco:** lo que se está trabajando ahora mismo.
+- La leyenda completa está en **Progress** arriba. Solo se publican cifras agregadas; ningún dato del juego.
 
 ### Lo que las cifras aún no miden
 
@@ -288,8 +295,8 @@ versión privada se generará localmente a partir de ella, igual que con la vers
 | Paso | Estado | Nota |
 | --- | --- | --- |
 | Recompilación estática del ejecutable del juego | En curso | Arranca y ejecuta como código nativo las rutas de combate medidas. |
-| Renderizador nativo para los combates | En curso | Ver "Route frames native"; los pocos fotogramas restantes aún usan el camino de PS2 de forma temporal. |
-| Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en los paneles de Progress. |
+| Renderizador nativo para los combates | En curso | Ver "Measured battle routes"; los pocos fotogramas medidos restantes aún usan el camino de PS2 de forma temporal. |
+| Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en Progress (un cuadrado por programa). |
 | Menús, pantallas de carga y otras escenas | En curso | Se cubren progresivamente después de los combates. |
 | Imagen idéntica al juego original | En curso | Se compara familia por familia con el juego original. |
 | Velocidad completa (60 fps en todos los fotogramas) | En curso | Los fotogramas nativos ya son mucho más rápidos que el camino emulado, aún no lo suficiente. |
@@ -343,7 +350,7 @@ Uma recompilação simples do PS2 continua emulando o hardware gráfico do conso
 comandos do PS2 que passam por **VIF / VU1 / GIF / GS** emulados e por um renderizador de GS (**ParaLLEl-GS**) sobre Vulkan.
 A versão nativa elimina essa camada: pega o que o jogo *quer dizer* (a semântica do RenderWare e do Fate), converte para o
 **FUC Common Render IR** e desenha com o **FUC Native Renderer** por meio de um **backend Vulkan para Windows**, direto na
-GPU (diagrama acima). "Route frames native" mede quanto do jogo já funciona assim.
+GPU (diagrama acima). "Measured battle routes" mostra quantos dos quadros de combate medidos já funcionam assim (não o jogo inteiro).
 
 ### Vantagens de uma versão 100% nativa
 
@@ -359,13 +366,15 @@ GPU (diagrama acima). "Route frames native" mede quanto do jogo já funciona ass
 
 ### Como ler o progresso
 
-- **Route frames native:** porcentagem de quadros de combate desenhados inteiramente pelo renderizador nativo (a medida
-  mais direta).
-- **Effect programs:** os programas de efeitos visuais do jogo, pelo que os bloqueia e camada por camada (menus
-  expansíveis); a porcentagem de cada camada conta apenas os programas aos quais ela se aplica.
-- **Borda azul:** o que está sendo trabalhado agora.
-- A legenda de cores e o guia dos painéis estão em **Progress** acima. Só são publicados números agregados; nenhum dado do
-  jogo.
+- **FUC Native Game Coverage:** cada item conhecido tem um estado (NATIVE, PARTIAL, FALLBACK, READY / NOT SEEN, UNKNOWN,
+  UNTOUCHED). Só as áreas com inventário conhecido têm porcentagem; as outras dizem NOT MEASURED em vez de adivinhar.
+- **Cobertura nativa, pronta e investigada** são três números separados: executado de fato em nativo; comprovado pronto
+  mas ainda não visto rodando; examinado. Nunca são somados.
+- **Measured battle routes:** porcentagem dos quadros de combate medidos desenhados inteiramente pelo renderizador nativo.
+  Cobre apenas as rotas que o projeto mediu, não o jogo inteiro.
+- **Effect programs:** os programas de efeitos visuais do jogo, um quadrado cada, agrupados por personagem.
+- **Contorno branco:** o que está sendo trabalhado agora.
+- A legenda completa está em **Progress** acima. Só são publicados números agregados; nenhum dado do jogo.
 
 ### O que os números ainda não medem
 
@@ -396,8 +405,8 @@ versão privada será gerada localmente a partir dela, como na versão de PSP.
 | Etapa | Estado | Nota |
 | --- | --- | --- |
 | Recompilação estática do executável do jogo | Em andamento | Inicia e executa como código nativo as rotas de combate medidas. |
-| Renderizador nativo para os combates | Em andamento | Veja "Route frames native"; os poucos quadros restantes ainda usam o caminho do PS2 de forma temporária. |
-| Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa nos painéis de Progress. |
+| Renderizador nativo para os combates | Em andamento | Veja "Measured battle routes"; os poucos quadros medidos restantes ainda usam o caminho do PS2 de forma temporária. |
+| Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa em Progress (um quadrado por programa). |
 | Menus, telas de carregamento e outras cenas | Em andamento | Cobertos progressivamente depois dos combates. |
 | Imagem idêntica ao jogo original | Em andamento | Comparada família por família com o jogo original. |
 | Velocidade completa (60 fps em todos os quadros) | Em andamento | Os quadros nativos já são muito mais rápidos que o caminho emulado, ainda não o suficiente. |
