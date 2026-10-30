@@ -151,6 +151,23 @@ Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vu
 - **Blue border:** what is being worked on right now.
 - The colour legend and the panel guide are in **Progress** above. Only aggregate figures are published; no game data.
 
+### What the figures do not measure yet
+
+Reaching 100 % in the progress figures does **not** mean the game is playable yet. They follow the current phase: moving
+scene and effect rendering from the emulated PS2 path to the native renderer. After that, these steps remain:
+
+1. **The whole game.** The battle routes measured so far cover few characters and stages. Every character, stage, menu,
+   character select, HUD, super move, ending and game mode (Arcade, Story, Versus, Practice) must also run with no fallback.
+2. **Correct image.** "Supported" or "eligible" means the native renderer can run a program, not that its pixels already
+   match the original. Each family of effects and scenes is compared against the original game.
+3. **Speed.** Every frame must stay comfortably under 16.67 ms (60 fps). Native frames are already far faster than the
+   emulated path, but not yet fast enough; leftover emulation work and diagnostic hooks still have to be removed.
+4. **Release build.** The newest work has to be promoted into the build that is actually used, validated by regression
+   tests and a full route.
+5. **Removing the PS2 path.** Only after the steps above is the emulated path deleted for good.
+6. **The rest of the game.** The game logic is the original code, recompiled, but real-time audio, controller, legitimate
+   save data, loading and long-session stability must be checked end to end.
+
 ### Requirements
 
 None yet: there is nothing to download. A future build will require your own lawfully obtained copy of the PS2 game, and
@@ -164,6 +181,9 @@ the private build will be generated locally from it, as with the PSP version.
 | Native renderer for battles | In progress | See "Route frames native"; the few remaining frames still use the PS2 path temporarily. |
 | Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in the Progress panels. |
 | Menus, loading screens and other scenes | In progress | Covered progressively after battles. |
+| Image identical to the original game | In progress | Compared family by family against the original game. |
+| Full speed (60 fps on every frame) | In progress | Native frames are much faster than the emulated path, not yet fast enough. |
+| Audio, controller, save data, loading, stability | Planned | Checked end to end before any public build. |
 | Complete removal of the PS2 graphics path | Planned (goal) | The final version contains neither it nor any fallback. |
 | Public build and instructions | Planned | Announced here when everything is ready. |
 
@@ -237,6 +257,25 @@ Windows**, directamente en la GPU (diagrama arriba). "Route frames native" mide 
 - La leyenda de colores y la guía de los paneles están en **Progress** arriba. Solo se publican cifras agregadas; ningún
   dato del juego.
 
+### Lo que las cifras aún no miden
+
+Llegar al 100 % en las cifras de progreso **no** significa que el juego ya se pueda jugar. Siguen la fase actual: pasar el
+dibujado de escenas y efectos del camino de PS2 emulado al renderizador nativo. Después quedan estos pasos:
+
+1. **Todo el juego.** Las rutas de combate medidas hasta ahora cubren pocos personajes y escenarios. También tienen que
+   funcionar sin respaldo todos los personajes, escenarios, menús, selección de personaje, HUD, supers, finales y modos de
+   juego (Arcade, Story, Versus, Practice).
+2. **Imagen correcta.** "Soportado" o "elegible" significa que el renderizador nativo sabe ejecutar un programa, no que sus
+   píxeles ya coincidan con el original. Cada familia de efectos y escenas se compara con el juego original.
+3. **Velocidad.** Cada fotograma tiene que quedar holgadamente por debajo de 16,67 ms (60 fps). Los fotogramas nativos ya son
+   mucho más rápidos que el camino emulado, pero todavía no lo suficiente; falta retirar trabajo de emulación heredado y
+   ganchos de diagnóstico.
+4. **Versión de uso.** El trabajo más reciente tiene que pasar a la versión que realmente se usa, validado con pruebas de
+   regresión y una ruta completa.
+5. **Retirar el camino de PS2.** Solo después de los pasos anteriores se elimina definitivamente el camino emulado.
+6. **El resto del juego.** La lógica es el código original recompilado, pero hay que comprobar de punta a punta el audio a
+   tiempo real, el mando, las partidas guardadas legítimas, las cargas y la estabilidad en sesiones largas.
+
 ### Requisitos
 
 Por ahora ninguno: no hay nada que descargar. Una futura versión requerirá tu propia copia legítima del juego de PS2, y la
@@ -250,6 +289,9 @@ versión privada se generará localmente a partir de ella, igual que con la vers
 | Renderizador nativo para los combates | En curso | Ver "Route frames native"; los pocos fotogramas restantes aún usan el camino de PS2 de forma temporal. |
 | Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en los paneles de Progress. |
 | Menús, pantallas de carga y otras escenas | En curso | Se cubren progresivamente después de los combates. |
+| Imagen idéntica al juego original | En curso | Se compara familia por familia con el juego original. |
+| Velocidad completa (60 fps en todos los fotogramas) | En curso | Los fotogramas nativos ya son mucho más rápidos que el camino emulado, aún no lo suficiente. |
+| Audio, mando, partidas guardadas, cargas, estabilidad | Previsto | Se comprueban de punta a punta antes de cualquier versión pública. |
 | Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no tendrá ni ese camino ni ningún respaldo. |
 | Versión pública e instrucciones | Previsto | Se anunciará aquí cuando todo esté listo. |
 
@@ -323,6 +365,25 @@ GPU (diagrama acima). "Route frames native" mede quanto do jogo já funciona ass
 - A legenda de cores e o guia dos painéis estão em **Progress** acima. Só são publicados números agregados; nenhum dado do
   jogo.
 
+### O que os números ainda não medem
+
+Chegar a 100 % nos números de progresso **não** significa que o jogo já possa ser jogado. Eles acompanham a fase atual:
+passar o desenho de cenas e efeitos do caminho do PS2 emulado para o renderizador nativo. Depois disso restam estas etapas:
+
+1. **O jogo inteiro.** As rotas de combate medidas até agora cobrem poucos personagens e cenários. Também precisam funcionar
+   sem reserva todos os personagens, cenários, menus, seleção de personagem, HUD, supers, finais e modos de jogo (Arcade,
+   Story, Versus, Practice).
+2. **Imagem correta.** "Suportado" ou "elegível" significa que o renderizador nativo sabe executar um programa, não que os
+   seus pixels já coincidam com o original. Cada família de efeitos e cenas é comparada com o jogo original.
+3. **Velocidade.** Cada quadro precisa ficar folgadamente abaixo de 16,67 ms (60 fps). Os quadros nativos já são muito mais
+   rápidos que o caminho emulado, mas ainda não o suficiente; falta retirar trabalho de emulação herdado e ganchos de
+   diagnóstico.
+4. **Versão de uso.** O trabalho mais recente precisa passar para a versão realmente usada, validado com testes de regressão
+   e uma rota completa.
+5. **Retirar o caminho do PS2.** Só depois das etapas anteriores o caminho emulado é eliminado de vez.
+6. **O resto do jogo.** A lógica é o código original recompilado, mas é preciso verificar de ponta a ponta o áudio em tempo
+   real, o controle, os saves legítimos, os carregamentos e a estabilidade em sessões longas.
+
 ### Requisitos
 
 Por enquanto nenhum: não há nada para baixar. Uma versão futura vai exigir a sua própria cópia legítima do jogo de PS2, e a
@@ -336,6 +397,9 @@ versão privada será gerada localmente a partir dela, como na versão de PSP.
 | Renderizador nativo para os combates | Em andamento | Veja "Route frames native"; os poucos quadros restantes ainda usam o caminho do PS2 de forma temporária. |
 | Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa nos painéis de Progress. |
 | Menus, telas de carregamento e outras cenas | Em andamento | Cobertos progressivamente depois dos combates. |
+| Imagem idêntica ao jogo original | Em andamento | Comparada família por família com o jogo original. |
+| Velocidade completa (60 fps em todos os quadros) | Em andamento | Os quadros nativos já são muito mais rápidos que o caminho emulado, ainda não o suficiente. |
+| Áudio, controle, saves, carregamentos, estabilidade | Planejado | Verificados de ponta a ponta antes de qualquer versão pública. |
 | Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não terá nem esse caminho nem nenhuma reserva. |
 | Versão pública e instruções | Planejado | Será anunciada aqui quando tudo estiver pronto. |
 
