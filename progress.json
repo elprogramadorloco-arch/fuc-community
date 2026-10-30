@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T12:19:11Z",
+  "generated_utc": "2026-10-30T16:52:05Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -158,7 +158,13 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 277
+              "count": 275
+            },
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 2,
+              "current": true
             },
             {
               "state": "STATIC ONLY",
@@ -168,17 +174,13 @@
             {
               "state": "NO VERDICT",
               "tone": "unknown",
-              "count": 117
+              "count": 116
             },
             {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "BLOCKED (L01)",
-              "tone": "bad",
-              "count": 1
+              "state": "NO VERDICT",
+              "tone": "unknown",
+              "count": 1,
+              "current": true
             },
             {
               "state": "BLOCKED",
@@ -189,6 +191,18 @@
               "state": "NOT ELIGIBLE",
               "tone": "bad",
               "count": 9
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2,
+              "current": true
+            },
+            {
+              "state": "BLOCKED (L01)",
+              "tone": "bad",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 443,
@@ -232,11 +246,52 @@
           ],
           "total": 443,
           "good": 432
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 118
+            },
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 1,
+              "current": true
+            },
+            {
+              "state": "GUARDED",
+              "tone": "caution",
+              "count": 2,
+              "current": true
+            },
+            {
+              "state": "NOT RESOLVED",
+              "tone": "attention",
+              "count": 3,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 17
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 302
+            }
+          ],
+          "current": true,
+          "total": 443,
+          "good": 119
         }
       ],
       "combined": false,
-      "total": 1329,
-      "good": 1150,
+      "total": 1772,
+      "good": 1269,
       "not_applicable": 0
     },
     {
@@ -252,7 +307,13 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 274
+              "count": 273
+            },
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 274,
@@ -264,7 +325,13 @@
             {
               "state": "NO VERDICT",
               "tone": "unknown",
-              "count": 117
+              "count": 116
+            },
+            {
+              "state": "NO VERDICT",
+              "tone": "unknown",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 117,
@@ -315,7 +382,8 @@
             {
               "state": "FAIL",
               "tone": "bad",
-              "count": 2
+              "count": 2,
+              "current": true
             }
           ],
           "total": 2,
@@ -344,9 +412,11 @@
             {
               "state": "BLOCKED (L01)",
               "tone": "bad",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 0
         },
@@ -368,9 +438,11 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         }
@@ -382,6 +454,14 @@
       "not_applicable": 0
     }
   ],
+  "current_work": {
+    "subsystems": [
+      "L01 (local lights)",
+      "R01 (effect element registers)"
+    ],
+    "programs": 6,
+    "as_of": "2026-10-30"
+  },
   "layer_views": [
     {
       "id": "layer_static_eligible",
@@ -396,7 +476,13 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 274
+              "count": 273
+            },
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 274,
@@ -408,7 +494,13 @@
             {
               "state": "NO VERDICT",
               "tone": "unknown",
-              "count": 117
+              "count": 116
+            },
+            {
+              "state": "NO VERDICT",
+              "tone": "unknown",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 117,
@@ -459,7 +551,8 @@
             {
               "state": "FAIL",
               "tone": "bad",
-              "count": 2
+              "count": 2,
+              "current": true
             }
           ],
           "total": 2,
@@ -488,9 +581,11 @@
             {
               "state": "BLOCKED (L01)",
               "tone": "bad",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 0
         },
@@ -512,9 +607,11 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         }
@@ -538,7 +635,13 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 274
+              "count": 273
+            },
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 274,
@@ -550,7 +653,13 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 117
+              "count": 116
+            },
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 117,
@@ -586,7 +695,8 @@
             {
               "state": "FAIL",
               "tone": "bad",
-              "count": 2
+              "count": 2,
+              "current": true
             }
           ],
           "total": 2,
@@ -610,9 +720,11 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         },
@@ -634,9 +746,11 @@
             {
               "state": "SUPPORTED",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         }
@@ -660,7 +774,13 @@
             {
               "state": "COMPLETE",
               "tone": "good",
-              "count": 274
+              "count": 273
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 274,
@@ -672,7 +792,13 @@
             {
               "state": "COMPLETE",
               "tone": "good",
-              "count": 117
+              "count": 116
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 1,
+              "current": true
             }
           ],
           "total": 117,
@@ -718,7 +844,8 @@
             {
               "state": "PASS",
               "tone": "good",
-              "count": 2
+              "count": 2,
+              "current": true
             }
           ],
           "total": 2,
@@ -747,9 +874,11 @@
             {
               "state": "COMPLETE",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         },
@@ -771,9 +900,11 @@
             {
               "state": "PASS",
               "tone": "good",
-              "count": 1
+              "count": 1,
+              "current": true
             }
           ],
+          "current": true,
           "total": 1,
           "good": 1
         }
@@ -782,6 +913,133 @@
       "total": 443,
       "good": 432,
       "percent": 97.51693002257336,
+      "not_applicable": 0
+    },
+    {
+      "id": "layer_r01",
+      "title": "Effect programs: R01 layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Shows the 124 programs this layer applies to, grouped by first-failure subsystem and coloured by their R01 status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 67
+            },
+            {
+              "state": "GUARDED",
+              "tone": "caution",
+              "count": 1,
+              "current": true
+            }
+          ],
+          "total": 68,
+          "good": 67
+        },
+        {
+          "name": "NO VERDICT",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 24
+            },
+            {
+              "state": "GUARDED",
+              "tone": "caution",
+              "count": 1,
+              "current": true
+            }
+          ],
+          "total": 25,
+          "good": 24
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 14
+            }
+          ],
+          "total": 14,
+          "good": 14
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 12
+            }
+          ],
+          "total": 12,
+          "good": 12
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "NOT RESOLVED",
+              "tone": "attention",
+              "count": 2,
+              "current": true
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 1,
+              "current": true
+            }
+          ],
+          "current": true,
+          "total": 1,
+          "good": 1
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "POLICY D",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "NOT RESOLVED",
+              "tone": "attention",
+              "count": 1,
+              "current": true
+            }
+          ],
+          "current": true,
+          "total": 1,
+          "good": 0
+        }
+      ],
+      "combined": true,
+      "total": 124,
+      "good": 119,
+      "percent": 95.96774193548387,
       "not_applicable": 0
     }
   ]
