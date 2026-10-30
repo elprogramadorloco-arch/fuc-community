@@ -1,40 +1,498 @@
 {
-  "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T16:52:05Z",
+  "schema": "FUC_COMMUNITY_PROGRESS_V2",
+  "generated_utc": "2026-10-30T17:45:56Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
-      "label": "Route frames native",
+      "label": "Measured battle routes — native frames",
       "value": 3227,
       "total": 3233,
-      "as_of": "2026-10-30"
+      "as_of": "2026-10-30",
+      "note": "measured route frames only"
     },
     {
-      "label": "Effect programs statically eligible",
+      "label": "Effect programs — native coverage",
+      "value": 0,
+      "total": 443,
+      "as_of": "2026-10-29",
+      "note": "actually executed natively"
+    },
+    {
+      "label": "Effect programs — native-ready coverage",
       "value": 277,
       "total": 443,
-      "as_of": "2026-10-29"
+      "as_of": "2026-10-29",
+      "note": "native + ready, not seen"
     },
     {
-      "label": "Effect VM semantic support",
-      "value": 441,
+      "label": "Effect programs — investigated coverage",
+      "value": 443,
       "total": 443,
-      "as_of": "2026-10-30"
-    },
-    {
-      "label": "Catalog support",
-      "value": 432,
-      "total": 443,
-      "as_of": "2026-10-30"
+      "as_of": "2026-10-29",
+      "note": "everything but untouched"
     }
   ],
   "panels": [
     {
+      "id": "effect_programs",
+      "title": "Effects → Effect programs — 443 known programs",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "One square per effect program, grouped by character; colour = overall state.",
+      "groups": [
+        {
+          "name": "Kuzuki",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "Leysritt",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 14
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 16,
+          "good": 0
+        },
+        {
+          "name": "Kirei",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 17
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 4
+            }
+          ],
+          "total": 21,
+          "good": 0
+        },
+        {
+          "name": "Zero Lancer",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 12
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 3
+            }
+          ],
+          "total": 15,
+          "good": 0
+        },
+        {
+          "name": "Luviagelita",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 10
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 13,
+          "good": 0
+        },
+        {
+          "name": "Caster",
+          "segments": [
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 30
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 1,
+              "current": true
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            }
+          ],
+          "current": true,
+          "total": 42,
+          "good": 0
+        },
+        {
+          "name": "Lancer",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 11
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 4
+            }
+          ],
+          "total": 15,
+          "good": 0
+        },
+        {
+          "name": "Rin",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 18
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 7
+            }
+          ],
+          "total": 26,
+          "good": 0
+        },
+        {
+          "name": "Saber Alter",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 23
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1,
+              "current": true
+            }
+          ],
+          "current": true,
+          "total": 35,
+          "good": 0
+        },
+        {
+          "name": "Rider",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 14
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 8
+            }
+          ],
+          "total": 22,
+          "good": 0
+        },
+        {
+          "name": "Gilgamesh",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 8
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 16
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 26,
+          "good": 0
+        },
+        {
+          "name": "Bazett",
+          "segments": [
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 1,
+              "current": true
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 17
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            }
+          ],
+          "current": true,
+          "total": 28,
+          "good": 0
+        },
+        {
+          "name": "Archer",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 10
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 27
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 7
+            }
+          ],
+          "total": 45,
+          "good": 0
+        },
+        {
+          "name": "Saber",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 13
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 9
+            }
+          ],
+          "total": 22,
+          "good": 0
+        },
+        {
+          "name": "Assassin",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 5
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 4
+            }
+          ],
+          "total": 9,
+          "good": 0
+        },
+        {
+          "name": "Shirou",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 9
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 13
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 2
+            }
+          ],
+          "total": 25,
+          "good": 0
+        },
+        {
+          "name": "Berserker",
+          "segments": [
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 2,
+              "current": true
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 3
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 5
+            }
+          ],
+          "current": true,
+          "total": 10,
+          "good": 0
+        },
+        {
+          "name": "Sakura",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 11
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 7
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 1,
+              "current": true
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 15
+            }
+          ],
+          "current": true,
+          "total": 34,
+          "good": 0
+        },
+        {
+          "name": "Minigames",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 12
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 14,
+          "good": 0
+        },
+        {
+          "name": "Common effects",
+          "segments": [
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 12
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 10
+            }
+          ],
+          "total": 22,
+          "good": 0
+        },
+        {
+          "name": "Story mode",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 1
+            }
+          ],
+          "total": 2,
+          "good": 0
+        }
+      ],
+      "total": 443,
+      "good": 0,
+      "percent": 0
+    },
+    {
       "id": "route_frames",
-      "title": "Route frames: native vs fallback",
+      "title": "Measured battle routes — native frames",
       "unit": "frames",
       "as_of": "2026-10-30",
-      "note": "Newest run census per route, as measured by the project.",
+      "note": "Measured route frames only (not whole-game coverage): green = drawn natively, red = still the PS2 path.",
       "groups": [
         {
           "name": "GCU",
@@ -46,7 +504,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -63,7 +521,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -80,7 +538,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -97,7 +555,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -114,7 +572,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -131,7 +589,7 @@
             },
             {
               "state": "FALLBACK",
-              "tone": "attention",
+              "tone": "bad",
               "count": 1
             }
           ],
@@ -139,319 +597,9 @@
           "good": 541
         }
       ],
-      "combined": true,
       "total": 3233,
       "good": 3227,
-      "percent": 99.81441385709867,
-      "not_applicable": 0
-    },
-    {
-      "id": "effect_program_layers",
-      "title": "Effect programs by semantic layer (443 programs)",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Each layer is a separate measure of the same programs; green = supported in that layer. Per program and layer, the newest project census that reports it.",
-      "groups": [
-        {
-          "name": "Static eligible",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 275
-            },
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 2,
-              "current": true
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 35
-            },
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 116
-            },
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 1,
-              "current": true
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 9
-            },
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2,
-              "current": true
-            },
-            {
-              "state": "BLOCKED (L01)",
-              "tone": "bad",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 443,
-          "good": 277
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 441
-            },
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2
-            }
-          ],
-          "total": 443,
-          "good": 441
-        },
-        {
-          "name": "Catalog",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 5
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 427
-            },
-            {
-              "state": "GAP",
-              "tone": "bad",
-              "count": 11
-            }
-          ],
-          "total": 443,
-          "good": 432
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 118
-            },
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 2,
-              "current": true
-            },
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 3,
-              "current": true
-            },
-            {
-              "state": "NO DEPENDENCY",
-              "tone": "neutral",
-              "count": 17
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 302
-            }
-          ],
-          "current": true,
-          "total": 443,
-          "good": 119
-        }
-      ],
-      "combined": false,
-      "total": 1772,
-      "good": 1269,
-      "not_applicable": 0
-    },
-    {
-      "id": "first_failure_subsystems",
-      "title": "Effect programs by first-failure subsystem",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Grouped by the subsystem that blocks each program first; green = statically eligible.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 273
-            },
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 274,
-          "good": 274
-        },
-        {
-          "name": "NO VERDICT",
-          "segments": [
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 116
-            },
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 117,
-          "good": 0
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 2
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 24
-            }
-          ],
-          "total": 26,
-          "good": 2
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 9
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 9
-            }
-          ],
-          "total": 19,
-          "good": 0
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "BLOCKED (L01)",
-              "tone": "bad",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 443,
-      "good": 277,
-      "percent": 62.52821670428894,
-      "not_applicable": 0
+      "percent": 99.81441385709867
     }
   ],
   "current_work": {
@@ -462,585 +610,874 @@
     "programs": 6,
     "as_of": "2026-10-30"
   },
-  "layer_views": [
-    {
-      "id": "layer_static_eligible",
-      "title": "Effect programs: Static eligible layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their Static eligible status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 273
-            },
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 274,
-          "good": 274
-        },
-        {
-          "name": "NO VERDICT",
-          "segments": [
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 116
-            },
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 117,
-          "good": 0
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 2
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 24
-            }
-          ],
-          "total": 26,
-          "good": 2
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 9
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 9
-            }
-          ],
-          "total": 19,
-          "good": 0
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "BLOCKED (L01)",
-              "tone": "bad",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
+  "game_coverage": {
+    "states": [
+      {
+        "id": "native",
+        "label": "NATIVE",
+        "meaning": "executed through the native path with its guards passing",
+        "color": "#3FB950"
+      },
+      {
+        "id": "partial",
+        "label": "PARTIAL",
+        "meaning": "native only under a condition that is not closed yet, or only part of it is native",
+        "color": "#E3B341"
+      },
+      {
+        "id": "fallback",
+        "label": "FALLBACK",
+        "meaning": "known and examined, but it still needs the PS2 path",
+        "color": "#F85149"
+      },
+      {
+        "id": "ready_not_seen",
+        "label": "READY / NOT SEEN",
+        "meaning": "proven native-ready, but no real run has executed it natively yet",
+        "color": "#58A6FF"
+      },
+      {
+        "id": "unknown",
+        "label": "UNKNOWN",
+        "meaning": "investigated, but an unresolved question still prevents a verdict",
+        "color": "#A371F7"
+      },
+      {
+        "id": "untouched",
+        "label": "UNTOUCHED",
+        "meaning": "known to exist, work has not started",
+        "color": "#6E7681"
+      },
+      {
+        "id": "not_measured",
+        "label": "NOT MEASURED",
+        "meaning": "no trustworthy inventory or census exists yet",
+        "color": "#6E7681"
+      }
+    ],
+    "item_census": "443 effect programs (the only complete item census so far)",
+    "items": {
       "total": 443,
-      "good": 277,
-      "percent": 62.52821670428894,
-      "not_applicable": 0
+      "native": 0,
+      "native_ready": 277,
+      "investigated": 443,
+      "by_state": {
+        "native": 0,
+        "partial": 35,
+        "fallback": 14,
+        "ready_not_seen": 277,
+        "unknown": 117,
+        "untouched": 0
+      },
+      "native_pct": 0,
+      "native_ready_pct": 62.53,
+      "investigated_pct": 100
     },
-    {
-      "id": "layer_vm",
-      "title": "Effect programs: VM layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their VM status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 273
-            },
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 274,
-          "good": 274
+    "categories": [
+      {
+        "id": "gameplay",
+        "name": "Gameplay / game logic",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "The game code runs recompiled, but no per-function or per-feature native census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "characters",
+        "name": "Characters",
+        "measurement": "partly_measured",
+        "summary": "18 characters · effect programs only",
+        "known_count": 405,
+        "total_count": 405,
+        "coverage_known": true,
+        "coverage": {
+          "total": 405,
+          "native": 0,
+          "native_ready": 253,
+          "investigated": 405,
+          "by_state": {
+            "native": 0,
+            "partial": 33,
+            "fallback": 14,
+            "ready_not_seen": 253,
+            "unknown": 105,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 62.47,
+          "investigated_pct": 100
         },
-        {
-          "name": "NO VERDICT",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 116
-            },
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 117,
-          "good": 117
+        "note": "Only each character's effect programs are measured; core rendering, weapons, materials, skin, shadows, local lights, supers / special effects, runtime coverage and image validation have no census yet (NOT MEASURED).",
+        "facts": [
+          "18 of 18 named by the project's roster records"
+        ],
+        "as_of": "2026-10-29"
+      },
+      {
+        "id": "stages",
+        "name": "Stages",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No stage inventory census is recorded (geometry, materials, lighting, shadows, fog, stage effects).",
+        "facts": [
+          "measured battle routes touch 2 stage IDs"
+        ]
+      },
+      {
+        "id": "effects",
+        "name": "Effects",
+        "measurement": "measured",
+        "summary": "Effect programs · 443 known",
+        "known_count": 443,
+        "total_count": 443,
+        "coverage_known": true,
+        "coverage": {
+          "total": 443,
+          "native": 0,
+          "native_ready": 277,
+          "investigated": 443,
+          "by_state": {
+            "native": 0,
+            "partial": 35,
+            "fallback": 14,
+            "ready_not_seen": 277,
+            "unknown": 117,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 62.53,
+          "investigated_pct": 100
         },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 26
-            }
-          ],
+        "note": "Effect programs: 443 / 443 inventory known (composed census). Other effect kinds have no census.",
+        "facts": [],
+        "as_of": "2026-10-29"
+      },
+      {
+        "id": "hud",
+        "name": "HUD / battle UI",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No HUD inventory census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "menus",
+        "name": "Menus / frontend",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No menu or frontend inventory census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "fmv",
+        "name": "FMV / cutscenes",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No FMV inventory census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "audio",
+        "name": "Audio",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No audio inventory census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "input",
+        "name": "Input",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No input census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "save",
+        "name": "Save / load",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No save or load census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "storage",
+        "name": "Storage / assets / loading",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No storage or loading census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "timing",
+        "name": "Timing / synchronization",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No timing census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "modes",
+        "name": "Game modes / progression",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No game-mode census is recorded.",
+        "facts": []
+      },
+      {
+        "id": "image",
+        "name": "Image correctness",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No recurring image-validation census: one-off comparisons exist, none gives a validated-of-total count. A comparison only validates a class when the affected draw contributes pixels.",
+        "facts": [
+          "effect programs: all NOT VALIDATED"
+        ]
+      },
+      {
+        "id": "performance",
+        "name": "Performance",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No recurring whole-frame timing census is found (target: every frame under 16.67 ms at 60 fps); one-off profiles are not a whole-game measure, and one measured route never becomes a whole-game percentage.",
+        "facts": [
+          "no supported performance record found"
+        ]
+      },
+      {
+        "id": "stability",
+        "name": "Stability",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "No stability census is found.",
+        "facts": [
+          "no supported stability record found"
+        ]
+      },
+      {
+        "id": "production",
+        "name": "Production integration",
+        "measurement": "not_measured",
+        "summary": "NOT MEASURED",
+        "coverage_known": false,
+        "note": "Research results are integrated in the research tree; promotion of each into the production build is not recorded per item. Integrated or frozen research is not production.",
+        "facts": [
+          "production baseline: recorded",
+          "integration items integrated in research: 8 of 11",
+          "promoted to production: not recorded"
+        ]
+      },
+      {
+        "id": "fallback",
+        "name": "Fallback removal",
+        "measurement": "partly_measured",
+        "summary": "goal: fallback = 0",
+        "coverage_known": false,
+        "note": "Fallback is counted only over populations with a census; there is no whole-game denominator yet.",
+        "facts": [
+          "measured route fallback: 6 of 3233 frames",
+          "effect-program fallback: 14 of 443 programs",
+          "known content fallback: NOT MEASURED"
+        ],
+        "as_of": "2026-10-30"
+      },
+      {
+        "id": "unknowns",
+        "name": "Global semantic unknowns",
+        "measurement": "measured",
+        "summary": "87 OPEN of 128",
+        "known_count": 128,
+        "total_count": 128,
+        "coverage_known": true,
+        "note": "Known semantic unknowns from the project's unknown census (closed and deferred are not told apart there).",
+        "facts": [
+          "OPEN: 87",
+          "closed or deferred: 41",
+          "VM support near 100 % does not close them"
+        ]
+      }
+    ],
+    "characters": [
+      {
+        "name": "Kuzuki",
+        "effect_programs": {
+          "total": 1,
+          "native": 0,
+          "native_ready": 1,
+          "investigated": 1,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 1,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 100,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Leysritt",
+        "effect_programs": {
+          "total": 16,
+          "native": 0,
+          "native_ready": 14,
+          "investigated": 16,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 14,
+            "unknown": 2,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 87.5,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Kirei",
+        "effect_programs": {
+          "total": 21,
+          "native": 0,
+          "native_ready": 17,
+          "investigated": 21,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 17,
+            "unknown": 4,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 80.95,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Zero Lancer",
+        "effect_programs": {
+          "total": 15,
+          "native": 0,
+          "native_ready": 12,
+          "investigated": 15,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 12,
+            "unknown": 3,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 80,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Luviagelita",
+        "effect_programs": {
+          "total": 13,
+          "native": 0,
+          "native_ready": 10,
+          "investigated": 13,
+          "by_state": {
+            "native": 0,
+            "partial": 1,
+            "fallback": 0,
+            "ready_not_seen": 10,
+            "unknown": 2,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 76.92,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Caster",
+        "effect_programs": {
+          "total": 42,
+          "native": 0,
+          "native_ready": 31,
+          "investigated": 42,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 1,
+            "ready_not_seen": 31,
+            "unknown": 10,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 73.81,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Lancer",
+        "effect_programs": {
+          "total": 15,
+          "native": 0,
+          "native_ready": 11,
+          "investigated": 15,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 11,
+            "unknown": 4,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 73.33,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Rin",
+        "effect_programs": {
           "total": 26,
-          "good": 26
+          "native": 0,
+          "native_ready": 18,
+          "investigated": 26,
+          "by_state": {
+            "native": 0,
+            "partial": 1,
+            "fallback": 0,
+            "ready_not_seen": 18,
+            "unknown": 7,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 69.23,
+          "investigated_pct": 100
         },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 19
-            }
-          ],
-          "total": 19,
-          "good": 19
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Saber Alter",
+        "effect_programs": {
+          "total": 35,
+          "native": 0,
+          "native_ready": 23,
+          "investigated": 35,
+          "by_state": {
+            "native": 0,
+            "partial": 1,
+            "fallback": 0,
+            "ready_not_seen": 23,
+            "unknown": 11,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 65.71,
+          "investigated_pct": 100
         },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 2,
-          "good": 0
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Rider",
+        "effect_programs": {
+          "total": 22,
+          "native": 0,
+          "native_ready": 14,
+          "investigated": 22,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 14,
+            "unknown": 8,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 63.64,
+          "investigated_pct": 100
         },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 2
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 443,
-      "good": 441,
-      "percent": 99.54853273137698,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_catalog",
-      "title": "Effect programs: Catalog layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their Catalog status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 273
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 274,
-          "good": 274
-        },
-        {
-          "name": "NO VERDICT",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 116
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 117,
-          "good": 117
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 2
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 24
-            }
-          ],
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Gilgamesh",
+        "effect_programs": {
           "total": 26,
-          "good": 26
+          "native": 0,
+          "native_ready": 16,
+          "investigated": 26,
+          "by_state": {
+            "native": 0,
+            "partial": 8,
+            "fallback": 0,
+            "ready_not_seen": 16,
+            "unknown": 2,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 61.54,
+          "investigated_pct": 100
         },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 9
-            },
-            {
-              "state": "GAP",
-              "tone": "bad",
-              "count": 10
-            }
-          ],
-          "total": 19,
-          "good": 9
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Bazett",
+        "effect_programs": {
+          "total": 28,
+          "native": 0,
+          "native_ready": 17,
+          "investigated": 28,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 1,
+            "ready_not_seen": 17,
+            "unknown": 10,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 60.71,
+          "investigated_pct": 100
         },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 2,
-          "good": 2
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Archer",
+        "effect_programs": {
+          "total": 45,
+          "native": 0,
+          "native_ready": 27,
+          "investigated": 45,
+          "by_state": {
+            "native": 0,
+            "partial": 10,
+            "fallback": 1,
+            "ready_not_seen": 27,
+            "unknown": 7,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 60,
+          "investigated_pct": 100
         },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 1
-            },
-            {
-              "state": "GAP",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 2,
-          "good": 1
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Saber",
+        "effect_programs": {
+          "total": 22,
+          "native": 0,
+          "native_ready": 13,
+          "investigated": 22,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 13,
+            "unknown": 9,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 59.09,
+          "investigated_pct": 100
         },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Assassin",
+        "effect_programs": {
+          "total": 9,
+          "native": 0,
+          "native_ready": 5,
+          "investigated": 9,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 0,
+            "ready_not_seen": 5,
+            "unknown": 4,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 55.56,
+          "investigated_pct": 100
         },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 443,
-      "good": 432,
-      "percent": 97.51693002257336,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_r01",
-      "title": "Effect programs: R01 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 124 programs this layer applies to, grouped by first-failure subsystem and coloured by their R01 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 67
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "total": 68,
-          "good": 67
-        },
-        {
-          "name": "NO VERDICT",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 24
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 1,
-              "current": true
-            }
-          ],
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Shirou",
+        "effect_programs": {
           "total": 25,
-          "good": 24
+          "native": 0,
+          "native_ready": 13,
+          "investigated": 25,
+          "by_state": {
+            "native": 0,
+            "partial": 1,
+            "fallback": 9,
+            "ready_not_seen": 13,
+            "unknown": 2,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 52,
+          "investigated_pct": 100
         },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 14
-            }
-          ],
-          "total": 14,
-          "good": 14
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Berserker",
+        "effect_programs": {
+          "total": 10,
+          "native": 0,
+          "native_ready": 3,
+          "investigated": 10,
+          "by_state": {
+            "native": 0,
+            "partial": 0,
+            "fallback": 2,
+            "ready_not_seen": 3,
+            "unknown": 5,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 30,
+          "investigated_pct": 100
         },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 12
-            }
-          ],
-          "total": 12,
-          "good": 12
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Sakura",
+        "effect_programs": {
+          "total": 34,
+          "native": 0,
+          "native_ready": 8,
+          "investigated": 34,
+          "by_state": {
+            "native": 0,
+            "partial": 11,
+            "fallback": 0,
+            "ready_not_seen": 8,
+            "unknown": 15,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 23.53,
+          "investigated_pct": 100
         },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 1,
-              "current": true
-            }
-          ],
-          "current": true,
-          "total": 1,
-          "good": 0
-        }
-      ],
-      "combined": true,
-      "total": 124,
-      "good": 119,
-      "percent": 95.96774193548387,
-      "not_applicable": 0
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      }
+    ],
+    "measured_runtime": {
+      "native_frames": 3227,
+      "frames": 3233,
+      "fallback_frames": 6,
+      "routes": 6,
+      "as_of": "2026-10-30",
+      "note": "measured battle route frames only; not extrapolated to the whole game"
     }
-  ]
+  }
 }

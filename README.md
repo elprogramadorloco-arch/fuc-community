@@ -31,73 +31,70 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261030T165205Z)
+![route frames](badges/route_frames.svg?v=20261030T174556Z)
 
-**🟦 Currently being worked on:** L01 (local lights) · R01 (effect element registers) — 6 effect programs (outlined in blue below).
+**⬜ Currently being worked on:** L01 (local lights) · R01 (effect element registers) — 6 effect programs (white outline below).
 
-![FUC progress](progress.svg?v=20261030T165205Z)
+![FUC native game coverage](progress.svg?v=20261030T174556Z)
 
-### Effect programs by layer
-
-Click a layer to open its map: the same programs grouped by first-failure subsystem and coloured by that layer (blue border = current work). Each percentage counts only the programs that layer applies to.
-
-<details><summary><b>Static eligible</b> · 62.53% (277/443)</summary>
-
-![Static eligible layer](layers/static_eligible.svg?v=20261030T165205Z)
-
-</details>
-<details><summary><b>VM</b> · 99.55% (441/443)</summary>
-
-![VM layer](layers/vm.svg?v=20261030T165205Z)
-
-</details>
-<details><summary><b>Catalog</b> · 97.52% (432/443)</summary>
-
-![Catalog layer](layers/catalog.svg?v=20261030T165205Z)
-
-</details>
-<details><summary><b>R01</b> · 95.97% (119/124)</summary>
-
-![R01 layer](layers/r01.svg?v=20261030T165205Z)
-
-</details>
-
-| Figure | Value | As of |
+| At a glance | Value | Over |
 |---|---|---|
-| Route frames native | 3227 / 3233 (99.81 %) | 2026-10-30 |
-| Effect programs statically eligible | 277 / 443 (62.53 %) | 2026-10-29 |
-| Effect VM semantic support | 441 / 443 (99.55 %) | 2026-10-30 |
-| Catalog support | 432 / 443 (97.52 %) | 2026-10-30 |
+| Measured battle routes — native frames | 3227 / 3233 (99.81 %) | measured route frames only |
+| Effect programs — native coverage | 0 / 443 (0.00 %) | actually executed natively |
+| Effect programs — native-ready coverage | 277 / 443 (62.53 %) | native + ready, not seen |
+| Effect programs — investigated coverage | 443 / 443 (100.00 %) | everything but untouched |
+| Known semantic unknowns | 87 OPEN of 128 | the project's unknown census |
 
-### How to read the panels
+### Game coverage
 
-Each panel is a treemap: a large box is a group whose **area is proportional to its number of items**, and each small
-square is one item (or N items, noted as "one cell = N"). The percentage on a box is its share of green squares.
+Only areas with a known inventory get a percentage; the rest say **NOT MEASURED** instead of guessing.
 
-| Colour | Meaning |
-|---|---|
-| 🟩 green | supported / native / pass |
-| 🟨 yellow | ready, static only or checked at run time (not yet proven while playing) |
-| 🟧 orange | fallback / pending |
-| 🟥 red | blocked / fail |
-| 🟪 purple | no verdict in the project's data |
-| ⬜ grey | not applicable / not evaluated |
-| 🟦 blue border | **what is being worked on right now** |
+| Area | Status | What is known |
+|---|---|---|
+| Gameplay / game logic | **NOT MEASURED** | The game code runs recompiled, but no per-function or per-feature native census is recorded. |
+| Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 62.5 %, investigated 100.0 % |
+| Stages | **NOT MEASURED** | measured battle routes touch 2 stage IDs |
+| Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 62.5 %, investigated 100.0 % |
+| HUD / battle UI | **NOT MEASURED** | No HUD inventory census is recorded. |
+| Menus / frontend | **NOT MEASURED** | No menu or frontend inventory census is recorded. |
+| FMV / cutscenes | **NOT MEASURED** | No FMV inventory census is recorded. |
+| Audio | **NOT MEASURED** | No audio inventory census is recorded. |
+| Input | **NOT MEASURED** | No input census is recorded. |
+| Save / load | **NOT MEASURED** | No save or load census is recorded. |
+| Storage / assets / loading | **NOT MEASURED** | No storage or loading census is recorded. |
+| Timing / synchronization | **NOT MEASURED** | No timing census is recorded. |
+| Game modes / progression | **NOT MEASURED** | No game-mode census is recorded. |
+| Image correctness | **NOT MEASURED** | effect programs: all NOT VALIDATED |
+| Performance | **NOT MEASURED** | no supported performance record found |
+| Stability | **NOT MEASURED** | no supported stability record found |
+| Production integration | **NOT MEASURED** | production baseline: recorded; integration items integrated in research: 8 of 11; promoted to production: not recorded |
+| Fallback removal | partly measured | measured route fallback: 6 of 3233 frames; effect-program fallback: 14 of 443 programs; known content fallback: NOT MEASURED |
+| Global semantic unknowns | measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them |
 
-- **Route frames.** One box per measured battle route (e.g. GSH, GCU, GGA); green frames were drawn entirely by the
-  native renderer, orange ones still used the PS2 path. The most direct measure of progress while playing.
-- **Effect programs by first-failure subsystem.** The game's effect programs grouped by what blocks each one first
-  (NONE = nothing left statically); green = statically eligible for the native path.
-- **Effect programs by layer** (drop-downs). The same programs measured one layer at a time: static eligibility (the
-  summary), VM instructions, resource catalog, and the layer currently being worked on. Layers are independent and
-  never added together; each percentage counts only the programs that layer applies to.
-- **Table.** Headline figures as the project records them; when a figure also appears in a panel, the table is
-  authoritative.
+### How to read it
 
-These figures follow the current phase, moving rendering from the emulated PS2 path to the native renderer. Even at
-100 % they do not mean the game is playable yet; see *What the figures do not measure yet* below.
+Every known item has one state. Today the only complete item census is the game's **effect programs** (the code that
+draws visual effects): one square each.
 
-_Updated 2026-10-30T16:52:05Z. Aggregate figures only (counts and percentages recorded by the project's own artifacts), exported by FUC Observer. No game data, file names or paths are published. The per-program layer panel composes the newest project census per program; where a milestone published only totals, the table above is authoritative. Raw data: [progress.json](progress.json)._
+| | State | Meaning | Effect programs |
+|---|---|---|---|
+| 🟩 | **NATIVE** | executed through the native path with its guards passing | 0 |
+| 🟨 | **PARTIAL** | native only under a condition that is not closed yet, or only part of it is native | 35 |
+| 🟥 | **FALLBACK** | known and examined, but it still needs the PS2 path | 14 |
+| 🟦 | **READY / NOT SEEN** | proven native-ready, but no real run has executed it natively yet | 277 |
+| 🟪 | **UNKNOWN** | investigated, but an unresolved question still prevents a verdict | 117 |
+| ⬜ | **UNTOUCHED** | known to exist, work has not started | 0 |
+| ⬛ | **NOT MEASURED** | no trustworthy inventory or census exists yet |  |
+| ⬜ | **white outline** | what is being worked on right now | |
+
+- **Native coverage** counts only items actually executed natively. **Native-ready** adds the ones proven ready but not
+  seen running yet. **Investigated** is everything except untouched. The three are never added together.
+- **Measured battle routes** count frames of the routes the project measured; they are not whole-game coverage.
+- Near-complete effect figures do not mean the whole game is native: most areas are still NOT MEASURED. See *What the
+  figures do not measure yet* below.
+
+
+_Updated 2026-10-30T17:45:56Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
