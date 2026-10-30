@@ -61,8 +61,10 @@ every small square is one item (or a fixed number of items, noted as "one cell =
 | 🟥 red | blocked / fail |
 | 🟪 purple | unknown or not classified by the project's data |
 | ⬜ grey | not evaluated |
+| 🟦 blue border | **what the project is working on right now** (derived from the coordinator's active milestone) |
 
 The percentage in each label is the share of green squares in that box. The chips at the top summarise the panels.
+Squares and boxes **outlined in blue are what is currently being worked on**; the line above the image names it.
 
 **1. Route frames: native vs fallback.** Each box is a measured game route (a fixed sequence the project runs, e.g.
 GSH, GCU, GGA). Squares are frames from the newest run of that route: green frames were drawn entirely by the native
@@ -140,6 +142,8 @@ runs without it (diagram above).
 - **Effect programs** shows how many of the game's visual effect programs are supported layer by layer (VM semantics,
   catalog, persistence rules, late binding, lights) and what blocks the rest.
 - **Regression tests** shows that what already works keeps working.
+- Squares and boxes **outlined in blue** are what the project is **working on right now** (the current milestone,
+  its subsystem and the effect programs it affects).
 - The colour legend and panel guide are in the **Progress** section above. All figures are aggregates (counts and
   percentages); no game data is published.
 
@@ -225,6 +229,8 @@ native" mide cuánto del juego ya funciona sin él (diagrama arriba).
 - **Effect programs** muestra cuántos programas de efectos visuales del juego están soportados capa por capa (semántica
   de la VM, catálogo, reglas de persistencia, enlace tardío, luces) y qué bloquea al resto.
 - **Regression tests** muestra que lo que ya funciona sigue funcionando.
+- Los cuadrados y recuadros **con borde azul** son aquello en lo que el proyecto **está trabajando ahora mismo** (el
+  hito actual, su subsistema y los programas de efectos a los que afecta).
 - La leyenda de colores y la guía de los paneles están en la sección **Progress** de arriba. Todas las cifras son
   agregadas (conteos y porcentajes); no se publica ningún dato del juego.
 
@@ -310,6 +316,8 @@ jogo já funciona sem ele (diagrama acima).
 - **Effect programs** mostra quantos programas de efeitos visuais do jogo são suportados camada por camada (semântica
   da VM, catálogo, regras de persistência, ligação tardia, luzes) e o que bloqueia o restante.
 - **Regression tests** mostra que o que já funciona continua funcionando.
+- Os quadrados e caixas **com borda azul** são aquilo em que o projeto **está trabalhando agora** (o marco atual, o
+  seu subsistema e os programas de efeitos que ele afeta).
 - A legenda de cores e o guia dos painéis estão na seção **Progress** acima. Todos os números são agregados (contagens
   e porcentagens); nenhum dado do jogo é publicado.
 
