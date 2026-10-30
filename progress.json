@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V1",
-  "generated_utc": "2026-10-30T01:51:00Z",
+  "generated_utc": "2026-10-30T01:52:38Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -159,209 +159,6 @@
       "note": "Each layer is a separate measure of the same programs; green = supported in that layer. Per program and layer, the newest project census that reports it.",
       "groups": [
         {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 441
-            },
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2
-            }
-          ],
-          "total": 443,
-          "good": 441
-        },
-        {
-          "name": "Catalog",
-          "segments": [
-            {
-              "state": "PASS",
-              "tone": "good",
-              "count": 5
-            },
-            {
-              "state": "COMPLETE",
-              "tone": "good",
-              "count": 427
-            },
-            {
-              "state": "GAP",
-              "tone": "bad",
-              "count": 11
-            }
-          ],
-          "total": 443,
-          "good": 432
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 119
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 2
-            },
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 3
-            },
-            {
-              "state": "NO DEPENDENCY",
-              "tone": "neutral",
-              "count": 17
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 302
-            }
-          ],
-          "total": 443,
-          "good": 119
-        },
-        {
-          "name": "K01",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 397
-            },
-            {
-              "state": "CONDITIONAL",
-              "tone": "caution",
-              "count": 8
-            },
-            {
-              "state": "WRITER (K01 RULE)",
-              "tone": "caution",
-              "count": 30
-            },
-            {
-              "state": "INHERITOR (K01 RULE)",
-              "tone": "caution",
-              "count": 2
-            },
-            {
-              "state": "NOT NATIVE",
-              "tone": "attention",
-              "count": 6
-            }
-          ],
-          "total": 443,
-          "good": 397
-        },
-        {
-          "name": "K02",
-          "segments": [
-            {
-              "state": "RUNTIME CHECKED",
-              "tone": "caution",
-              "count": 10
-            },
-            {
-              "state": "NOT APPLICABLE",
-              "tone": "neutral",
-              "count": 3
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 430
-            }
-          ],
-          "total": 443,
-          "good": 0
-        },
-        {
-          "name": "LB01",
-          "segments": [
-            {
-              "state": "PROVEN",
-              "tone": "good",
-              "count": 24
-            },
-            {
-              "state": "NOT PROVEN",
-              "tone": "attention",
-              "count": 9
-            },
-            {
-              "state": "NOT EVALUATED",
-              "tone": "neutral",
-              "count": 4
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 405
-            },
-            {
-              "state": "UNCLASSIFIED",
-              "tone": "unknown",
-              "count": 1
-            }
-          ],
-          "total": 443,
-          "good": 24
-        },
-        {
-          "name": "EOPT",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 25
-            },
-            {
-              "state": "NOT APPLICABLE",
-              "tone": "neutral",
-              "count": 9
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 409
-            }
-          ],
-          "total": 443,
-          "good": 25
-        },
-        {
-          "name": "LT01",
-          "segments": [
-            {
-              "state": "DEPENDS",
-              "tone": "attention",
-              "count": 23,
-              "current": true
-            },
-            {
-              "state": "NO DEPENDENCY",
-              "tone": "neutral",
-              "count": 11
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 409
-            }
-          ],
-          "current": true,
-          "total": 443,
-          "good": 0
-        },
-        {
           "name": "Static eligible",
           "segments": [
             {
@@ -414,11 +211,74 @@
           ],
           "total": 443,
           "good": 277
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "SUPPORTED",
+              "tone": "good",
+              "count": 441
+            },
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 443,
+          "good": 441
+        },
+        {
+          "name": "Catalog",
+          "segments": [
+            {
+              "state": "PASS",
+              "tone": "good",
+              "count": 5
+            },
+            {
+              "state": "COMPLETE",
+              "tone": "good",
+              "count": 427
+            },
+            {
+              "state": "GAP",
+              "tone": "bad",
+              "count": 11
+            }
+          ],
+          "total": 443,
+          "good": 432
+        },
+        {
+          "name": "LT01",
+          "segments": [
+            {
+              "state": "DEPENDS",
+              "tone": "attention",
+              "count": 23,
+              "current": true
+            },
+            {
+              "state": "NO DEPENDENCY",
+              "tone": "neutral",
+              "count": 11
+            },
+            {
+              "state": "UNKNOWN",
+              "tone": "unknown",
+              "count": 409
+            }
+          ],
+          "current": true,
+          "total": 443,
+          "good": 0
         }
       ],
       "combined": false,
-      "total": 3987,
-      "good": 1715,
+      "total": 1772,
+      "good": 1150,
       "not_applicable": 0
     },
     {
@@ -577,6 +437,153 @@
     "as_of": "2026-10-29"
   },
   "layer_views": [
+    {
+      "id": "layer_static_eligible",
+      "title": "Effect programs: Static eligible layer",
+      "unit": "programs",
+      "as_of": "2026-10-29",
+      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their Static eligible status. Blue border = current work.",
+      "groups": [
+        {
+          "name": "NONE (static)",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 274
+            }
+          ],
+          "total": 274,
+          "good": 274
+        },
+        {
+          "name": "H02",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "NO VERDICT",
+              "tone": "unknown",
+              "count": 117
+            }
+          ],
+          "total": 118,
+          "good": 0
+        },
+        {
+          "name": "RUNTIME",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 2
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 8
+            },
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 16,
+              "current": true
+            }
+          ],
+          "total": 26,
+          "good": 2
+        },
+        {
+          "name": "CATALOG",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 9
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            },
+            {
+              "state": "NOT ELIGIBLE",
+              "tone": "bad",
+              "count": 2
+            },
+            {
+              "state": "NOT ELIGIBLE",
+              "tone": "bad",
+              "count": 7,
+              "current": true
+            }
+          ],
+          "total": 19,
+          "good": 0
+        },
+        {
+          "name": "VM",
+          "segments": [
+            {
+              "state": "FAIL",
+              "tone": "bad",
+              "count": 2
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "OTHER",
+          "segments": [
+            {
+              "state": "STATIC ONLY",
+              "tone": "caution",
+              "count": 1
+            },
+            {
+              "state": "BLOCKED",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 2,
+          "good": 0
+        },
+        {
+          "name": "L01",
+          "segments": [
+            {
+              "state": "BLOCKED (L01)",
+              "tone": "bad",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 0
+        },
+        {
+          "name": "R01",
+          "segments": [
+            {
+              "state": "NATIVE",
+              "tone": "good",
+              "count": 1
+            }
+          ],
+          "total": 1,
+          "good": 1
+        }
+      ],
+      "combined": true,
+      "total": 443,
+      "good": 277,
+      "percent": 62.52821670428894,
+      "not_applicable": 0
+    },
     {
       "id": "layer_vm",
       "title": "Effect programs: VM layer",
@@ -837,440 +844,6 @@
       "not_applicable": 0
     },
     {
-      "id": "layer_r01",
-      "title": "Effect programs: R01 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 124 programs this layer applies to, grouped by first-failure subsystem and coloured by their R01 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 67
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 68,
-          "good": 67
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 24
-            },
-            {
-              "state": "GUARDED",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 25,
-          "good": 24
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 4
-            },
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 10,
-              "current": true
-            }
-          ],
-          "total": 14,
-          "good": 14
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 10
-            },
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 2,
-              "current": true
-            }
-          ],
-          "total": 12,
-          "good": 12
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "POLICY D",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "NOT RESOLVED",
-              "tone": "attention",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        }
-      ],
-      "combined": true,
-      "total": 124,
-      "good": 119,
-      "percent": 95.96774193548387,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_k01",
-      "title": "Effect programs: K01 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their K01 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 254
-            },
-            {
-              "state": "CONDITIONAL",
-              "tone": "caution",
-              "count": 5
-            },
-            {
-              "state": "WRITER (K01 RULE)",
-              "tone": "caution",
-              "count": 15
-            }
-          ],
-          "total": 274,
-          "good": 254
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 105
-            },
-            {
-              "state": "WRITER (K01 RULE)",
-              "tone": "caution",
-              "count": 9
-            },
-            {
-              "state": "CONDITIONAL",
-              "tone": "caution",
-              "count": 2
-            },
-            {
-              "state": "INHERITOR (K01 RULE)",
-              "tone": "caution",
-              "count": 2
-            }
-          ],
-          "total": 118,
-          "good": 105
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 10
-            },
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 10,
-              "current": true
-            },
-            {
-              "state": "NOT NATIVE",
-              "tone": "attention",
-              "count": 6,
-              "current": true
-            }
-          ],
-          "total": 26,
-          "good": 20
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 6
-            },
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 7,
-              "current": true
-            },
-            {
-              "state": "WRITER (K01 RULE)",
-              "tone": "caution",
-              "count": 6
-            }
-          ],
-          "total": 19,
-          "good": 13
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 2
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 2
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "CONDITIONAL",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "EXEMPT",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 443,
-      "good": 397,
-      "percent": 89.61625282167043,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_k02",
-      "title": "Effect programs: K02 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 10 programs this layer applies to, grouped by first-failure subsystem and coloured by their K02 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "RUNTIME CHECKED",
-              "tone": "caution",
-              "count": 9
-            }
-          ],
-          "total": 9,
-          "good": 0
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "RUNTIME CHECKED",
-              "tone": "caution",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        }
-      ],
-      "combined": true,
-      "total": 10,
-      "good": 0,
-      "percent": 0,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_lb01",
-      "title": "Effect programs: LB01 layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 34 programs this layer applies to, grouped by first-failure subsystem and coloured by their LB01 status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "PROVEN",
-              "tone": "good",
-              "count": 8
-            },
-            {
-              "state": "PROVEN",
-              "tone": "good",
-              "count": 16,
-              "current": true
-            }
-          ],
-          "total": 24,
-          "good": 24
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "NOT PROVEN",
-              "tone": "attention",
-              "count": 2
-            },
-            {
-              "state": "NOT PROVEN",
-              "tone": "attention",
-              "count": 7,
-              "current": true
-            }
-          ],
-          "total": 9,
-          "good": 0
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "UNCLASSIFIED",
-              "tone": "unknown",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        }
-      ],
-      "combined": true,
-      "total": 34,
-      "good": 24,
-      "percent": 70.58823529411765,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_eopt",
-      "title": "Effect programs: EOPT layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows the 25 programs this layer applies to, grouped by first-failure subsystem and coloured by their EOPT status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 8
-            },
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 16,
-              "current": true
-            }
-          ],
-          "total": 24,
-          "good": 24
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "SUPPORTED",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 25,
-      "good": 25,
-      "percent": 100,
-      "not_applicable": 0
-    },
-    {
       "id": "layer_lt01",
       "title": "Effect programs: LT01 layer",
       "unit": "programs",
@@ -1308,153 +881,6 @@
       "total": 23,
       "good": 0,
       "percent": 0,
-      "not_applicable": 0
-    },
-    {
-      "id": "layer_static_eligible",
-      "title": "Effect programs: Static eligible layer",
-      "unit": "programs",
-      "as_of": "2026-10-29",
-      "note": "Shows all programs, grouped by first-failure subsystem and coloured by their Static eligible status. Blue border = current work.",
-      "groups": [
-        {
-          "name": "NONE (static)",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 274
-            }
-          ],
-          "total": 274,
-          "good": 274
-        },
-        {
-          "name": "H02",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            },
-            {
-              "state": "NO VERDICT",
-              "tone": "unknown",
-              "count": 117
-            }
-          ],
-          "total": 118,
-          "good": 0
-        },
-        {
-          "name": "RUNTIME",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 2
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 8
-            },
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 16,
-              "current": true
-            }
-          ],
-          "total": 26,
-          "good": 2
-        },
-        {
-          "name": "CATALOG",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 9
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 2
-            },
-            {
-              "state": "NOT ELIGIBLE",
-              "tone": "bad",
-              "count": 7,
-              "current": true
-            }
-          ],
-          "total": 19,
-          "good": 0
-        },
-        {
-          "name": "VM",
-          "segments": [
-            {
-              "state": "FAIL",
-              "tone": "bad",
-              "count": 2
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "OTHER",
-          "segments": [
-            {
-              "state": "STATIC ONLY",
-              "tone": "caution",
-              "count": 1
-            },
-            {
-              "state": "BLOCKED",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 2,
-          "good": 0
-        },
-        {
-          "name": "L01",
-          "segments": [
-            {
-              "state": "BLOCKED (L01)",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 0
-        },
-        {
-          "name": "R01",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 1
-            }
-          ],
-          "total": 1,
-          "good": 1
-        }
-      ],
-      "combined": true,
-      "total": 443,
-      "good": 277,
-      "percent": 62.52821670428894,
       "not_applicable": 0
     }
   ]
