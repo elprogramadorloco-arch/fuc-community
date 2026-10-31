@@ -31,19 +31,18 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261030T175146Z)
+![route frames](badges/route_frames.svg?v=20261031T120527Z)
 
-**⬜ Currently being worked on:** L01 (local lights) · R01 (effect element registers) — 6 effect programs (white outline below).
+**⬜ Currently being worked on:** 0 effect programs (white outline below).
 
-![FUC native game coverage](progress.svg?v=20261030T175146Z)
+![FUC native game coverage](progress.svg?v=20261031T120527Z)
 
 | At a glance | Value | Over |
 |---|---|---|
-| Measured battle routes — native frames | 3227 / 3233 (99.81 %) | measured route frames only |
+| Measured battle routes — native frames | 7009 / 7022 (99.81 %) | measured route frames only |
 | Effect programs — native coverage | 0 / 443 (0.00 %) | actually executed natively |
 | Effect programs — native-ready coverage | 277 / 443 (62.53 %) | native + ready, not seen |
 | Effect programs — investigated coverage | 443 / 443 (100.00 %) | everything but untouched |
-| Known semantic unknowns | 87 OPEN of 128 | the project's unknown census |
 
 ### Game coverage
 
@@ -67,9 +66,9 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Image correctness | **NOT MEASURED** | effect programs: all NOT VALIDATED |
 | Performance | **NOT MEASURED** | no supported performance record found |
 | Stability | **NOT MEASURED** | no supported stability record found |
-| Production integration | **NOT MEASURED** | production baseline: recorded; integration items integrated in research: 8 of 11; promoted to production: not recorded |
-| Fallback removal | partly measured | measured route fallback: 6 of 3233 frames; effect-program fallback: 14 of 443 programs; known content fallback: NOT MEASURED |
-| Global semantic unknowns | measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them |
+| Production integration | **NOT MEASURED** | production baseline: recorded; integration items integrated in research: 11 of 15; promoted to production: not recorded |
+| Fallback removal | partly measured | measured route fallback: 13 of 7022 frames; effect-program fallback: 14 of 443 programs; known content fallback: NOT MEASURED |
+| Global semantic unknowns | **NOT MEASURED** | No unknown-census total found in the project metrics. |
 
 ### How to read it
 
@@ -94,7 +93,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-10-30T17:51:46Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-10-31T12:05:27Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
