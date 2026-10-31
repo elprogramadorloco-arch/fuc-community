@@ -1,12 +1,12 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V2",
-  "generated_utc": "2026-10-31T12:05:27Z",
+  "generated_utc": "2026-10-31T12:29:50Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
       "label": "Measured battle routes — native frames",
-      "value": 7009,
-      "total": 7022,
+      "value": 3224,
+      "total": 3230,
       "as_of": "2026-10-31",
       "note": "measured route frames only"
     },
@@ -475,7 +475,7 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 542
+              "count": 541
             },
             {
               "state": "FALLBACK",
@@ -483,8 +483,8 @@
               "count": 1
             }
           ],
-          "total": 543,
-          "good": 542
+          "total": 542,
+          "good": 541
         },
         {
           "name": "GFO",
@@ -526,40 +526,6 @@
             {
               "state": "NATIVE",
               "tone": "good",
-              "count": 540
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 541,
-          "good": 540
-        },
-        {
-          "name": "H2GCU",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 542
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 543,
-          "good": 542
-        },
-        {
-          "name": "H2GSH",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
               "count": 539
             },
             {
@@ -570,91 +536,6 @@
           ],
           "total": 540,
           "good": 539
-        },
-        {
-          "name": "RUN_CENSUS_L12H_GSH_20261030T184103Z_PRER1",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 539
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 540,
-          "good": 539
-        },
-        {
-          "name": "RUN_CENSUS_Q6H_GCU",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 541
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 542,
-          "good": 541
-        },
-        {
-          "name": "RUN_CENSUS_Q6H_GSH",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 539
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 540,
-          "good": 539
-        },
-        {
-          "name": "RUN_CENSUS_Q6H_R2GCU",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 542
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 543,
-          "good": 542
-        },
-        {
-          "name": "RUN_CENSUS_Q6H_R2GSH",
-          "segments": [
-            {
-              "state": "NATIVE",
-              "tone": "good",
-              "count": 541
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            }
-          ],
-          "total": 542,
-          "good": 541
         },
         {
           "name": "STG005",
@@ -691,9 +572,9 @@
           "good": 541
         }
       ],
-      "total": 7022,
-      "good": 7009,
-      "percent": 99.81486755909997
+      "total": 3230,
+      "good": 3224,
+      "percent": 99.81424148606811
     }
   ],
   "current_work": {
@@ -980,7 +861,7 @@
         "coverage_known": false,
         "note": "Fallback is counted only over populations with a census; there is no whole-game denominator yet.",
         "facts": [
-          "measured route fallback: 13 of 7022 frames",
+          "measured route fallback: 6 of 3230 frames",
           "effect-program fallback: 14 of 443 programs",
           "known content fallback: NOT MEASURED"
         ],
@@ -989,11 +870,17 @@
       {
         "id": "unknowns",
         "name": "Global semantic unknowns",
-        "measurement": "not_measured",
-        "summary": "NOT MEASURED",
-        "coverage_known": false,
-        "note": "No unknown-census total found in the project metrics.",
-        "facts": []
+        "measurement": "measured",
+        "summary": "87 OPEN of 128",
+        "known_count": 128,
+        "total_count": 128,
+        "coverage_known": true,
+        "note": "Known semantic unknowns from the project's unknown census (closed and deferred are not told apart there).",
+        "facts": [
+          "OPEN: 87",
+          "closed or deferred: 41",
+          "VM support near 100 % does not close them"
+        ]
       }
     ],
     "characters": [
@@ -1557,10 +1444,10 @@
       }
     ],
     "measured_runtime": {
-      "native_frames": 7009,
-      "frames": 7022,
-      "fallback_frames": 13,
-      "routes": 13,
+      "native_frames": 3224,
+      "frames": 3230,
+      "fallback_frames": 6,
+      "routes": 6,
       "as_of": "2026-10-31",
       "note": "measured battle route frames only; not extrapolated to the whole game"
     }
