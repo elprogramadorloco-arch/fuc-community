@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V2",
-  "generated_utc": "2026-10-31T12:29:50Z",
+  "generated_utc": "2026-11-01T01:52:42Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -14,21 +14,21 @@
       "label": "Effect programs — native coverage",
       "value": 0,
       "total": 443,
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-31",
       "note": "actually executed natively"
     },
     {
       "label": "Effect programs — native-ready coverage",
-      "value": 277,
+      "value": 240,
       "total": 443,
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-31",
       "note": "native + ready, not seen"
     },
     {
       "label": "Effect programs — investigated coverage",
       "value": 443,
       "total": 443,
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-31",
       "note": "everything but untouched"
     }
   ],
@@ -37,7 +37,7 @@
       "id": "effect_programs",
       "title": "Effects → Effect programs — 443 known programs",
       "unit": "programs",
-      "as_of": "2026-10-29",
+      "as_of": "2026-10-31",
       "note": "One square per effect program, grouped by character; colour = overall state.",
       "groups": [
         {
@@ -53,57 +53,6 @@
           "good": 0
         },
         {
-          "name": "Leysritt",
-          "segments": [
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 14
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 2
-            }
-          ],
-          "total": 16,
-          "good": 0
-        },
-        {
-          "name": "Kirei",
-          "segments": [
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 17
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 4
-            }
-          ],
-          "total": 21,
-          "good": 0
-        },
-        {
-          "name": "Zero Lancer",
-          "segments": [
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 12
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 3
-            }
-          ],
-          "total": 15,
-          "good": 0
-        },
-        {
           "name": "Luviagelita",
           "segments": [
             {
@@ -114,20 +63,54 @@
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 10
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 2
+              "count": 12
             }
           ],
           "total": 13,
           "good": 0
         },
         {
+          "name": "Leysritt",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 2
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 14
+            }
+          ],
+          "total": 16,
+          "good": 0
+        },
+        {
+          "name": "Kirei",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 5
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 16
+            }
+          ],
+          "total": 21,
+          "good": 0
+        },
+        {
           "name": "Caster",
           "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 14
+            },
             {
               "state": "FALLBACK",
               "tone": "bad",
@@ -136,32 +119,32 @@
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 31
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 10
+              "count": 27
             }
           ],
           "total": 42,
           "good": 0
         },
         {
-          "name": "Lancer",
+          "name": "Archer",
           "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 16
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 1
+            },
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 11
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 4
+              "count": 28
             }
           ],
-          "total": 15,
+          "total": 45,
           "good": 0
         },
         {
@@ -170,17 +153,119 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 1
+              "count": 10
             },
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 18
+              "count": 16
+            }
+          ],
+          "total": 26,
+          "good": 0
+        },
+        {
+          "name": "Rider",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 9
             },
             {
-              "state": "UNKNOWN",
-              "tone": "unknown",
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 13
+            }
+          ],
+          "total": 22,
+          "good": 0
+        },
+        {
+          "name": "Saber",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 9
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 13
+            }
+          ],
+          "total": 22,
+          "good": 0
+        },
+        {
+          "name": "Lancer",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
               "count": 7
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 8
+            }
+          ],
+          "total": 15,
+          "good": 0
+        },
+        {
+          "name": "Berserker",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 3
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 2
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 5
+            }
+          ],
+          "total": 10,
+          "good": 0
+        },
+        {
+          "name": "Zero Lancer",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 8
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 7
+            }
+          ],
+          "total": 15,
+          "good": 0
+        },
+        {
+          "name": "Gilgamesh",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 15
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 11
             }
           ],
           "total": 26,
@@ -192,142 +277,15 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 1
+              "count": 22
             },
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 23
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 11
-            }
-          ],
-          "total": 35,
-          "good": 0
-        },
-        {
-          "name": "Rider",
-          "segments": [
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 14
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 8
-            }
-          ],
-          "total": 22,
-          "good": 0
-        },
-        {
-          "name": "Gilgamesh",
-          "segments": [
-            {
-              "state": "PARTIAL",
-              "tone": "caution",
-              "count": 8
-            },
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 16
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 2
-            }
-          ],
-          "total": 26,
-          "good": 0
-        },
-        {
-          "name": "Bazett",
-          "segments": [
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            },
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 17
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 10
-            }
-          ],
-          "total": 28,
-          "good": 0
-        },
-        {
-          "name": "Archer",
-          "segments": [
-            {
-              "state": "PARTIAL",
-              "tone": "caution",
-              "count": 10
-            },
-            {
-              "state": "FALLBACK",
-              "tone": "bad",
-              "count": 1
-            },
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 27
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 7
-            }
-          ],
-          "total": 45,
-          "good": 0
-        },
-        {
-          "name": "Saber",
-          "segments": [
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
               "count": 13
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 9
             }
           ],
-          "total": 22,
-          "good": 0
-        },
-        {
-          "name": "Assassin",
-          "segments": [
-            {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 5
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 4
-            }
-          ],
-          "total": 9,
+          "total": 35,
           "good": 0
         },
         {
@@ -336,7 +294,7 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 1
+              "count": 7
             },
             {
               "state": "FALLBACK",
@@ -346,37 +304,32 @@
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 13
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 2
+              "count": 9
             }
           ],
           "total": 25,
           "good": 0
         },
         {
-          "name": "Berserker",
+          "name": "Bazett",
           "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 17
+            },
             {
               "state": "FALLBACK",
               "tone": "bad",
-              "count": 2
+              "count": 1
             },
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 3
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 5
+              "count": 10
             }
           ],
-          "total": 10,
+          "total": 28,
           "good": 0
         },
         {
@@ -385,20 +338,37 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 11
+              "count": 23
+            },
+            {
+              "state": "FALLBACK",
+              "tone": "bad",
+              "count": 1
             },
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 8
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 15
+              "count": 10
             }
           ],
           "total": 34,
+          "good": 0
+        },
+        {
+          "name": "Assassin",
+          "segments": [
+            {
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 7
+            },
+            {
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 2
+            }
+          ],
+          "total": 9,
           "good": 0
         },
         {
@@ -407,17 +377,12 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 1
+              "count": 4
             },
             {
               "state": "READY / NOT SEEN",
               "tone": "active",
-              "count": 12
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 1
+              "count": 10
             }
           ],
           "total": 14,
@@ -427,14 +392,14 @@
           "name": "Common effects",
           "segments": [
             {
-              "state": "READY / NOT SEEN",
-              "tone": "active",
-              "count": 12
+              "state": "PARTIAL",
+              "tone": "caution",
+              "count": 7
             },
             {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 10
+              "state": "READY / NOT SEEN",
+              "tone": "active",
+              "count": 15
             }
           ],
           "total": 22,
@@ -446,12 +411,7 @@
             {
               "state": "PARTIAL",
               "tone": "caution",
-              "count": 1
-            },
-            {
-              "state": "UNKNOWN",
-              "tone": "unknown",
-              "count": 1
+              "count": 2
             }
           ],
           "total": 2,
@@ -580,7 +540,7 @@
   "current_work": {
     "subsystems": [],
     "programs": 0,
-    "as_of": "2026-10-31"
+    "as_of": "2026-11-01"
   },
   "game_coverage": {
     "states": [
@@ -631,18 +591,18 @@
     "items": {
       "total": 443,
       "native": 0,
-      "native_ready": 277,
+      "native_ready": 240,
       "investigated": 443,
       "by_state": {
         "native": 0,
-        "partial": 35,
-        "fallback": 14,
-        "ready_not_seen": 277,
-        "unknown": 117,
+        "partial": 188,
+        "fallback": 15,
+        "ready_not_seen": 240,
+        "unknown": 0,
         "untouched": 0
       },
       "native_pct": 0,
-      "native_ready_pct": 62.53,
+      "native_ready_pct": 54.18,
       "investigated_pct": 100
     },
     "categories": [
@@ -666,25 +626,25 @@
         "coverage": {
           "total": 405,
           "native": 0,
-          "native_ready": 253,
+          "native_ready": 215,
           "investigated": 405,
           "by_state": {
             "native": 0,
-            "partial": 33,
-            "fallback": 14,
-            "ready_not_seen": 253,
-            "unknown": 105,
+            "partial": 175,
+            "fallback": 15,
+            "ready_not_seen": 215,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 62.47,
+          "native_ready_pct": 53.09,
           "investigated_pct": 100
         },
         "note": "Only each character's effect programs are measured; core rendering, weapons, materials, skin, shadows, local lights, supers / special effects, runtime coverage and image validation have no census yet (NOT MEASURED).",
         "facts": [
           "18 of 18 named by the project's roster records"
         ],
-        "as_of": "2026-10-29"
+        "as_of": "2026-10-31"
       },
       {
         "id": "stages",
@@ -708,23 +668,23 @@
         "coverage": {
           "total": 443,
           "native": 0,
-          "native_ready": 277,
+          "native_ready": 240,
           "investigated": 443,
           "by_state": {
             "native": 0,
-            "partial": 35,
-            "fallback": 14,
-            "ready_not_seen": 277,
-            "unknown": 117,
+            "partial": 188,
+            "fallback": 15,
+            "ready_not_seen": 240,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 62.53,
+          "native_ready_pct": 54.18,
           "investigated_pct": 100
         },
         "note": "Effect programs: 443 / 443 inventory known (composed census). Other effect kinds have no census.",
         "facts": [],
-        "as_of": "2026-10-29"
+        "as_of": "2026-10-31"
       },
       {
         "id": "hud",
@@ -862,7 +822,7 @@
         "note": "Fallback is counted only over populations with a census; there is no whole-game denominator yet.",
         "facts": [
           "measured route fallback: 6 of 3230 frames",
-          "effect-program fallback: 14 of 443 programs",
+          "effect-program fallback: 15 of 443 programs",
           "known content fallback: NOT MEASURED"
         ],
         "as_of": "2026-10-31"
@@ -916,6 +876,37 @@
         ]
       },
       {
+        "name": "Luviagelita",
+        "effect_programs": {
+          "total": 13,
+          "native": 0,
+          "native_ready": 12,
+          "investigated": 13,
+          "by_state": {
+            "native": 0,
+            "partial": 1,
+            "fallback": 0,
+            "ready_not_seen": 12,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 92.31,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
         "name": "Leysritt",
         "effect_programs": {
           "total": 16,
@@ -924,10 +915,10 @@
           "investigated": 16,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 2,
             "fallback": 0,
             "ready_not_seen": 14,
-            "unknown": 2,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
@@ -951,80 +942,18 @@
         "effect_programs": {
           "total": 21,
           "native": 0,
-          "native_ready": 17,
+          "native_ready": 16,
           "investigated": 21,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 5,
             "fallback": 0,
-            "ready_not_seen": 17,
-            "unknown": 4,
+            "ready_not_seen": 16,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 80.95,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Zero Lancer",
-        "effect_programs": {
-          "total": 15,
-          "native": 0,
-          "native_ready": 12,
-          "investigated": 15,
-          "by_state": {
-            "native": 0,
-            "partial": 0,
-            "fallback": 0,
-            "ready_not_seen": 12,
-            "unknown": 3,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 80,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Luviagelita",
-        "effect_programs": {
-          "total": 13,
-          "native": 0,
-          "native_ready": 10,
-          "investigated": 13,
-          "by_state": {
-            "native": 0,
-            "partial": 1,
-            "fallback": 0,
-            "ready_not_seen": 10,
-            "unknown": 2,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 76.92,
+          "native_ready_pct": 76.19,
           "investigated_pct": 100
         },
         "not_measured": [
@@ -1044,204 +973,18 @@
         "effect_programs": {
           "total": 42,
           "native": 0,
-          "native_ready": 31,
+          "native_ready": 27,
           "investigated": 42,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 14,
             "fallback": 1,
-            "ready_not_seen": 31,
-            "unknown": 10,
+            "ready_not_seen": 27,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 73.81,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Lancer",
-        "effect_programs": {
-          "total": 15,
-          "native": 0,
-          "native_ready": 11,
-          "investigated": 15,
-          "by_state": {
-            "native": 0,
-            "partial": 0,
-            "fallback": 0,
-            "ready_not_seen": 11,
-            "unknown": 4,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 73.33,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Rin",
-        "effect_programs": {
-          "total": 26,
-          "native": 0,
-          "native_ready": 18,
-          "investigated": 26,
-          "by_state": {
-            "native": 0,
-            "partial": 1,
-            "fallback": 0,
-            "ready_not_seen": 18,
-            "unknown": 7,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 69.23,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Saber Alter",
-        "effect_programs": {
-          "total": 35,
-          "native": 0,
-          "native_ready": 23,
-          "investigated": 35,
-          "by_state": {
-            "native": 0,
-            "partial": 1,
-            "fallback": 0,
-            "ready_not_seen": 23,
-            "unknown": 11,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 65.71,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Rider",
-        "effect_programs": {
-          "total": 22,
-          "native": 0,
-          "native_ready": 14,
-          "investigated": 22,
-          "by_state": {
-            "native": 0,
-            "partial": 0,
-            "fallback": 0,
-            "ready_not_seen": 14,
-            "unknown": 8,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 63.64,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Gilgamesh",
-        "effect_programs": {
-          "total": 26,
-          "native": 0,
-          "native_ready": 16,
-          "investigated": 26,
-          "by_state": {
-            "native": 0,
-            "partial": 8,
-            "fallback": 0,
-            "ready_not_seen": 16,
-            "unknown": 2,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 61.54,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Bazett",
-        "effect_programs": {
-          "total": 28,
-          "native": 0,
-          "native_ready": 17,
-          "investigated": 28,
-          "by_state": {
-            "native": 0,
-            "partial": 0,
-            "fallback": 1,
-            "ready_not_seen": 17,
-            "unknown": 10,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 60.71,
+          "native_ready_pct": 64.29,
           "investigated_pct": 100
         },
         "not_measured": [
@@ -1261,18 +1004,80 @@
         "effect_programs": {
           "total": 45,
           "native": 0,
-          "native_ready": 27,
+          "native_ready": 28,
           "investigated": 45,
           "by_state": {
             "native": 0,
-            "partial": 10,
+            "partial": 16,
             "fallback": 1,
-            "ready_not_seen": 27,
-            "unknown": 7,
+            "ready_not_seen": 28,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 60,
+          "native_ready_pct": 62.22,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Rin",
+        "effect_programs": {
+          "total": 26,
+          "native": 0,
+          "native_ready": 16,
+          "investigated": 26,
+          "by_state": {
+            "native": 0,
+            "partial": 10,
+            "fallback": 0,
+            "ready_not_seen": 16,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 61.54,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Rider",
+        "effect_programs": {
+          "total": 22,
+          "native": 0,
+          "native_ready": 13,
+          "investigated": 22,
+          "by_state": {
+            "native": 0,
+            "partial": 9,
+            "fallback": 0,
+            "ready_not_seen": 13,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 59.09,
           "investigated_pct": 100
         },
         "not_measured": [
@@ -1296,10 +1101,10 @@
           "investigated": 22,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 9,
             "fallback": 0,
             "ready_not_seen": 13,
-            "unknown": 9,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
@@ -1319,53 +1124,22 @@
         ]
       },
       {
-        "name": "Assassin",
+        "name": "Lancer",
         "effect_programs": {
-          "total": 9,
+          "total": 15,
           "native": 0,
-          "native_ready": 5,
-          "investigated": 9,
+          "native_ready": 8,
+          "investigated": 15,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 7,
             "fallback": 0,
-            "ready_not_seen": 5,
-            "unknown": 4,
+            "ready_not_seen": 8,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 55.56,
-          "investigated_pct": 100
-        },
-        "not_measured": [
-          "core rendering",
-          "weapons",
-          "materials",
-          "skin",
-          "shadows",
-          "local lights",
-          "supers / special effects",
-          "runtime coverage",
-          "image validation"
-        ]
-      },
-      {
-        "name": "Shirou",
-        "effect_programs": {
-          "total": 25,
-          "native": 0,
-          "native_ready": 13,
-          "investigated": 25,
-          "by_state": {
-            "native": 0,
-            "partial": 1,
-            "fallback": 9,
-            "ready_not_seen": 13,
-            "unknown": 2,
-            "untouched": 0
-          },
-          "native_pct": 0,
-          "native_ready_pct": 52,
+          "native_ready_pct": 53.33,
           "investigated_pct": 100
         },
         "not_measured": [
@@ -1385,18 +1159,173 @@
         "effect_programs": {
           "total": 10,
           "native": 0,
-          "native_ready": 3,
+          "native_ready": 5,
           "investigated": 10,
           "by_state": {
             "native": 0,
-            "partial": 0,
+            "partial": 3,
             "fallback": 2,
-            "ready_not_seen": 3,
-            "unknown": 5,
+            "ready_not_seen": 5,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 30,
+          "native_ready_pct": 50,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Zero Lancer",
+        "effect_programs": {
+          "total": 15,
+          "native": 0,
+          "native_ready": 7,
+          "investigated": 15,
+          "by_state": {
+            "native": 0,
+            "partial": 8,
+            "fallback": 0,
+            "ready_not_seen": 7,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 46.67,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Gilgamesh",
+        "effect_programs": {
+          "total": 26,
+          "native": 0,
+          "native_ready": 11,
+          "investigated": 26,
+          "by_state": {
+            "native": 0,
+            "partial": 15,
+            "fallback": 0,
+            "ready_not_seen": 11,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 42.31,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Saber Alter",
+        "effect_programs": {
+          "total": 35,
+          "native": 0,
+          "native_ready": 13,
+          "investigated": 35,
+          "by_state": {
+            "native": 0,
+            "partial": 22,
+            "fallback": 0,
+            "ready_not_seen": 13,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 37.14,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Shirou",
+        "effect_programs": {
+          "total": 25,
+          "native": 0,
+          "native_ready": 9,
+          "investigated": 25,
+          "by_state": {
+            "native": 0,
+            "partial": 7,
+            "fallback": 9,
+            "ready_not_seen": 9,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 36,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Bazett",
+        "effect_programs": {
+          "total": 28,
+          "native": 0,
+          "native_ready": 10,
+          "investigated": 28,
+          "by_state": {
+            "native": 0,
+            "partial": 17,
+            "fallback": 1,
+            "ready_not_seen": 10,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 35.71,
           "investigated_pct": 100
         },
         "not_measured": [
@@ -1416,18 +1345,49 @@
         "effect_programs": {
           "total": 34,
           "native": 0,
-          "native_ready": 8,
+          "native_ready": 10,
           "investigated": 34,
           "by_state": {
             "native": 0,
-            "partial": 11,
-            "fallback": 0,
-            "ready_not_seen": 8,
-            "unknown": 15,
+            "partial": 23,
+            "fallback": 1,
+            "ready_not_seen": 10,
+            "unknown": 0,
             "untouched": 0
           },
           "native_pct": 0,
-          "native_ready_pct": 23.53,
+          "native_ready_pct": 29.41,
+          "investigated_pct": 100
+        },
+        "not_measured": [
+          "core rendering",
+          "weapons",
+          "materials",
+          "skin",
+          "shadows",
+          "local lights",
+          "supers / special effects",
+          "runtime coverage",
+          "image validation"
+        ]
+      },
+      {
+        "name": "Assassin",
+        "effect_programs": {
+          "total": 9,
+          "native": 0,
+          "native_ready": 2,
+          "investigated": 9,
+          "by_state": {
+            "native": 0,
+            "partial": 7,
+            "fallback": 0,
+            "ready_not_seen": 2,
+            "unknown": 0,
+            "untouched": 0
+          },
+          "native_pct": 0,
+          "native_ready_pct": 22.22,
           "investigated_pct": 100
         },
         "not_measured": [

@@ -31,17 +31,17 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261031T122950Z)
+![route frames](badges/route_frames.svg?v=20261101T015242Z)
 
 **⬜ Currently being worked on:** a task outside the effect-program inventory (no effect program is outlined).
 
-![FUC native game coverage](progress.svg?v=20261031T122950Z)
+![FUC native game coverage](progress.svg?v=20261101T015242Z)
 
 | At a glance | Value | Over |
 |---|---|---|
 | Measured battle routes — native frames | 3224 / 3230 (99.81 %) | measured route frames only |
 | Effect programs — native coverage | 0 / 443 (0.00 %) | actually executed natively |
-| Effect programs — native-ready coverage | 277 / 443 (62.53 %) | native + ready, not seen |
+| Effect programs — native-ready coverage | 240 / 443 (54.18 %) | native + ready, not seen |
 | Effect programs — investigated coverage | 443 / 443 (100.00 %) | everything but untouched |
 | Known semantic unknowns | 87 OPEN of 128 | the project's unknown census |
 
@@ -52,9 +52,9 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Area | Status | What is known |
 |---|---|---|
 | Gameplay / game logic | **NOT MEASURED** | The game code runs recompiled, but no per-function or per-feature native census is recorded. |
-| Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 62.5 %, investigated 100.0 % |
+| Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 53.1 %, investigated 100.0 % |
 | Stages | **NOT MEASURED** | measured battle routes touch 2 stage IDs |
-| Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 62.5 %, investigated 100.0 % |
+| Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % |
 | HUD / battle UI | **NOT MEASURED** | No HUD inventory census is recorded. |
 | Menus / frontend | **NOT MEASURED** | No menu or frontend inventory census is recorded. |
 | FMV / cutscenes | **NOT MEASURED** | No FMV inventory census is recorded. |
@@ -68,7 +68,7 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Performance | **NOT MEASURED** | no supported performance record found |
 | Stability | **NOT MEASURED** | no supported stability record found |
 | Production integration | **NOT MEASURED** | production baseline: recorded; integration items integrated in research: 11 of 15; promoted to production: not recorded |
-| Fallback removal | partly measured | measured route fallback: 6 of 3230 frames; effect-program fallback: 14 of 443 programs; known content fallback: NOT MEASURED |
+| Fallback removal | partly measured | measured route fallback: 6 of 3230 frames; effect-program fallback: 15 of 443 programs; known content fallback: NOT MEASURED |
 | Global semantic unknowns | measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them |
 
 ### How to read it
@@ -79,10 +79,10 @@ draws visual effects): one square each.
 | | State | Meaning | Effect programs |
 |---|---|---|---|
 | 🟩 | **NATIVE** | executed through the native path with its guards passing | 0 |
-| 🟨 | **PARTIAL** | native only under a condition that is not closed yet, or only part of it is native | 35 |
-| 🟥 | **FALLBACK** | known and examined, but it still needs the PS2 path | 14 |
-| 🟦 | **READY / NOT SEEN** | proven native-ready, but no real run has executed it natively yet | 277 |
-| 🟪 | **UNKNOWN** | investigated, but an unresolved question still prevents a verdict | 117 |
+| 🟨 | **PARTIAL** | native only under a condition that is not closed yet, or only part of it is native | 188 |
+| 🟥 | **FALLBACK** | known and examined, but it still needs the PS2 path | 15 |
+| 🟦 | **READY / NOT SEEN** | proven native-ready, but no real run has executed it natively yet | 240 |
+| 🟪 | **UNKNOWN** | investigated, but an unresolved question still prevents a verdict | 0 |
 | ⬜ | **UNTOUCHED** | known to exist, work has not started | 0 |
 | ⬛ | **NOT MEASURED** | no trustworthy inventory or census exists yet |  |
 | ⬜ | **white outline** | what is being worked on right now | |
@@ -94,7 +94,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-10-31T12:29:50Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-01T01:52:42Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
