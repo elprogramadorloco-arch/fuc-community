@@ -31,19 +31,16 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261101T015242Z)
+![route frames](badges/route_frames.svg?v=20261105T003754Z)
 
-**⬜ Currently being worked on:** a task outside the effect-program inventory (no effect program is outlined).
-
-![FUC native game coverage](progress.svg?v=20261101T015242Z)
+![FUC native game coverage](progress.svg?v=20261105T003754Z)
 
 | At a glance | Value | Over |
 |---|---|---|
-| Measured battle routes — native frames | 3224 / 3230 (99.81 %) | measured route frames only |
+| Measured battle routes — diagnostic overlay frames | 3227 / 3233 (99.81 %) | diagnostic builds only: the PS2 pass still runs underneath and production has no native render path |
 | Effect programs — native coverage | 0 / 443 (0.00 %) | actually executed natively |
-| Effect programs — native-ready coverage | 240 / 443 (54.18 %) | native + ready, not seen |
+| Effect programs — native-ready coverage | 240 / 443 (54.18 %) | static proof only; needs a barrier existing only in diagnostic builds |
 | Effect programs — investigated coverage | 443 / 443 (100.00 %) | everything but untouched |
-| Known semantic unknowns | 87 OPEN of 128 | the project's unknown census |
 
 ### Game coverage
 
@@ -51,25 +48,25 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 
 | Area | Status | What is known |
 |---|---|---|
-| Gameplay / game logic | **NOT MEASURED** | The game code runs recompiled, but no per-function or per-feature native census is recorded. |
+| Gameplay / game logic | partly measured | 3 on the PS2 path |
 | Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 53.1 %, investigated 100.0 % |
-| Stages | **NOT MEASURED** | measured battle routes touch 2 stage IDs |
+| Stages | partly measured | 2 on the PS2 path; measured battle routes touch 2 stage IDs |
 | Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % |
-| HUD / battle UI | **NOT MEASURED** | No HUD inventory census is recorded. |
-| Menus / frontend | **NOT MEASURED** | No menu or frontend inventory census is recorded. |
-| FMV / cutscenes | **NOT MEASURED** | No FMV inventory census is recorded. |
-| Audio | **NOT MEASURED** | No audio inventory census is recorded. |
-| Input | **NOT MEASURED** | No input census is recorded. |
-| Save / load | **NOT MEASURED** | No save or load census is recorded. |
-| Storage / assets / loading | **NOT MEASURED** | No storage or loading census is recorded. |
-| Timing / synchronization | **NOT MEASURED** | No timing census is recorded. |
-| Game modes / progression | **NOT MEASURED** | No game-mode census is recorded. |
+| HUD / battle UI | partly measured | 1 on the PS2 path |
+| Menus / frontend | partly measured | 1 native guard on PS2 code, 3 on the PS2 path |
+| FMV / cutscenes | partly measured | 1 native, 1 on the PS2 path |
+| Audio | partly measured | 1 on the PS2 path |
+| Input | partly measured | 1 on the PS2 path |
+| Save / load | partly measured | 1 on the PS2 path, 1 not established |
+| Storage / assets / loading | partly measured | 2 on the PS2 path |
+| Timing / synchronization | partly measured | 1 on the PS2 path |
+| Game modes / progression | **NOT MEASURED** | production, one audited route: 1 not established |
 | Image correctness | **NOT MEASURED** | effect programs: all NOT VALIDATED |
 | Performance | **NOT MEASURED** | no supported performance record found |
 | Stability | **NOT MEASURED** | no supported stability record found |
-| Production integration | **NOT MEASURED** | production baseline: recorded; integration items integrated in research: 11 of 15; promoted to production: not recorded |
-| Fallback removal | partly measured | measured route fallback: 6 of 3230 frames; effect-program fallback: 15 of 443 programs; known content fallback: NOT MEASURED |
-| Global semantic unknowns | measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them |
+| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project |
+| Fallback removal | partly measured | diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED |
+| Global semantic unknowns | partly measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established |
 
 ### How to read it
 
@@ -90,11 +87,12 @@ draws visual effects): one square each.
 - **Native coverage** counts only items actually executed natively. **Native-ready** adds the ones proven ready but not
   seen running yet. **Investigated** is everything except untouched. The three are never added together.
 - **Measured battle routes** count frames of the routes the project measured; they are not whole-game coverage.
+  They come from diagnostic builds: a native overlay is drawn while the PS2 pass still runs underneath, and production has no native render path.
 - Near-complete effect figures do not mean the whole game is native: most areas are still NOT MEASURED. See *What the
   figures do not measure yet* below.
 
 
-_Updated 2026-11-01T01:52:42Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-05T00:37:54Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---

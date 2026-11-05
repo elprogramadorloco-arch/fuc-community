@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "label": "measured routes native",
+  "label": "diagnostic overlay frames",
   "message": "99.81%",
   "color": "yellow",
   "labelColor": "555"
