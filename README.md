@@ -31,9 +31,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261105T003754Z)
+![route frames](badges/route_frames.svg?v=20261106T003140Z)
 
-![FUC native game coverage](progress.svg?v=20261105T003754Z)
+**⬜ Currently being worked on:** a task outside the effect-program inventory (no effect program is outlined).
+
+![FUC native game coverage](progress.svg?v=20261106T003140Z)
 
 | At a glance | Value | Over |
 |---|---|---|
@@ -53,7 +55,7 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Stages | partly measured | 2 on the PS2 path; measured battle routes touch 2 stage IDs |
 | Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % |
 | HUD / battle UI | partly measured | 1 on the PS2 path |
-| Menus / frontend | partly measured | 1 native guard on PS2 code, 3 on the PS2 path |
+| Menus / frontend | partly measured | 1 native guard on PS2 code, 3 on the PS2 path; native component outside the build actually used: its game state runs natively, loads its assets natively, 0 PS2 links, needs no disc image; offline comparison with the original game, 2 routes: 40 field checks pass, 10 unknown, 0 fail |
 | FMV / cutscenes | partly measured | 1 native, 1 on the PS2 path |
 | Audio | partly measured | 1 on the PS2 path |
 | Input | partly measured | 1 on the PS2 path |
@@ -64,7 +66,7 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Image correctness | **NOT MEASURED** | effect programs: all NOT VALIDATED |
 | Performance | **NOT MEASURED** | no supported performance record found |
 | Stability | **NOT MEASURED** | no supported stability record found |
-| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project |
+| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 1; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project |
 | Fallback removal | partly measured | diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED |
 | Global semantic unknowns | partly measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established |
 
@@ -92,7 +94,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-11-05T00:37:54Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-06T00:31:40Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
