@@ -273,6 +273,45 @@
         "Fallback removal": "diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED",
         "Global semantic unknowns": "OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established"
       }
+    },
+    {
+      "published_utc": "2026-11-08T14:59:48Z",
+      "items": {
+        "native": 0,
+        "partial": 188,
+        "fallback": 15,
+        "ready_not_seen": 240,
+        "unknown": 0,
+        "untouched": 0
+      },
+      "route_native": 3227,
+      "route_frames": 3233,
+      "route_overlay": true,
+      "figures": {
+        "Measured battle routes — diagnostic overlay frames": "3227 / 3233 (99.81 %)",
+        "Effect programs — native coverage": "0 / 443 (0.00 %)",
+        "Effect programs — native-ready coverage": "240 / 443 (54.18 %)",
+        "Effect programs — investigated coverage": "443 / 443 (100.00 %)",
+        "Gameplay / game logic": "3 on the PS2 path",
+        "Characters": "18 characters · effect programs only: native 0.0 %, native-ready 53.1 %, investigated 100.0 %",
+        "Stages": "2 on the PS2 path; measured battle routes touch 2 stage IDs",
+        "Effects": "Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 %",
+        "HUD / battle UI": "1 on the PS2 path",
+        "Menus / frontend": "1 native guard on PS2 code, 3 on the PS2 path; native component outside the build actually used: its game state runs natively, loads its assets natively, 0 PS2 links, needs no disc image; offline comparison with the original game, 2 routes: 40 field checks pass, 10 unknown, 0 fail; native component outside the build actually used (closed on HOLD: a gate stays open): its game state runs natively, builds a native render frame, 0 PS2 links, needs no disc image; no image is drawn from that frame yet; comparison with 15 frozen reference images: 14 within tolerance; native component outside the build actually used: runs live with keyboard input, draws its frames on screen natively, 0 PS2 links",
+        "FMV / cutscenes": "1 native, 1 on the PS2 path",
+        "Audio": "1 on the PS2 path",
+        "Input": "1 on the PS2 path",
+        "Save / load": "1 on the PS2 path, 1 not established",
+        "Storage / assets / loading": "2 on the PS2 path",
+        "Timing / synchronization": "1 on the PS2 path",
+        "Game modes / progression": "production, one audited route: 1 not established",
+        "Image correctness": "one native screen compared with the original game: 44.32 % of pixels exact, 92.86 % within 2 colour levels, none off by more than 16; no pixel parity is claimed; effect programs: all NOT VALIDATED",
+        "Performance": "one native menu screen, one session: a frame renders in 0.95 ms (median) and the tick holds 16.65 ms on average",
+        "Stability": "no supported stability record found",
+        "Production integration": "production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 3; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project",
+        "Fallback removal": "diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED",
+        "Global semantic unknowns": "OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established"
+      }
     }
   ]
 }

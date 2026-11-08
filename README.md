@@ -31,9 +31,9 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261106T182620Z)
+![route frames](badges/route_frames.svg?v=20261108T145948Z)
 
-![FUC native game coverage](progress.svg?v=20261106T182620Z)
+![FUC native game coverage](progress.svg?v=20261108T145948Z)
 
 | At a glance | Value | Over | Since |
 |---|---|---|---|
@@ -55,7 +55,7 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Stages | partly measured | 2 on the PS2 path; measured battle routes touch 2 stage IDs | 2026-11-05 |
 | Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % | 2026-11-01 |
 | HUD / battle UI | partly measured | 1 on the PS2 path | 2026-11-05 |
-| Menus / frontend | partly measured | 1 native guard on PS2 code, 3 on the PS2 path; native component outside the build actually used: its game state runs natively, loads its assets natively, 0 PS2 links, needs no disc image; offline comparison with the original game, 2 routes: 40 field checks pass, 10 unknown, 0 fail; native component outside the build actually used (closed on HOLD: a gate stays open): its game state runs natively, builds a native render frame, 0 PS2 links, needs no disc image; no image is drawn from that frame yet; comparison with 15 frozen reference images: 14 within tolerance | 2026-11-06 |
+| Menus / frontend | partly measured | 1 native guard on PS2 code, 3 on the PS2 path; native component outside the build actually used: its game state runs natively, loads its assets natively, 0 PS2 links, needs no disc image; offline comparison with the original game, 2 routes: 40 field checks pass, 10 unknown, 0 fail; native component outside the build actually used (closed on HOLD: a gate stays open): its game state runs natively, builds a native render frame, 0 PS2 links, needs no disc image; no image is drawn from that frame yet; comparison with 15 frozen reference images: 14 within tolerance; native component outside the build actually used: runs live with keyboard input, draws its frames on screen natively, 0 PS2 links | 2026-11-08 |
 | FMV / cutscenes | partly measured | 1 native, 1 on the PS2 path | 2026-11-05 |
 | Audio | partly measured | 1 on the PS2 path | 2026-11-05 |
 | Input | partly measured | 1 on the PS2 path | 2026-11-05 |
@@ -63,10 +63,10 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 | Storage / assets / loading | partly measured | 2 on the PS2 path | 2026-11-05 |
 | Timing / synchronization | partly measured | 1 on the PS2 path | 2026-11-05 |
 | Game modes / progression | **NOT MEASURED** | production, one audited route: 1 not established | 2026-11-05 |
-| Image correctness | **NOT MEASURED** | effect programs: all NOT VALIDATED | 2026-10-30 |
-| Performance | **NOT MEASURED** | no supported performance record found | 2026-10-30 |
+| Image correctness | partly measured | one native screen compared with the original game: 44.32 % of pixels exact, 92.86 % within 2 colour levels, none off by more than 16; no pixel parity is claimed; effect programs: all NOT VALIDATED | 2026-11-08 |
+| Performance | **NOT MEASURED** | one native menu screen, one session: a frame renders in 0.95 ms (median) and the tick holds 16.65 ms on average | 2026-11-08 |
 | Stability | **NOT MEASURED** | no supported stability record found | 2026-10-30 |
-| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 2; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project | 2026-11-06 |
+| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 3; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project | 2026-11-08 |
 | Fallback removal | partly measured | diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED | 2026-11-05 |
 | Global semantic unknowns | partly measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established | 2026-11-05 |
 
@@ -77,6 +77,7 @@ also come from the observer reading the project's records more accurately, not o
 
 | Published | Effect programs: native | native-ready | partial | fallback | unknown | Battle route frames | What changed |
 |---|---|---|---|---|---|---|---|
+| 2026-11-08 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Menus / frontend, Image correctness, Performance, Production integration |
 | 2026-11-06 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Menus / frontend, Production integration |
 | 2026-11-06 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Menus / frontend, Production integration |
 | 2026-11-05 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Measured battle routes — diagnostic overlay frames, Gameplay / game logic, Stages, HUD / battle UI, Menus / frontend, FMV / cutscenes, Audio, Input, Save / load, Storage / assets / loading, Timing / synchronization, Game modes / progression, Production integration, Fallback removal, Global semantic unknowns |
@@ -109,7 +110,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-11-06T18:26:20Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-08T14:59:48Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
