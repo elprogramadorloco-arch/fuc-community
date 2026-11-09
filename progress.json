@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V2",
-  "generated_utc": "2026-11-08T15:33:57Z",
+  "generated_utc": "2026-11-09T01:10:07Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -540,7 +540,7 @@
   "current_work": {
     "subsystems": [],
     "programs": 0,
-    "as_of": "2026-11-08"
+    "as_of": "2026-11-09"
   },
   "game_coverage": {
     "states": [
@@ -741,7 +741,10 @@
           "comparison with 15 frozen reference images: 14 within tolerance",
           "native component outside the build actually used: runs live with keyboard input, draws its frames on screen natively, 0 PS2 links",
           "native component outside the build actually used (closed PARTIAL): builds a native render frame, 0 PS2 links",
-          "245 frames of this screen drawn natively; 4 kinds of screen state are not drawn yet"
+          "245 frames of this screen drawn natively; 4 kinds of screen state are not drawn yet",
+          "native component outside the build actually used (closed PARTIAL): builds a native render frame, runs live with keyboard input, 0 PS2 links",
+          "one live session from the keyboard: 1147 new frames drawn natively, 696 refused (shown blank)",
+          "245 frames of this screen drawn natively; 5 kinds of screen state are not drawn yet"
         ],
         "as_of": "2026-11-04"
       },
@@ -876,7 +879,7 @@
           "production baseline: recorded",
           "integration items integrated in research: 11 of 15",
           "route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established",
-          "native components proven outside the build actually used: 4; the build actually used is not PS2-free",
+          "native components proven outside the build actually used: 5; the build actually used is not PS2-free",
           "native renderer in production: absent",
           "PS2 dependencies: 21 of 42 required at run time, 2 already native",
           "PS2 runtime links removed: 0",
