@@ -31,11 +31,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261109T011007Z)
+![route frames](badges/route_frames.svg?v=20261113T203359Z)
 
 **⬜ Currently being worked on:** a task outside the effect-program inventory (no effect program is outlined).
 
-![FUC native game coverage](progress.svg?v=20261109T011007Z)
+![FUC native game coverage](progress.svg?v=20261113T203359Z)
 
 | At a glance | Value | Over | Since |
 |---|---|---|---|
@@ -52,23 +52,23 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 
 | Area | Status | What is known | Since |
 |---|---|---|---|
-| Gameplay / game logic | partly measured | 3 on the PS2 path | 2026-11-05 |
+| Gameplay / game logic | partly measured | 3 on the PS2 path; native application outside the build actually used: the route ends where combat starts: COMBAT NOT IMPLEMENTED | 2026-11-13 |
 | Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 53.1 %, investigated 100.0 % | 2026-11-01 |
 | Stages | partly measured | 2 on the PS2 path; measured battle routes touch 2 stage IDs | 2026-11-05 |
 | Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % | 2026-11-01 |
 | HUD / battle UI | partly measured | 1 on the PS2 path | 2026-11-05 |
-| Menus / frontend | partly measured | 4 menu screens of the Practice route: native 0.0 %, native-ready 75.0 %, investigated 100.0 % | 2026-11-08 |
-| FMV / cutscenes | partly measured | 1 native, 1 on the PS2 path | 2026-11-05 |
-| Audio | partly measured | 1 on the PS2 path | 2026-11-05 |
-| Input | partly measured | 1 on the PS2 path | 2026-11-05 |
-| Save / load | partly measured | 1 on the PS2 path, 1 not established | 2026-11-05 |
-| Storage / assets / loading | partly measured | 2 on the PS2 path | 2026-11-05 |
+| Menus / frontend | partly measured | 7 screens of the Practice route: native 100.0 %, native-ready 100.0 %, investigated 100.0 % | 2026-11-13 |
+| FMV / cutscenes | partly measured | 1 native, 1 on the PS2 path; native application outside the build actually used: the opening movie plays natively from the original file | 2026-11-13 |
+| Audio | partly measured | 1 on the PS2 path; native application outside the build actually used: the original music, voices and sound effects play natively on the power-on route | 2026-11-13 |
+| Input | partly measured | 1 on the PS2 path; native application outside the build actually used: the whole power-on route is played from the keyboard | 2026-11-13 |
+| Save / load | partly measured | 1 on the PS2 path, 1 not established; native application outside the build actually used: the power-on memory-card dialog runs natively | 2026-11-13 |
+| Storage / assets / loading | partly measured | 2 on the PS2 path; native application outside the build actually used: the pre-battle VS and loading screen runs natively, loading from the original data | 2026-11-13 |
 | Timing / synchronization | partly measured | 1 on the PS2 path | 2026-11-05 |
-| Game modes / progression | **NOT MEASURED** | production, one audited route: 1 not established | 2026-11-05 |
+| Game modes / progression | **NOT MEASURED** | native application outside the build actually used: the mode menu lists every entry; Practice runs and 9 other modes stop as NOT IMPLEMENTED; production, one audited route: 1 not established | 2026-11-13 |
 | Image correctness | partly measured | one native screen compared with the original game: 44.32 % of pixels exact, 92.86 % within 2 colour levels, none off by more than 16; no pixel parity is claimed; effect programs: all NOT VALIDATED | 2026-11-08 |
-| Performance | **NOT MEASURED** | one native menu screen, one session: a frame renders in 0.95 ms (median) and the tick holds 16.65 ms on average; building a frame takes 1.12 ms (median) | 2026-11-08 |
+| Performance | **NOT MEASURED** | one native menu screen, one session: the tick holds 16.65 ms on average; building a frame takes 0.74 ms (median) | 2026-11-13 |
 | Stability | **NOT MEASURED** | no supported stability record found | 2026-10-30 |
-| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 5; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project | 2026-11-09 |
+| Production integration | partly measured | production baseline: recorded; integration items integrated in research: 11 of 15; route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established; native components proven outside the build actually used: 6; the build actually used is not PS2-free; native renderer in production: absent; PS2 dependencies: 21 of 42 required at run time, 2 already native; PS2 runtime links removed: 0; final independence gates met: 0 of 6; completion percentage: not claimed by the project | 2026-11-13 |
 | Fallback removal | partly measured | diagnostic route fallback: 6 of 3233 frames; effect-program fallback: 15 of 443 programs; passes actually replaced by native code: 0; zero fallback on an admitted slice: NOT MET; known content fallback: NOT MEASURED | 2026-11-05 |
 | Global semantic unknowns | partly measured | OPEN: 87; closed or deferred: 41; VM support near 100 % does not close them; later milestones changed entries without restating a total; the project's audit lists the current total as not established | 2026-11-05 |
 
@@ -79,6 +79,7 @@ also come from the observer reading the project's records more accurately, not o
 
 | Published | Effect programs: native | native-ready | partial | fallback | unknown | Battle route frames | What changed |
 |---|---|---|---|---|---|---|---|
+| 2026-11-13 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Gameplay / game logic, Menus / frontend, FMV / cutscenes, Audio, Input, Save / load, Storage / assets / loading, Game modes / progression, Performance, Production integration |
 | 2026-11-09 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Production integration |
 | 2026-11-08 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Menus / frontend, Performance, Production integration |
 | 2026-11-08 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Menus / frontend, Image correctness, Performance, Production integration |
@@ -114,7 +115,7 @@ draws visual effects): one square each.
   figures do not measure yet* below.
 
 
-_Updated 2026-11-09T01:10:07Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-13T20:33:59Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---

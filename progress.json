@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V2",
-  "generated_utc": "2026-11-09T01:10:07Z",
+  "generated_utc": "2026-11-13T20:33:59Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -540,7 +540,7 @@
   "current_work": {
     "subsystems": [],
     "programs": 0,
-    "as_of": "2026-11-09"
+    "as_of": "2026-11-13"
   },
   "game_coverage": {
     "states": [
@@ -614,7 +614,8 @@
         "coverage_known": false,
         "note": "The game code runs recompiled, but no per-function or per-feature native census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "3 on the PS2 path"
+          "3 on the PS2 path",
+          "native application outside the build actually used: the route ends where combat starts: COMBAT NOT IMPLEMENTED"
         ],
         "as_of": "2026-11-04"
       },
@@ -710,41 +711,32 @@
         "id": "menus",
         "name": "Menus / frontend",
         "measurement": "partly_measured",
-        "summary": "4 menu screens of the Practice route",
-        "known_count": 4,
-        "total_count": 4,
+        "summary": "7 screens of the Practice route",
+        "known_count": 7,
+        "total_count": 7,
         "coverage_known": true,
         "coverage": {
-          "total": 4,
-          "native": 0,
-          "native_ready": 3,
-          "investigated": 4,
+          "total": 7,
+          "native": 7,
+          "native_ready": 7,
+          "investigated": 7,
           "by_state": {
-            "native": 0,
-            "partial": 1,
+            "native": 7,
+            "partial": 0,
             "fallback": 0,
-            "ready_not_seen": 3,
+            "ready_not_seen": 0,
             "unknown": 0,
             "untouched": 0
           },
-          "native_pct": 0,
-          "native_ready_pct": 75,
+          "native_pct": 100,
+          "native_ready_pct": 100,
           "investigated_pct": 100
         },
-        "note": "Only the menu screens the project's native state contract models on the Practice route (Title, Mode menu, Character select, Stage select); other modes and menus have no inventory. The screens run in a native component outside the build actually used. A screen is NATIVE only when all of it is drawn natively.",
+        "note": "Only the screens the project's native application reaches on the Practice route from power-on (Memory-card dialog, Logo, Title, Mode menu, Character select, Stage select, Pre-battle (VS and loading)); other modes and menus have no inventory. The screens run in a native component outside the build actually used. A screen is NATIVE only when all of it is drawn natively.",
         "facts": [
+          "native application outside the build actually used: from power-on through Memory-card dialog, Logo, Opening movie, Title, Mode menu, Character select, Stage select, Pre-battle (VS and loading); it stops before combat (COMBAT NOT IMPLEMENTED)",
           "1 native guard on PS2 code, 3 on the PS2 path",
-          "native component outside the build actually used: its game state runs natively, loads its assets natively, 0 PS2 links, needs no disc image",
-          "offline comparison with the original game, 2 routes: 40 field checks pass, 10 unknown, 0 fail",
-          "native component outside the build actually used (closed on HOLD: a gate stays open): its game state runs natively, builds a native render frame, 0 PS2 links, needs no disc image",
-          "no image is drawn from that frame yet",
-          "comparison with 15 frozen reference images: 14 within tolerance",
-          "native component outside the build actually used: runs live with keyboard input, draws its frames on screen natively, 0 PS2 links",
-          "native component outside the build actually used (closed PARTIAL): builds a native render frame, 0 PS2 links",
-          "245 frames of this screen drawn natively; 4 kinds of screen state are not drawn yet",
-          "native component outside the build actually used (closed PARTIAL): builds a native render frame, runs live with keyboard input, 0 PS2 links",
-          "one live session from the keyboard: 1147 new frames drawn natively, 696 refused (shown blank)",
-          "245 frames of this screen drawn natively; 5 kinds of screen state are not drawn yet"
+          "native component outside the build actually used: 0 PS2 links"
         ],
         "as_of": "2026-11-04"
       },
@@ -756,7 +748,8 @@
         "coverage_known": false,
         "note": "No FMV inventory census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "1 native, 1 on the PS2 path"
+          "1 native, 1 on the PS2 path",
+          "native application outside the build actually used: the opening movie plays natively from the original file"
         ],
         "as_of": "2026-11-04"
       },
@@ -768,7 +761,8 @@
         "coverage_known": false,
         "note": "No audio inventory census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "1 on the PS2 path"
+          "1 on the PS2 path",
+          "native application outside the build actually used: the original music, voices and sound effects play natively on the power-on route"
         ],
         "as_of": "2026-11-04"
       },
@@ -780,7 +774,8 @@
         "coverage_known": false,
         "note": "No input census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "1 on the PS2 path"
+          "1 on the PS2 path",
+          "native application outside the build actually used: the whole power-on route is played from the keyboard"
         ],
         "as_of": "2026-11-04"
       },
@@ -792,7 +787,8 @@
         "coverage_known": false,
         "note": "No save or load census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "1 on the PS2 path, 1 not established"
+          "1 on the PS2 path, 1 not established",
+          "native application outside the build actually used: the power-on memory-card dialog runs natively"
         ],
         "as_of": "2026-11-04"
       },
@@ -804,7 +800,8 @@
         "coverage_known": false,
         "note": "No storage or loading census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
-          "2 on the PS2 path"
+          "2 on the PS2 path",
+          "native application outside the build actually used: the pre-battle VS and loading screen runs natively, loading from the original data"
         ],
         "as_of": "2026-11-04"
       },
@@ -828,6 +825,7 @@
         "coverage_known": false,
         "note": "No game-mode census is recorded.",
         "facts": [
+          "native application outside the build actually used: the mode menu lists every entry; Practice runs and 9 other modes stop as NOT IMPLEMENTED",
           "production, one audited route: 1 not established"
         ],
         "as_of": "2026-11-04"
@@ -854,7 +852,7 @@
         "coverage_known": false,
         "note": "No recurring whole-frame timing census is found (target: every frame under 16.67 ms at 60 fps); one-off profiles are not a whole-game measure, and one measured route never becomes a whole-game percentage.",
         "facts": [
-          "one native menu screen, one session: a frame renders in 0.95 ms (median) and the tick holds 16.65 ms on average; building a frame takes 1.12 ms (median)"
+          "one native menu screen, one session: the tick holds 16.65 ms on average; building a frame takes 0.74 ms (median)"
         ]
       },
       {
@@ -879,7 +877,7 @@
           "production baseline: recorded",
           "integration items integrated in research: 11 of 15",
           "route steps: 1 native, 1 native guard on PS2 code, 20 on the PS2 path, 2 not established",
-          "native components proven outside the build actually used: 5; the build actually used is not PS2-free",
+          "native components proven outside the build actually used: 6; the build actually used is not PS2-free",
           "native renderer in production: absent",
           "PS2 dependencies: 21 of 42 required at run time, 2 already native",
           "PS2 runtime links removed: 0",
