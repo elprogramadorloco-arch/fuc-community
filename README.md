@@ -220,13 +220,13 @@ the private build will be generated locally from it, as with the PSP version.
 | --- | --- | --- |
 | Static recompilation of the game executable | In progress | The game code runs recompiled, on a runtime that still models the PS2 machine. |
 | Native renderer for battles | In progress | Diagnostic builds only: it draws over the game while the PS2 path still runs. The build actually used has no native render path. |
-| Native game state | Planned | The renderer still reads game state from emulated PS2 memory. |
+| Native game state | In progress | The native application keeps the menus' state natively (title, mode menu, select, pre-battle); combat state and the build actually used still rely on emulated PS2 memory. |
 | Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in Progress (one square per program). |
-| Menus, loading screens and other scenes | In progress | The build actually used still takes the PS2 path; native screens exist only in diagnostic builds. |
-| Opening movie | In progress | Decoding and display are native in the build actually used; the player around them still takes the PS2 path. |
+| Menus, loading screens and other scenes | In progress | The native application runs the Practice route natively from power-on: memory-card dialog, logo, title, mode menu, character and stage select, VS and loading, up to combat. The build actually used still takes the PS2 path. |
+| Opening movie | In progress | Decoding and display are native in the build actually used; the native application plays the whole movie natively. |
 | Image identical to the original game | In progress | Compared family by family against the original game. |
 | Full speed (60 fps on every frame) | In progress | Battles do not reach real time yet in the measured builds. |
-| Audio, controller, save data, loading, stability | Planned | Native audio exists only in diagnostic builds. All of it is checked end to end before any public build. |
+| Audio, controller, save data, loading, stability | In progress | The native application plays the original music, voices and effects, reads the keyboard, shows the memory-card dialog and loads before battle; the build actually used does not yet. All of it is checked end to end before any public build. |
 | Complete removal of the PS2 graphics path | Planned (goal) | The final version contains neither it nor any fallback. |
 | Public build and instructions | Planned | Announced here when everything is ready. |
 
@@ -351,13 +351,13 @@ versión privada se generará localmente a partir de ella, igual que con la vers
 | --- | --- | --- |
 | Recompilación estática del ejecutable del juego | En curso | El código del juego funciona recompilado, sobre un entorno que sigue modelando la máquina PS2. |
 | Renderizador nativo para los combates | En curso | Solo en versiones de diagnóstico: dibuja encima del juego mientras el camino de PS2 sigue ejecutándose. La versión que realmente se usa no tiene camino de render nativo. |
-| Estado nativo del juego | Previsto | El renderizador aún lee el estado del juego de la memoria de PS2 emulada. |
+| Estado nativo del juego | En curso | La aplicación nativa lleva en nativo el estado de los menús (título, menú de modos, selección, previa al combate); el estado del combate y la versión que realmente se usa siguen dependiendo de la memoria de PS2 emulada. |
 | Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en Progress (un cuadrado por programa). |
-| Menús, pantallas de carga y otras escenas | En curso | La versión que realmente se usa sigue por el camino de PS2; las pantallas nativas solo existen en versiones de diagnóstico. |
-| Vídeo de apertura | En curso | La decodificación y la imagen son nativas en la versión que realmente se usa; el reproductor que las rodea sigue por el camino de PS2. |
+| Menús, pantallas de carga y otras escenas | En curso | La aplicación nativa recorre en nativo Practice desde el encendido: tarjeta de memoria, logo, título, menú de modos, selección de personaje y escenario, VS y carga, hasta el combate. La versión que realmente se usa sigue por el camino de PS2. |
+| Vídeo de apertura | En curso | La decodificación y la imagen son nativas en la versión que realmente se usa; la aplicación nativa reproduce el vídeo entero en nativo. |
 | Imagen idéntica al juego original | En curso | Se compara familia por familia con el juego original. |
 | Velocidad completa (60 fps en todos los fotogramas) | En curso | Los combates aún no llegan a tiempo real en las versiones medidas. |
-| Audio, mando, partidas guardadas, cargas, estabilidad | Previsto | El audio nativo solo existe en versiones de diagnóstico. Todo se comprueba de punta a punta antes de cualquier versión pública. |
+| Audio, mando, partidas guardadas, cargas, estabilidad | En curso | La aplicación nativa reproduce la música, las voces y los efectos originales, lee el teclado, muestra el diálogo de la tarjeta de memoria y carga antes del combate; la versión que realmente se usa todavía no. Todo se comprueba de punta a punta antes de cualquier versión pública. |
 | Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no tendrá ni ese camino ni ningún respaldo. |
 | Versión pública e instrucciones | Previsto | Se anunciará aquí cuando todo esté listo. |
 
@@ -481,13 +481,13 @@ versão privada será gerada localmente a partir dela, como na versão de PSP.
 | --- | --- | --- |
 | Recompilação estática do executável do jogo | Em andamento | O código do jogo roda recompilado, sobre um ambiente que continua modelando a máquina PS2. |
 | Renderizador nativo para os combates | Em andamento | Só em versões de diagnóstico: desenha por cima do jogo enquanto o caminho do PS2 continua rodando. A versão realmente usada não tem caminho de renderização nativo. |
-| Estado nativo do jogo | Planejado | O renderizador ainda lê o estado do jogo da memória do PS2 emulada. |
+| Estado nativo do jogo | Em andamento | A aplicação nativa mantém em nativo o estado dos menus (título, menu de modos, seleção, pré-combate); o estado do combate e a versão realmente usada ainda dependem da memória do PS2 emulada. |
 | Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa em Progress (um quadrado por programa). |
-| Menus, telas de carregamento e outras cenas | Em andamento | A versão realmente usada continua pelo caminho do PS2; as telas nativas só existem em versões de diagnóstico. |
-| Vídeo de abertura | Em andamento | A decodificação e a imagem são nativas na versão realmente usada; o player ao redor continua pelo caminho do PS2. |
+| Menus, telas de carregamento e outras cenas | Em andamento | A aplicação nativa percorre em nativo o Practice desde o ligar: cartão de memória, logo, título, menu de modos, seleção de personagem e cenário, VS e carregamento, até o combate. A versão realmente usada continua pelo caminho do PS2. |
+| Vídeo de abertura | Em andamento | A decodificação e a imagem são nativas na versão realmente usada; a aplicação nativa reproduz o vídeo inteiro em nativo. |
 | Imagem idêntica ao jogo original | Em andamento | Comparada família por família com o jogo original. |
 | Velocidade completa (60 fps em todos os quadros) | Em andamento | Os combates ainda não chegam a tempo real nas versões medidas. |
-| Áudio, controle, saves, carregamentos, estabilidade | Planejado | O áudio nativo só existe em versões de diagnóstico. Tudo é verificado de ponta a ponta antes de qualquer versão pública. |
+| Áudio, controle, saves, carregamentos, estabilidade | Em andamento | A aplicação nativa toca a música, as vozes e os efeitos originais, lê o teclado, mostra o diálogo do cartão de memória e carrega antes do combate; a versão realmente usada ainda não. Tudo é verificado de ponta a ponta antes de qualquer versão pública. |
 | Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não terá nem esse caminho nem nenhuma reserva. |
 | Versão pública e instruções | Planejado | Será anunciada aqui quando tudo estiver pronto. |
 
