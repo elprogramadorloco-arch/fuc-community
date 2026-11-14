@@ -34,11 +34,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261113T203359Z)
+![route frames](badges/route_frames.svg?v=20261114T021410Z)
 
 **⬜ Currently being worked on:** a task outside the effect-program inventory (no effect program is outlined).
 
-![FUC native game coverage](progress.svg?v=20261113T203359Z)
+![FUC native game coverage](progress.svg?v=20261114T021410Z)
 
 | At a glance | Value | Over | Since |
 |---|---|---|---|
@@ -114,11 +114,11 @@ draws visual effects): one square each.
   seen running yet. **Investigated** is everything except untouched. The three are never added together.
 - **Measured battle routes** count frames of the routes the project measured; they are not whole-game coverage.
   They come from diagnostic builds: a native overlay is drawn while the PS2 pass still runs underneath, and production has no native render path.
-- Near-complete effect figures do not mean the whole game is native: most areas are still NOT MEASURED. See *What the
-  figures do not measure yet* below.
+- Near-complete figures do not mean the whole game is native: 16 of 19 areas have no complete inventory yet. See
+  *What the figures do not measure yet* below.
 
 
-_Updated 2026-11-13T20:33:59Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-14T02:14:10Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---
