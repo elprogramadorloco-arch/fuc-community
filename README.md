@@ -2,14 +2,17 @@
 
 [English](#english) · [Español](#español) · [Português](#português)
 
-**EN** — A 100% native Windows version of the PS2 release of *Fate/unlimited codes*: the game's own code,
-statically recompiled, with a native renderer that does not depend on PS2 hardware or software.
+**EN** — Goal: a 100% native Windows version of the PS2 release of *Fate/unlimited codes*: the game's own code,
+statically recompiled, with a native renderer that does not depend on PS2 hardware or software. Today it runs natively
+from power-on up to the start of combat.
 
-**ES** — Una versión nativa al 100% para Windows de la edición de PS2 de *Fate/unlimited codes*: el código del propio
-juego, recompilado estáticamente, con un renderizador nativo que no depende del hardware ni del software de PS2.
+**ES** — Objetivo: una versión nativa al 100% para Windows de la edición de PS2 de *Fate/unlimited codes*: el código del
+propio juego, recompilado estáticamente, con un renderizador nativo que no depende del hardware ni del software de PS2. Hoy
+funciona en nativo desde el encendido hasta el inicio del combate.
 
-**PT** — Uma versão 100% nativa para Windows da edição de PS2 de *Fate/unlimited codes*: o código do próprio jogo,
-recompilado estaticamente, com um renderizador nativo que não depende do hardware nem do software do PS2.
+**PT** — Objetivo: uma versão 100% nativa para Windows da edição de PS2 de *Fate/unlimited codes*: o código do próprio jogo,
+recompilado estaticamente, com um renderizador nativo que não depende do hardware nem do software do PS2. Hoje roda em nativo
+desde o ligar até o início do combate.
 
 ## PS2Recomp version vs native version
 
@@ -139,9 +142,10 @@ of the game still run only in the recompiled build, which models the PS2 machine
 - **Static recompilation.** The game's executable is translated ahead of time into native code with **PS2Recomp**
   (open-source static recompiler, GPLv3).
 - **Fully native rendering.** A native renderer draws what the game asks for: models, stages, fighters, effects, lights
-  and fog. The final version has **no PS2 graphics path and no fallback of any kind**. Today the native renderer runs only
-  in diagnostic builds, drawing over the game while the PS2 path still runs underneath; the build actually used has no native
-  render path yet. The PS2 path will be deleted part by part as each one is really replaced.
+  and fog. The final version has **no PS2 graphics path and no fallback of any kind**. Today the native renderer draws the
+  whole Practice route up to combat in the native application (menus, select, VS and loading), with no PS2 path at all. In
+  battle it still runs only in diagnostic builds, drawing over the game while the PS2 path runs underneath, and the build
+  actually used has no native render path yet. The PS2 path will be deleted part by part as each one is really replaced.
 - **Proven, not guessed.** Each subsystem (effect VM, resource catalogs, material and texture state, late-bound resources,
   local lights, colour and fog rules…) is reconstructed from the game's own behaviour, and a part only becomes native
   once it is proven to match the original game.
@@ -154,8 +158,9 @@ A plain PS2 recompilation still emulates the console's graphics hardware: the ga
 that go through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) on Vulkan. The native version
 removes that layer: it takes what the game *means* (RenderWare and Fate's own semantics), turns it into the **FUC Common
 Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vulkan backend**, straight to the GPU
-(diagram above). That is the goal; today it exists only in diagnostic builds, on top of the PS2 path. "Measured battle routes"
-shows how many of the measured battle frames that overlay can already draw (not the whole game).
+(diagram above). Today this path already draws every screen of the native application up to combat. For battles it exists
+only in diagnostic builds, on top of the PS2 path: "Measured battle routes" shows how many of the measured battle frames that
+overlay can already draw (not the whole game).
 
 ### Why a 100% native version
 
@@ -177,12 +182,13 @@ shows how many of the measured battle frames that overlay can already draw (not 
   They are never added together.
 - **Measured battle routes:** share of the measured battle frames that a native overlay can draw in diagnostic builds, while
   the PS2 path still runs underneath. It is not native execution, and it covers only the routes the project measured.
-- **PARTLY MEASURED areas:** the project audited one played route through the build actually used, step by step. That shows
-  what the build does in each area, not how much of the area is done, so these areas get no percentage.
+- **PARTLY MEASURED areas:** only part of the area has a record: the route the project audited step by step through the build
+  actually used, and what the native application already does. That is not how much of the area is done, so these areas get
+  no percentage, except Menus, whose percentage covers only the screens of the Practice route.
 - **Effect programs:** the game's visual effect programs, one square each, grouped by character.
 - **White outline:** what is being worked on right now.
-- **Why native coverage is 0 % today:** an item turns green only when the project records that it actually ran through
-  the native path while the game was playing. The project's latest count is zero effect programs: no route activates that path
+- **Why effect-program native coverage is 0 % today:** an item turns green only when the project records that it actually
+  ran through the native path while the game was playing. The project's latest count is zero effect programs: no route activates that path
   yet. Native-ready programs pass the static checks but nobody has seen them run; their squares move from blue to green only
   when a native execution is recorded.
 - **Characters, "effect programs only":** for each character only its effect programs are measured. Models, weapons,
@@ -194,22 +200,24 @@ shows how many of the measured battle frames that overlay can already draw (not 
 
 ### What the figures do not measure yet
 
-Reaching 100 % in the progress figures does **not** mean the game is playable yet. They follow the current phase: moving
-scene and effect rendering from the emulated PS2 path to the native renderer. The project itself claims no completion
-percentage. After that, these steps remain:
+Reaching 100 % in the progress figures does **not** mean the game is playable yet. The native application reaches the start
+of combat; the figures follow that work and the move of battle scenes and effects from the emulated PS2 path to the native
+renderer. The project itself claims no completion percentage. These steps remain:
 
-1. **The whole game.** The battle routes measured so far cover few characters and stages. Every character, stage, menu,
-   character select, HUD, super move, ending and game mode (Arcade, Story, Versus, Practice) must also run with no fallback.
+1. **The whole game.** The Practice menus, character and stage select, VS and loading already run natively up to combat.
+   Combat itself, every stage, the HUD, super moves, endings and the other game modes (Arcade, Story, Versus…) still have to
+   run with no fallback.
 2. **Correct image.** "Supported" or "eligible" means the native renderer can run a program, not that its pixels already
    match the original. Each family of effects and scenes is compared against the original game.
-3. **Speed.** Every frame must stay comfortably under 16.67 ms (60 fps). Battles do not reach real time yet in the measured
-   builds: the PS2 work still runs, and leftover emulation work and diagnostic hooks still have to be removed.
+3. **Speed.** Every frame must stay comfortably under 16.67 ms (60 fps). The native application's menus hold that 60 Hz
+   tick; battles do not reach real time yet in the measured builds: the PS2 work still runs, and leftover emulation work and
+   diagnostic hooks still have to be removed.
 4. **Release build.** The newest work has to be promoted into the build that is actually used, validated by regression
    tests and a full route. Today that build has no native renderer.
 5. **Removing the PS2 path.** Only after the steps above is the emulated path deleted for good.
-6. **The rest of the game.** The game logic is the original code, recompiled, and its state still lives in emulated PS2 memory, so
-   a native source of game state is still missing. Real-time audio, controller, legitimate save data, loading and long-session
-   stability must also be checked end to end.
+6. **The rest of the game.** In the native application the menus' state, real-time audio, keyboard input, the memory-card
+   dialog and the pre-battle loading already work. Combat state still lives in emulated PS2 memory, and saving, game
+   controllers and long-session stability still have to be done and checked end to end.
 
 ### Requirements
 
@@ -267,9 +275,10 @@ datos originales. El combate y el resto del juego solo funcionan todavía en la 
   (recompilador estático de código abierto, GPLv3).
 - **Renderizado totalmente nativo.** Un renderizador nativo dibuja lo que el juego pide: modelos, escenarios, luchadores,
   efectos, luces y niebla. La versión final **no tiene camino gráfico de PS2 ni respaldo de ningún tipo**. Hoy el renderizador
-  nativo solo funciona en versiones de diagnóstico, dibujando encima del juego mientras el camino de PS2 sigue ejecutándose
-  debajo; la versión que realmente se usa aún no tiene camino de render nativo. El camino de PS2 se irá borrando parte por parte
-  a medida que cada una se reemplace de verdad.
+  nativo dibuja todo el recorrido de Practice hasta el combate en la aplicación nativa (menús, selección, VS y carga), sin
+  ningún camino de PS2. En combate solo funciona todavía en versiones de diagnóstico, dibujando encima del juego mientras el
+  camino de PS2 se ejecuta debajo, y la versión que realmente se usa aún no tiene camino de render nativo. El camino de PS2 se
+  irá borrando parte por parte a medida que cada una se reemplace de verdad.
 - **Demostrado, no adivinado.** Cada subsistema (máquina virtual de efectos, catálogos de recursos, estado de materiales y
   texturas, recursos enlazados tarde, luces locales, reglas de color y niebla…) se reconstruye a partir del comportamiento
   del propio juego, y una parte solo pasa a ser nativa cuando está demostrado que coincide con el original.
@@ -282,8 +291,9 @@ Una recompilación de PS2 sin más sigue emulando el hardware gráfico de la con
 convierten en comandos de PS2 que pasan por **VIF / VU1 / GIF / GS** emulados y por un renderizador de GS (**ParaLLEl-GS**)
 sobre Vulkan. La versión nativa elimina esa capa: toma lo que el juego *quiere decir* (la semántica de RenderWare y de Fate),
 lo convierte al **FUC Common Render IR** y lo dibuja con el **FUC Native Renderer** a través de un **backend Vulkan para
-Windows**, directamente en la GPU (diagrama arriba). Ese es el objetivo; hoy solo existe en versiones de diagnóstico, por encima del camino de PS2. "Measured
-battle routes" muestra cuántos de los fotogramas de combate medidos ya puede dibujar esa superposición (no el juego entero).
+Windows**, directamente en la GPU (diagrama arriba). Hoy este camino ya dibuja todas las pantallas de la aplicación nativa
+hasta el combate. Para los combates solo existe en versiones de diagnóstico, por encima del camino de PS2: "Measured battle
+routes" muestra cuántos de los fotogramas de combate medidos ya puede dibujar esa superposición (no el juego entero).
 
 ### Ventajas de una versión 100% nativa
 
@@ -308,12 +318,13 @@ battle routes" muestra cuántos de los fotogramas de combate medidos ya puede di
 - **Measured battle routes:** porcentaje de los fotogramas de combate medidos que una superposición nativa puede dibujar en
   versiones de diagnóstico, mientras el camino de PS2 sigue ejecutándose debajo. No es ejecución nativa, y solo cubre las rutas
   que el proyecto midió.
-- **Áreas PARTLY MEASURED:** el proyecto auditó paso a paso una ruta jugada en la versión que realmente se usa. Eso muestra qué
-  hace esa versión en cada área, no cuánto del área está hecho, así que estas áreas no tienen porcentaje.
+- **Áreas PARTLY MEASURED:** solo parte del área tiene registro: la ruta que el proyecto auditó paso a paso en la versión que
+  realmente se usa y lo que ya hace la aplicación nativa. Eso no es cuánto del área está hecho, así que estas áreas no tienen
+  porcentaje, salvo Menús, cuyo porcentaje cubre solo las pantallas del recorrido de Practice.
 - **Effect programs:** los programas de efectos visuales del juego, un cuadrado cada uno, agrupados por personaje.
 - **Contorno blanco:** lo que se está trabajando ahora mismo.
-- **Por qué la cobertura nativa es 0 % hoy:** un elemento solo se pone verde cuando el proyecto registra que se ejecutó
-  de verdad por el camino nativo con el juego en marcha. El último recuento del proyecto es de cero programas de efectos:
+- **Por qué la cobertura nativa de los programas de efectos es 0 % hoy:** un elemento solo se pone verde cuando el proyecto
+  registra que se ejecutó de verdad por el camino nativo con el juego en marcha. El último recuento del proyecto es de cero programas de efectos:
   ninguna ruta activa todavía ese camino. Los programas listos (native-ready) superan las comprobaciones estáticas pero nadie
   los ha visto ejecutarse; sus cuadrados solo pasan de azul a verde cuando se registra una ejecución nativa.
 - **Personajes, "effect programs only":** de cada personaje solo se miden sus programas de efectos. Modelos, armas,
@@ -325,24 +336,25 @@ battle routes" muestra cuántos de los fotogramas de combate medidos ya puede di
 
 ### Lo que las cifras aún no miden
 
-Llegar al 100 % en las cifras de progreso **no** significa que el juego ya se pueda jugar. Siguen la fase actual: pasar el
-dibujado de escenas y efectos del camino de PS2 emulado al renderizador nativo. El propio proyecto no declara ningún porcentaje
-de avance. Después quedan estos pasos:
+Llegar al 100 % en las cifras de progreso **no** significa que el juego ya se pueda jugar. La aplicación nativa llega hasta el
+inicio del combate; las cifras siguen ese trabajo y el paso de las escenas y efectos de combate del camino de PS2 emulado al
+renderizador nativo. El propio proyecto no declara ningún porcentaje de avance. Quedan estos pasos:
 
-1. **Todo el juego.** Las rutas de combate medidas hasta ahora cubren pocos personajes y escenarios. También tienen que
-   funcionar sin respaldo todos los personajes, escenarios, menús, selección de personaje, HUD, supers, finales y modos de
-   juego (Arcade, Story, Versus, Practice).
+1. **Todo el juego.** Los menús de Practice, la selección de personaje y de escenario, el VS y la carga ya funcionan en
+   nativo hasta el combate. El combate en sí, todos los escenarios, el HUD, los supers, los finales y los demás modos de juego
+   (Arcade, Story, Versus…) todavía tienen que funcionar sin respaldo.
 2. **Imagen correcta.** "Soportado" o "elegible" significa que el renderizador nativo sabe ejecutar un programa, no que sus
    píxeles ya coincidan con el original. Cada familia de efectos y escenas se compara con el juego original.
-3. **Velocidad.** Cada fotograma tiene que quedar holgadamente por debajo de 16,67 ms (60 fps). Los combates aún no llegan a
-   tiempo real en las versiones medidas: el trabajo de PS2 sigue ejecutándose, y falta retirar trabajo de emulación heredado y
-   ganchos de diagnóstico.
+3. **Velocidad.** Cada fotograma tiene que quedar holgadamente por debajo de 16,67 ms (60 fps). Los menús de la aplicación
+   nativa mantienen ese ritmo de 60 Hz; los combates aún no llegan a tiempo real en las versiones medidas: el trabajo de PS2
+   sigue ejecutándose, y falta retirar trabajo de emulación heredado y ganchos de diagnóstico.
 4. **Versión de uso.** El trabajo más reciente tiene que pasar a la versión que realmente se usa, validado con pruebas de
    regresión y una ruta completa. Hoy esa versión no tiene renderizador nativo.
 5. **Retirar el camino de PS2.** Solo después de los pasos anteriores se elimina definitivamente el camino emulado.
-6. **El resto del juego.** La lógica es el código original recompilado, y su estado sigue viviendo en la memoria de PS2 emulada, así
-   que aún falta una fuente nativa del estado del juego. También hay que comprobar de punta a punta el audio a tiempo real, el
-   mando, las partidas guardadas legítimas, las cargas y la estabilidad en sesiones largas.
+6. **El resto del juego.** En la aplicación nativa ya funcionan el estado de los menús, el audio a tiempo real, la entrada por
+   teclado, el diálogo de la tarjeta de memoria y la carga previa al combate. El estado del combate sigue en la memoria de PS2
+   emulada, y el guardado, los mandos y la estabilidad en sesiones largas todavía tienen que hacerse y comprobarse de punta a
+   punta.
 
 ### Requisitos
 
@@ -400,9 +412,10 @@ resto do jogo ainda rodam só na versão recompilada, que modela a máquina PS2.
   (recompilador estático de código aberto, GPLv3).
 - **Renderização totalmente nativa.** Um renderizador nativo desenha o que o jogo pede: modelos, cenários, lutadores,
   efeitos, luzes e névoa. A versão final **não tem caminho gráfico do PS2 nem reserva de nenhum tipo**. Hoje o renderizador
-  nativo só funciona em versões de diagnóstico, desenhando por cima do jogo enquanto o caminho do PS2 continua rodando por baixo;
-  a versão realmente usada ainda não tem caminho de renderização nativo. O caminho do PS2 será apagado parte por parte à medida
-  que cada uma for substituída de verdade.
+  nativo desenha todo o percurso do Practice até o combate na aplicação nativa (menus, seleção, VS e carregamento), sem nenhum
+  caminho do PS2. No combate ainda só funciona em versões de diagnóstico, desenhando por cima do jogo enquanto o caminho do PS2
+  roda por baixo, e a versão realmente usada ainda não tem caminho de renderização nativo. O caminho do PS2 será apagado parte
+  por parte à medida que cada uma for substituída de verdade.
 - **Provado, não adivinhado.** Cada subsistema (máquina virtual de efeitos, catálogos de recursos, estado de materiais e
   texturas, recursos ligados tardiamente, luzes locais, regras de cor e névoa…) é reconstruído a partir do comportamento do
   próprio jogo, e uma parte só passa a ser nativa quando está provado que coincide com o original.
@@ -415,8 +428,9 @@ Uma recompilação simples do PS2 continua emulando o hardware gráfico do conso
 comandos do PS2 que passam por **VIF / VU1 / GIF / GS** emulados e por um renderizador de GS (**ParaLLEl-GS**) sobre Vulkan.
 A versão nativa elimina essa camada: pega o que o jogo *quer dizer* (a semântica do RenderWare e do Fate), converte para o
 **FUC Common Render IR** e desenha com o **FUC Native Renderer** por meio de um **backend Vulkan para Windows**, direto na
-GPU (diagrama acima). Esse é o objetivo; hoje só existe em versões de diagnóstico, por cima do caminho do PS2. "Measured battle
-routes" mostra quantos dos quadros de combate medidos essa sobreposição já consegue desenhar (não o jogo inteiro).
+GPU (diagrama acima). Hoje esse caminho já desenha todas as telas da aplicação nativa até o combate. Para os combates só existe
+em versões de diagnóstico, por cima do caminho do PS2: "Measured battle routes" mostra quantos dos quadros de combate medidos essa
+sobreposição já consegue desenhar (não o jogo inteiro).
 
 ### Vantagens de uma versão 100% nativa
 
@@ -440,12 +454,13 @@ routes" mostra quantos dos quadros de combate medidos essa sobreposição já co
 - **Measured battle routes:** porcentagem dos quadros de combate medidos que uma sobreposição nativa consegue desenhar em versões
   de diagnóstico, enquanto o caminho do PS2 continua rodando por baixo. Não é execução nativa, e cobre apenas as rotas que o
   projeto mediu.
-- **Áreas PARTLY MEASURED:** o projeto auditou passo a passo uma rota jogada na versão realmente usada. Isso mostra o que essa
-  versão faz em cada área, não quanto da área está pronto, por isso essas áreas não têm porcentagem.
+- **Áreas PARTLY MEASURED:** só parte da área tem registro: a rota que o projeto auditou passo a passo na versão realmente usada
+  e o que a aplicação nativa já faz. Isso não é quanto da área está pronto, por isso essas áreas não têm porcentagem, exceto
+  Menus, cuja porcentagem cobre só as telas do percurso do Practice.
 - **Effect programs:** os programas de efeitos visuais do jogo, um quadrado cada, agrupados por personagem.
 - **Contorno branco:** o que está sendo trabalhado agora.
-- **Por que a cobertura nativa é 0 % hoje:** um item só fica verde quando o projeto registra que ele rodou de fato pelo
-  caminho nativo com o jogo em execução. A última contagem do projeto é de zero programas de efeitos: nenhuma rota ativa
+- **Por que a cobertura nativa dos programas de efeitos é 0 % hoje:** um item só fica verde quando o projeto registra que
+  ele rodou de fato pelo caminho nativo com o jogo em execução. A última contagem do projeto é de zero programas de efeitos: nenhuma rota ativa
   esse caminho ainda. Os programas prontos (native-ready) passam nas verificações estáticas, mas ninguém os viu rodando; seus
   quadrados só passam de azul para verde quando uma execução nativa é registrada.
 - **Personagens, "effect programs only":** de cada personagem só são medidos os programas de efeitos. Modelos, armas,
@@ -457,24 +472,24 @@ routes" mostra quantos dos quadros de combate medidos essa sobreposição já co
 
 ### O que os números ainda não medem
 
-Chegar a 100 % nos números de progresso **não** significa que o jogo já possa ser jogado. Eles acompanham a fase atual:
-passar o desenho de cenas e efeitos do caminho do PS2 emulado para o renderizador nativo. O próprio projeto não declara nenhuma
-porcentagem de conclusão. Depois disso restam estas etapas:
+Chegar a 100 % nos números de progresso **não** significa que o jogo já possa ser jogado. A aplicação nativa chega até o início
+do combate; os números acompanham esse trabalho e a passagem das cenas e efeitos de combate do caminho do PS2 emulado para o
+renderizador nativo. O próprio projeto não declara nenhuma porcentagem de conclusão. Restam estas etapas:
 
-1. **O jogo inteiro.** As rotas de combate medidas até agora cobrem poucos personagens e cenários. Também precisam funcionar
-   sem reserva todos os personagens, cenários, menus, seleção de personagem, HUD, supers, finais e modos de jogo (Arcade,
-   Story, Versus, Practice).
+1. **O jogo inteiro.** Os menus do Practice, a seleção de personagem e de cenário, o VS e o carregamento já rodam em nativo
+   até o combate. O combate em si, todos os cenários, o HUD, os supers, os finais e os outros modos de jogo (Arcade, Story,
+   Versus…) ainda precisam funcionar sem reserva.
 2. **Imagem correta.** "Suportado" ou "elegível" significa que o renderizador nativo sabe executar um programa, não que os
    seus pixels já coincidam com o original. Cada família de efeitos e cenas é comparada com o jogo original.
-3. **Velocidade.** Cada quadro precisa ficar folgadamente abaixo de 16,67 ms (60 fps). Os combates ainda não chegam a tempo
-   real nas versões medidas: o trabalho do PS2 continua rodando, e falta retirar trabalho de emulação herdado e ganchos de
-   diagnóstico.
+3. **Velocidade.** Cada quadro precisa ficar folgadamente abaixo de 16,67 ms (60 fps). Os menus da aplicação nativa mantêm
+   esse ritmo de 60 Hz; os combates ainda não chegam a tempo real nas versões medidas: o trabalho do PS2 continua rodando, e
+   falta retirar trabalho de emulação herdado e ganchos de diagnóstico.
 4. **Versão de uso.** O trabalho mais recente precisa passar para a versão realmente usada, validado com testes de regressão
    e uma rota completa. Hoje essa versão não tem renderizador nativo.
 5. **Retirar o caminho do PS2.** Só depois das etapas anteriores o caminho emulado é eliminado de vez.
-6. **O resto do jogo.** A lógica é o código original recompilado, e o seu estado continua vivendo na memória do PS2 emulada, então
-   ainda falta uma fonte nativa do estado do jogo. Também é preciso verificar de ponta a ponta o áudio em tempo real, o controle,
-   os saves legítimos, os carregamentos e a estabilidade em sessões longas.
+6. **O resto do jogo.** Na aplicação nativa já funcionam o estado dos menus, o áudio em tempo real, a entrada pelo teclado,
+   o diálogo do cartão de memória e o carregamento pré-combate. O estado do combate continua na memória do PS2 emulada, e o
+   salvamento, os controles e a estabilidade em sessões longas ainda precisam ser feitos e verificados de ponta a ponta.
 
 ### Requisitos
 
