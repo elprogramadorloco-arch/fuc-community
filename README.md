@@ -131,8 +131,10 @@ be announced here. The PSP-based version stays at [fuc-recomp](https://github.co
 ### What is this project?
 
 The goal is a native Windows version of the PS2 release of *Fate/unlimited codes* that runs the game's own logic as native
-code, with no emulator, no model of the PS2 hardware and no PS2 software in the loop. **It is not there yet:** today's build
-runs the recompiled game on a runtime that still models the PS2 machine.
+code, with no emulator, no model of the PS2 hardware and no PS2 software in the loop. **It is partly there:** a native
+application already runs the Practice route from power-on to the start of combat (memory-card dialog, logo, opening movie,
+title, mode menu, character and stage select, VS and loading) with no PS2 runtime, from the original data. Combat and the rest
+of the game still run only in the recompiled build, which models the PS2 machine.
 
 - **Static recompilation.** The game's executable is translated ahead of time into native code with **PS2Recomp**
   (open-source static recompiler, GPLv3).
@@ -256,8 +258,10 @@ arriba). Las versiones se anunciarán aquí. La versión basada en PSP sigue en
 ### ¿Qué es este proyecto?
 
 El objetivo es una versión nativa para Windows de la edición de PS2 de *Fate/unlimited codes* que ejecute la lógica propia del
-juego como código nativo, sin emulador, sin un modelo del hardware de PS2 y sin software de PS2 de por medio. **Todavía no ha
-llegado ahí:** la versión de hoy ejecuta el juego recompilado sobre un entorno que sigue modelando la máquina PS2.
+juego como código nativo, sin emulador, sin un modelo del hardware de PS2 y sin software de PS2 de por medio. **Ya lo es en
+parte:** una aplicación nativa recorre Practice desde el encendido hasta el inicio del combate (tarjeta de memoria, logo, vídeo
+de apertura, título, menú de modos, selección de personaje y escenario, VS y carga) sin ningún entorno de PS2, a partir de los
+datos originales. El combate y el resto del juego solo funcionan todavía en la versión recompilada, que modela la máquina PS2.
 
 - **Recompilación estática.** El ejecutable del juego se traduce por adelantado a código nativo con **PS2Recomp**
   (recompilador estático de código abierto, GPLv3).
@@ -387,8 +391,10 @@ As versões serão anunciadas aqui. A versão baseada no PSP continua em
 ### O que é este projeto?
 
 O objetivo é uma versão nativa para Windows da edição de PS2 de *Fate/unlimited codes* que execute a lógica do próprio jogo como
-código nativo, sem emulador, sem um modelo do hardware do PS2 e sem software do PS2 no meio. **Ainda não chegou lá:** a versão de
-hoje executa o jogo recompilado sobre um ambiente que continua modelando a máquina PS2.
+código nativo, sem emulador, sem um modelo do hardware do PS2 e sem software do PS2 no meio. **Já é em parte:** uma aplicação
+nativa percorre o Practice desde o ligar até o início do combate (cartão de memória, logo, vídeo de abertura, título, menu de
+modos, seleção de personagem e cenário, VS e carregamento) sem nenhum ambiente do PS2, a partir dos dados originais. O combate e o
+resto do jogo ainda rodam só na versão recompilada, que modela a máquina PS2.
 
 - **Recompilação estática.** O executável do jogo é traduzido antecipadamente para código nativo com o **PS2Recomp**
   (recompilador estático de código aberto, GPLv3).
