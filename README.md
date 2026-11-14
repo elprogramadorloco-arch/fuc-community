@@ -4,15 +4,16 @@
 
 **EN** — Goal: a 100% native Windows version of the PS2 release of *Fate/unlimited codes*: the game's own code,
 statically recompiled, with a native renderer that does not depend on PS2 hardware or software. Today it runs natively
-from power-on up to the start of combat.
+from power-on to the battle scene, in idle, on all ten stages; combat itself is not native yet.
 
 **ES** — Objetivo: una versión nativa al 100% para Windows de la edición de PS2 de *Fate/unlimited codes*: el código del
 propio juego, recompilado estáticamente, con un renderizador nativo que no depende del hardware ni del software de PS2. Hoy
-funciona en nativo desde el encendido hasta el inicio del combate.
+funciona en nativo desde el encendido hasta la escena de combate, en reposo, en los diez escenarios; el combate en sí aún no
+es nativo.
 
 **PT** — Objetivo: uma versão 100% nativa para Windows da edição de PS2 de *Fate/unlimited codes*: o código do próprio jogo,
 recompilado estaticamente, com um renderizador nativo que não depende do hardware nem do software do PS2. Hoje roda em nativo
-desde o ligar até o início do combate.
+desde o ligar até a cena de combate, em repouso, nos dez cenários; o combate em si ainda não é nativo.
 
 ## PS2Recomp version vs native version
 
@@ -135,17 +136,19 @@ be announced here. The PSP-based version stays at [fuc-recomp](https://github.co
 
 The goal is a native Windows version of the PS2 release of *Fate/unlimited codes* that runs the game's own logic as native
 code, with no emulator, no model of the PS2 hardware and no PS2 software in the loop. **It is partly there:** a native
-application already runs the Practice route from power-on to the start of combat (memory-card dialog, logo, opening movie,
-title, mode menu, character and stage select, VS and loading) with no PS2 runtime, from the original data. Combat and the rest
-of the game still run only in the recompiled build, which models the PS2 machine.
+application already runs the Practice route from power-on (memory-card dialog, logo, opening movie, title, mode menu,
+character and stage select, VS and loading) up to the battle scene, where Saber faces Saber in their idle on all ten battle
+stages, with no PS2 runtime and from the original data. Combat itself, the other fighters and the rest of the game still run
+only in the recompiled build, which models the PS2 machine.
 
 - **Static recompilation.** The game's executable is translated ahead of time into native code with **PS2Recomp**
   (open-source static recompiler, GPLv3).
 - **Fully native rendering.** A native renderer draws what the game asks for: models, stages, fighters, effects, lights
   and fog. The final version has **no PS2 graphics path and no fallback of any kind**. Today the native renderer draws the
-  whole Practice route up to combat in the native application (menus, select, VS and loading), with no PS2 path at all. In
-  battle it still runs only in diagnostic builds, drawing over the game while the PS2 path runs underneath, and the build
-  actually used has no native render path yet. The PS2 path will be deleted part by part as each one is really replaced.
+  whole Practice route in the native application (menus, select, VS and loading) and the battle scene in idle on all ten
+  stages (world, animation, lights, shadows, effects and the start-of-battle HUD), with no PS2 path at all. Combat itself is
+  not native yet; in the recompiled build battles still take the PS2 path, with the native renderer only as a diagnostic
+  overlay, and the build actually used has no native render path yet. The PS2 path will be deleted part by part as each one is really replaced.
 - **Proven, not guessed.** Each subsystem (effect VM, resource catalogs, material and texture state, late-bound resources,
   local lights, colour and fog rules…) is reconstructed from the game's own behaviour, and a part only becomes native
   once it is proven to match the original game.
@@ -158,9 +161,9 @@ A plain PS2 recompilation still emulates the console's graphics hardware: the ga
 that go through emulated **VIF / VU1 / GIF / GS** and a GS renderer (**ParaLLEl-GS**) on Vulkan. The native version
 removes that layer: it takes what the game *means* (RenderWare and Fate's own semantics), turns it into the **FUC Common
 Render IR** and draws it with the **FUC Native Renderer** through a **Windows Vulkan backend**, straight to the GPU
-(diagram above). Today this path already draws every screen of the native application up to combat. For battles it exists
-only in diagnostic builds, on top of the PS2 path: "Measured battle routes" shows how many of the measured battle frames that
-overlay can already draw (not the whole game).
+(diagram above). Today this path already draws every screen of the native application, the idle battle scene on all ten
+stages included. In the recompiled build it exists for battles only as a diagnostic overlay on top of the PS2 path: "Measured
+battle routes" shows how many of the measured battle frames that overlay can already draw (not the whole game).
 
 ### Why a 100% native version
 
@@ -204,9 +207,9 @@ Reaching 100 % in the progress figures does **not** mean the game is playable ye
 of combat; the figures follow that work and the move of battle scenes and effects from the emulated PS2 path to the native
 renderer. The project itself claims no completion percentage. These steps remain:
 
-1. **The whole game.** The Practice menus, character and stage select, VS and loading already run natively up to combat.
-   Combat itself, every stage, the HUD, super moves, endings and the other game modes (Arcade, Story, Versus…) still have to
-   run with no fallback.
+1. **The whole game.** The Practice menus, character and stage select, VS and loading, and the battle scene in idle on all ten
+   stages already run natively. Combat itself, the other fighters, the HUD during combat, super moves, endings and the other
+   game modes (Arcade, Story, Versus…) still have to run with no fallback.
 2. **Correct image.** "Supported" or "eligible" means the native renderer can run a program, not that its pixels already
    match the original. Each family of effects and scenes is compared against the original game.
 3. **Speed.** Every frame must stay comfortably under 16.67 ms (60 fps). The native application's menus hold that 60 Hz
@@ -229,14 +232,14 @@ the private build will be generated locally from it, as with the PSP version.
 | Step | Status | Note |
 | --- | --- | --- |
 | Static recompilation of the game executable | In progress | The game code runs recompiled, on a runtime that still models the PS2 machine. |
-| Native renderer for battles | In progress | Diagnostic builds only: it draws over the game while the PS2 path still runs. The build actually used has no native render path. |
-| Native game state | In progress | The native application keeps the menus' state natively (title, mode menu, select, pre-battle); combat state and the build actually used still rely on emulated PS2 memory. |
+| Native renderer for battles | In progress | The native application draws the battle scene in idle on all ten stages (world, animation, shadows, effects, start-of-battle HUD); combat is not native yet. In the build actually used it exists only as a diagnostic overlay. |
+| Native game state | In progress | The native application keeps the menus' state and the idle battle scene natively (title, mode menu, select, pre-battle, stage and fighters at rest); combat state and the build actually used still rely on emulated PS2 memory. |
 | Effect programs (VM, catalog, persistence, lights) | In progress | Tracked program by program in Progress (one square per program). |
 | Menus, loading screens and other scenes | In progress | The native application runs the Practice route natively from power-on: memory-card dialog, logo, title, mode menu, character and stage select, VS and loading, up to combat. The build actually used still takes the PS2 path. |
 | Opening movie | In progress | Decoding and display are native in the build actually used; the native application plays the whole movie natively. |
 | Image identical to the original game | In progress | Compared family by family against the original game. |
 | Full speed (60 fps on every frame) | In progress | Battles do not reach real time yet in the measured builds. |
-| Audio, controller, save data, loading, stability | In progress | The native application plays the original music, voices and effects, reads the keyboard, shows the memory-card dialog and loads before battle; the build actually used does not yet. All of it is checked end to end before any public build. |
+| Audio, controller, save data, loading, stability | In progress | The native application plays the original music, voices and effects, the battle music and the stage sounds, reads the keyboard, shows the memory-card dialog and loads before battle; the build actually used does not yet. All of it is checked end to end before any public build. |
 | Complete removal of the PS2 graphics path | Planned (goal) | The final version contains neither it nor any fallback. |
 | Public build and instructions | Planned | Announced here when everything is ready. |
 
@@ -267,17 +270,20 @@ arriba). Las versiones se anunciarán aquí. La versión basada en PSP sigue en
 
 El objetivo es una versión nativa para Windows de la edición de PS2 de *Fate/unlimited codes* que ejecute la lógica propia del
 juego como código nativo, sin emulador, sin un modelo del hardware de PS2 y sin software de PS2 de por medio. **Ya lo es en
-parte:** una aplicación nativa recorre Practice desde el encendido hasta el inicio del combate (tarjeta de memoria, logo, vídeo
-de apertura, título, menú de modos, selección de personaje y escenario, VS y carga) sin ningún entorno de PS2, a partir de los
-datos originales. El combate y el resto del juego solo funcionan todavía en la versión recompilada, que modela la máquina PS2.
+parte:** una aplicación nativa recorre Practice desde el encendido (tarjeta de memoria, logo, vídeo de apertura, título, menú
+de modos, selección de personaje y escenario, VS y carga) hasta la escena de combate, donde Saber se enfrenta a Saber en reposo
+en los diez escenarios, sin ningún entorno de PS2 y a partir de los datos originales. El combate en sí, los demás luchadores y
+el resto del juego solo funcionan todavía en la versión recompilada, que modela la máquina PS2.
 
 - **Recompilación estática.** El ejecutable del juego se traduce por adelantado a código nativo con **PS2Recomp**
   (recompilador estático de código abierto, GPLv3).
 - **Renderizado totalmente nativo.** Un renderizador nativo dibuja lo que el juego pide: modelos, escenarios, luchadores,
   efectos, luces y niebla. La versión final **no tiene camino gráfico de PS2 ni respaldo de ningún tipo**. Hoy el renderizador
-  nativo dibuja todo el recorrido de Practice hasta el combate en la aplicación nativa (menús, selección, VS y carga), sin
-  ningún camino de PS2. En combate solo funciona todavía en versiones de diagnóstico, dibujando encima del juego mientras el
-  camino de PS2 se ejecuta debajo, y la versión que realmente se usa aún no tiene camino de render nativo. El camino de PS2 se
+  nativo dibuja en la aplicación nativa todo el recorrido de Practice (menús, selección, VS y carga) y la escena de combate en
+  reposo en los diez escenarios (mundo, animación, luces, sombras, efectos y el HUD del inicio del combate), sin ningún camino
+  de PS2. El combate en sí aún no es nativo; en la versión recompilada los combates siguen por el camino de PS2, con el
+  renderizador nativo solo como superposición de diagnóstico, y la versión que realmente se usa aún no tiene camino de render
+  nativo. El camino de PS2 se
   irá borrando parte por parte a medida que cada una se reemplace de verdad.
 - **Demostrado, no adivinado.** Cada subsistema (máquina virtual de efectos, catálogos de recursos, estado de materiales y
   texturas, recursos enlazados tarde, luces locales, reglas de color y niebla…) se reconstruye a partir del comportamiento
@@ -291,9 +297,10 @@ Una recompilación de PS2 sin más sigue emulando el hardware gráfico de la con
 convierten en comandos de PS2 que pasan por **VIF / VU1 / GIF / GS** emulados y por un renderizador de GS (**ParaLLEl-GS**)
 sobre Vulkan. La versión nativa elimina esa capa: toma lo que el juego *quiere decir* (la semántica de RenderWare y de Fate),
 lo convierte al **FUC Common Render IR** y lo dibuja con el **FUC Native Renderer** a través de un **backend Vulkan para
-Windows**, directamente en la GPU (diagrama arriba). Hoy este camino ya dibuja todas las pantallas de la aplicación nativa
-hasta el combate. Para los combates solo existe en versiones de diagnóstico, por encima del camino de PS2: "Measured battle
-routes" muestra cuántos de los fotogramas de combate medidos ya puede dibujar esa superposición (no el juego entero).
+Windows**, directamente en la GPU (diagrama arriba). Hoy este camino ya dibuja todas las pantallas de la aplicación nativa,
+incluida la escena de combate en reposo en los diez escenarios. En la versión recompilada, para los combates solo existe como
+superposición de diagnóstico por encima del camino de PS2: "Measured battle routes" muestra cuántos de los fotogramas de combate
+medidos ya puede dibujar esa superposición (no el juego entero).
 
 ### Ventajas de una versión 100% nativa
 
@@ -340,9 +347,9 @@ Llegar al 100 % en las cifras de progreso **no** significa que el juego ya se pu
 inicio del combate; las cifras siguen ese trabajo y el paso de las escenas y efectos de combate del camino de PS2 emulado al
 renderizador nativo. El propio proyecto no declara ningún porcentaje de avance. Quedan estos pasos:
 
-1. **Todo el juego.** Los menús de Practice, la selección de personaje y de escenario, el VS y la carga ya funcionan en
-   nativo hasta el combate. El combate en sí, todos los escenarios, el HUD, los supers, los finales y los demás modos de juego
-   (Arcade, Story, Versus…) todavía tienen que funcionar sin respaldo.
+1. **Todo el juego.** Los menús de Practice, la selección de personaje y de escenario, el VS y la carga, y la escena de combate
+   en reposo en los diez escenarios ya funcionan en nativo. El combate en sí, los demás luchadores, el HUD durante el combate,
+   los supers, los finales y los demás modos de juego (Arcade, Story, Versus…) todavía tienen que funcionar sin respaldo.
 2. **Imagen correcta.** "Soportado" o "elegible" significa que el renderizador nativo sabe ejecutar un programa, no que sus
    píxeles ya coincidan con el original. Cada familia de efectos y escenas se compara con el juego original.
 3. **Velocidad.** Cada fotograma tiene que quedar holgadamente por debajo de 16,67 ms (60 fps). Los menús de la aplicación
@@ -366,14 +373,14 @@ versión privada se generará localmente a partir de ella, igual que con la vers
 | Paso | Estado | Nota |
 | --- | --- | --- |
 | Recompilación estática del ejecutable del juego | En curso | El código del juego funciona recompilado, sobre un entorno que sigue modelando la máquina PS2. |
-| Renderizador nativo para los combates | En curso | Solo en versiones de diagnóstico: dibuja encima del juego mientras el camino de PS2 sigue ejecutándose. La versión que realmente se usa no tiene camino de render nativo. |
-| Estado nativo del juego | En curso | La aplicación nativa lleva en nativo el estado de los menús (título, menú de modos, selección, previa al combate); el estado del combate y la versión que realmente se usa siguen dependiendo de la memoria de PS2 emulada. |
+| Renderizador nativo para los combates | En curso | La aplicación nativa dibuja la escena de combate en reposo en los diez escenarios (mundo, animación, sombras, efectos, HUD del inicio del combate); el combate aún no es nativo. En la versión que realmente se usa solo existe como superposición de diagnóstico. |
+| Estado nativo del juego | En curso | La aplicación nativa lleva en nativo el estado de los menús y la escena de combate en reposo (título, menú de modos, selección, previa al combate, escenario y luchadores en reposo); el estado del combate y la versión que realmente se usa siguen dependiendo de la memoria de PS2 emulada. |
 | Programas de efectos (VM, catálogo, persistencia, luces) | En curso | Se siguen programa a programa en Progress (un cuadrado por programa). |
 | Menús, pantallas de carga y otras escenas | En curso | La aplicación nativa recorre en nativo Practice desde el encendido: tarjeta de memoria, logo, título, menú de modos, selección de personaje y escenario, VS y carga, hasta el combate. La versión que realmente se usa sigue por el camino de PS2. |
 | Vídeo de apertura | En curso | La decodificación y la imagen son nativas en la versión que realmente se usa; la aplicación nativa reproduce el vídeo entero en nativo. |
 | Imagen idéntica al juego original | En curso | Se compara familia por familia con el juego original. |
 | Velocidad completa (60 fps en todos los fotogramas) | En curso | Los combates aún no llegan a tiempo real en las versiones medidas. |
-| Audio, mando, partidas guardadas, cargas, estabilidad | En curso | La aplicación nativa reproduce la música, las voces y los efectos originales, lee el teclado, muestra el diálogo de la tarjeta de memoria y carga antes del combate; la versión que realmente se usa todavía no. Todo se comprueba de punta a punta antes de cualquier versión pública. |
+| Audio, mando, partidas guardadas, cargas, estabilidad | En curso | La aplicación nativa reproduce la música, las voces y los efectos originales, la música de combate y los sonidos de los escenarios, lee el teclado, muestra el diálogo de la tarjeta de memoria y carga antes del combate; la versión que realmente se usa todavía no. Todo se comprueba de punta a punta antes de cualquier versión pública. |
 | Eliminación completa del camino gráfico de PS2 | Previsto (objetivo) | La versión final no tendrá ni ese camino ni ningún respaldo. |
 | Versión pública e instrucciones | Previsto | Se anunciará aquí cuando todo esté listo. |
 
@@ -404,17 +411,19 @@ As versões serão anunciadas aqui. A versão baseada no PSP continua em
 
 O objetivo é uma versão nativa para Windows da edição de PS2 de *Fate/unlimited codes* que execute a lógica do próprio jogo como
 código nativo, sem emulador, sem um modelo do hardware do PS2 e sem software do PS2 no meio. **Já é em parte:** uma aplicação
-nativa percorre o Practice desde o ligar até o início do combate (cartão de memória, logo, vídeo de abertura, título, menu de
-modos, seleção de personagem e cenário, VS e carregamento) sem nenhum ambiente do PS2, a partir dos dados originais. O combate e o
-resto do jogo ainda rodam só na versão recompilada, que modela a máquina PS2.
+nativa percorre o Practice desde o ligar (cartão de memória, logo, vídeo de abertura, título, menu de modos, seleção de personagem
+e cenário, VS e carregamento) até a cena de combate, onde Saber enfrenta Saber em repouso nos dez cenários, sem nenhum ambiente do
+PS2 e a partir dos dados originais. O combate em si, os outros lutadores e o resto do jogo ainda rodam só na versão recompilada,
+que modela a máquina PS2.
 
 - **Recompilação estática.** O executável do jogo é traduzido antecipadamente para código nativo com o **PS2Recomp**
   (recompilador estático de código aberto, GPLv3).
 - **Renderização totalmente nativa.** Um renderizador nativo desenha o que o jogo pede: modelos, cenários, lutadores,
   efeitos, luzes e névoa. A versão final **não tem caminho gráfico do PS2 nem reserva de nenhum tipo**. Hoje o renderizador
-  nativo desenha todo o percurso do Practice até o combate na aplicação nativa (menus, seleção, VS e carregamento), sem nenhum
-  caminho do PS2. No combate ainda só funciona em versões de diagnóstico, desenhando por cima do jogo enquanto o caminho do PS2
-  roda por baixo, e a versão realmente usada ainda não tem caminho de renderização nativo. O caminho do PS2 será apagado parte
+  nativo desenha na aplicação nativa todo o percurso do Practice (menus, seleção, VS e carregamento) e a cena de combate em
+  repouso nos dez cenários (mundo, animação, luzes, sombras, efeitos e o HUD do início do combate), sem nenhum caminho do PS2. O
+  combate em si ainda não é nativo; na versão recompilada os combates seguem pelo caminho do PS2, com o renderizador nativo só
+  como sobreposição de diagnóstico, e a versão realmente usada ainda não tem caminho de renderização nativo. O caminho do PS2 será apagado parte
   por parte à medida que cada uma for substituída de verdade.
 - **Provado, não adivinhado.** Cada subsistema (máquina virtual de efeitos, catálogos de recursos, estado de materiais e
   texturas, recursos ligados tardiamente, luzes locais, regras de cor e névoa…) é reconstruído a partir do comportamento do
@@ -428,9 +437,9 @@ Uma recompilação simples do PS2 continua emulando o hardware gráfico do conso
 comandos do PS2 que passam por **VIF / VU1 / GIF / GS** emulados e por um renderizador de GS (**ParaLLEl-GS**) sobre Vulkan.
 A versão nativa elimina essa camada: pega o que o jogo *quer dizer* (a semântica do RenderWare e do Fate), converte para o
 **FUC Common Render IR** e desenha com o **FUC Native Renderer** por meio de um **backend Vulkan para Windows**, direto na
-GPU (diagrama acima). Hoje esse caminho já desenha todas as telas da aplicação nativa até o combate. Para os combates só existe
-em versões de diagnóstico, por cima do caminho do PS2: "Measured battle routes" mostra quantos dos quadros de combate medidos essa
-sobreposição já consegue desenhar (não o jogo inteiro).
+GPU (diagrama acima). Hoje esse caminho já desenha todas as telas da aplicação nativa, incluída a cena de combate em repouso nos
+dez cenários. Na versão recompilada, para os combates só existe como sobreposição de diagnóstico por cima do caminho do PS2:
+"Measured battle routes" mostra quantos dos quadros de combate medidos essa sobreposição já consegue desenhar (não o jogo inteiro).
 
 ### Vantagens de uma versão 100% nativa
 
@@ -476,9 +485,9 @@ Chegar a 100 % nos números de progresso **não** significa que o jogo já possa
 do combate; os números acompanham esse trabalho e a passagem das cenas e efeitos de combate do caminho do PS2 emulado para o
 renderizador nativo. O próprio projeto não declara nenhuma porcentagem de conclusão. Restam estas etapas:
 
-1. **O jogo inteiro.** Os menus do Practice, a seleção de personagem e de cenário, o VS e o carregamento já rodam em nativo
-   até o combate. O combate em si, todos os cenários, o HUD, os supers, os finais e os outros modos de jogo (Arcade, Story,
-   Versus…) ainda precisam funcionar sem reserva.
+1. **O jogo inteiro.** Os menus do Practice, a seleção de personagem e de cenário, o VS e o carregamento, e a cena de combate
+   em repouso nos dez cenários já rodam em nativo. O combate em si, os outros lutadores, o HUD durante o combate, os supers, os
+   finais e os outros modos de jogo (Arcade, Story, Versus…) ainda precisam funcionar sem reserva.
 2. **Imagem correta.** "Suportado" ou "elegível" significa que o renderizador nativo sabe executar um programa, não que os
    seus pixels já coincidam com o original. Cada família de efeitos e cenas é comparada com o jogo original.
 3. **Velocidade.** Cada quadro precisa ficar folgadamente abaixo de 16,67 ms (60 fps). Os menus da aplicação nativa mantêm
@@ -501,14 +510,14 @@ versão privada será gerada localmente a partir dela, como na versão de PSP.
 | Etapa | Estado | Nota |
 | --- | --- | --- |
 | Recompilação estática do executável do jogo | Em andamento | O código do jogo roda recompilado, sobre um ambiente que continua modelando a máquina PS2. |
-| Renderizador nativo para os combates | Em andamento | Só em versões de diagnóstico: desenha por cima do jogo enquanto o caminho do PS2 continua rodando. A versão realmente usada não tem caminho de renderização nativo. |
-| Estado nativo do jogo | Em andamento | A aplicação nativa mantém em nativo o estado dos menus (título, menu de modos, seleção, pré-combate); o estado do combate e a versão realmente usada ainda dependem da memória do PS2 emulada. |
+| Renderizador nativo para os combates | Em andamento | A aplicação nativa desenha a cena de combate em repouso nos dez cenários (mundo, animação, sombras, efeitos, HUD do início do combate); o combate ainda não é nativo. Na versão realmente usada só existe como sobreposição de diagnóstico. |
+| Estado nativo do jogo | Em andamento | A aplicação nativa mantém em nativo o estado dos menus e a cena de combate em repouso (título, menu de modos, seleção, pré-combate, cenário e lutadores em repouso); o estado do combate e a versão realmente usada ainda dependem da memória do PS2 emulada. |
 | Programas de efeitos (VM, catálogo, persistência, luzes) | Em andamento | Acompanhados programa a programa em Progress (um quadrado por programa). |
 | Menus, telas de carregamento e outras cenas | Em andamento | A aplicação nativa percorre em nativo o Practice desde o ligar: cartão de memória, logo, título, menu de modos, seleção de personagem e cenário, VS e carregamento, até o combate. A versão realmente usada continua pelo caminho do PS2. |
 | Vídeo de abertura | Em andamento | A decodificação e a imagem são nativas na versão realmente usada; a aplicação nativa reproduz o vídeo inteiro em nativo. |
 | Imagem idêntica ao jogo original | Em andamento | Comparada família por família com o jogo original. |
 | Velocidade completa (60 fps em todos os quadros) | Em andamento | Os combates ainda não chegam a tempo real nas versões medidas. |
-| Áudio, controle, saves, carregamentos, estabilidade | Em andamento | A aplicação nativa toca a música, as vozes e os efeitos originais, lê o teclado, mostra o diálogo do cartão de memória e carrega antes do combate; a versão realmente usada ainda não. Tudo é verificado de ponta a ponta antes de qualquer versão pública. |
+| Áudio, controle, saves, carregamentos, estabilidade | Em andamento | A aplicação nativa toca a música, as vozes e os efeitos originais, a música de combate e os sons dos cenários, lê o teclado, mostra o diálogo do cartão de memória e carrega antes do combate; a versão realmente usada ainda não. Tudo é verificado de ponta a ponta antes de qualquer versão pública. |
 | Eliminação completa do caminho gráfico do PS2 | Planejado (objetivo) | A versão final não terá nem esse caminho nem nenhuma reserva. |
 | Versão pública e instruções | Planejado | Será anunciada aqui quando tudo estiver pronto. |
 
