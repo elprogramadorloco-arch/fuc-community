@@ -35,9 +35,11 @@ flowchart TB
 <!-- fuc-observer:progress:start -->
 ## Progress
 
-![route frames](badges/route_frames.svg?v=20261114T161117Z)
+![route frames](badges/route_frames.svg?v=20261118T052221Z)
 
-![FUC native game coverage](progress.svg?v=20261114T161117Z)
+**⬜ Currently being worked on:** Native Saber vs Saber combat in Practice (open since 2026-11-14).
+
+![FUC native game coverage](progress.svg?v=20261118T052221Z)
 
 | At a glance | Value | Over | Since |
 |---|---|---|---|
@@ -54,7 +56,7 @@ Only areas with a known inventory get a percentage; the rest say **NOT MEASURED*
 
 | Area | Status | What is known | Since |
 |---|---|---|---|
-| Gameplay / game logic | partly measured | 3 on the PS2 path; native application outside the build actually used: the battle scene runs natively in idle (Saber vs Saber) on 10 stages; combat: COMBAT NOT IMPLEMENTED | 2026-11-14 |
+| Gameplay / game logic | partly measured | 3 on the PS2 path; native application outside the build actually used: the battle scene runs natively in idle (Saber vs Saber) on 10 stages; combat: COMBAT NOT IMPLEMENTED; currently being worked on: Native Saber vs Saber combat in Practice (open since 2026-11-14, not finished) | 2026-11-18 |
 | Characters | partly measured | 18 characters · effect programs only: native 0.0 %, native-ready 53.1 %, investigated 100.0 % | 2026-11-01 |
 | Stages | partly measured | 10 battle stages · idle battle scene: native 100.0 %, native-ready 100.0 %, investigated 100.0 % | 2026-11-14 |
 | Effects | measured | Effect programs · 443 known: native 0.0 %, native-ready 54.2 %, investigated 100.0 % | 2026-11-01 |
@@ -81,6 +83,7 @@ also come from the observer reading the project's records more accurately, not o
 
 | Published | Effect programs: native | native-ready | partial | fallback | unknown | Battle route frames | What changed |
 |---|---|---|---|---|---|---|---|
+| 2026-11-18 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Gameplay / game logic |
 | 2026-11-14 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Gameplay / game logic, Stages, HUD / battle UI, Audio, Image correctness, Stability |
 | 2026-11-13 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Gameplay / game logic, Menus / frontend, FMV / cutscenes, Audio, Input, Save / load, Storage / assets / loading, Game modes / progression, Performance, Production integration |
 | 2026-11-09 | 0 | 240 | 188 | 15 | 0 | 3227 / 3233 diagnostic overlay | Production integration |
@@ -118,7 +121,7 @@ draws visual effects): one square each.
   *What the figures do not measure yet* below.
 
 
-_Updated 2026-11-14T16:11:17Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
+_Updated 2026-11-18T05:22:21Z. Aggregate figures only, derived from the project's own records by FUC Observer (schema V2). No game data, file names or paths are published. Raw data: [progress.json](progress.json)._
 <!-- fuc-observer:progress:end -->
 
 ---

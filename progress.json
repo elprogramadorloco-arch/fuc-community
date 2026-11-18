@@ -1,6 +1,6 @@
 {
   "schema": "FUC_COMMUNITY_PROGRESS_V2",
-  "generated_utc": "2026-11-14T16:11:17Z",
+  "generated_utc": "2026-11-18T05:22:21Z",
   "generator": "FUC Observer (aggregate-only export)",
   "headline": [
     {
@@ -537,6 +537,13 @@
       "percent": 99.81441385709867
     }
   ],
+  "current_work": {
+    "subsystems": [],
+    "programs": 0,
+    "as_of": "2026-11-15",
+    "task": "Native Saber vs Saber combat in Practice",
+    "since": "2026-11-14"
+  },
   "game_coverage": {
     "states": [
       {
@@ -610,7 +617,8 @@
         "note": "The game code runs recompiled, but no per-function or per-feature native census is recorded. One audited route shows what production does here; that is not an inventory of the area.",
         "facts": [
           "3 on the PS2 path",
-          "native application outside the build actually used: the battle scene runs natively in idle (Saber vs Saber) on 10 stages; combat: COMBAT NOT IMPLEMENTED"
+          "native application outside the build actually used: the battle scene runs natively in idle (Saber vs Saber) on 10 stages; combat: COMBAT NOT IMPLEMENTED",
+          "currently being worked on: Native Saber vs Saber combat in Practice (open since 2026-11-14, not finished)"
         ],
         "as_of": "2026-11-04"
       },
